@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+<div class="mainPage">
+	<section class="bindcardWrap J_mainView">
+		{include file="_common/header.htm" returnBtn="back" rightLink="rechargeExp"}
+		<section class="pt20">
+			<form action="{$action_url}" class="validForm" method="post">
+				<div class="bindInfos">
+					<div class="infoItem clearfix border-top-1">
+						<label class="infoName">持卡人</label>
+						<div class="infoCont">
+							{if !empty($Realnameinfo) && $Realnameinfo.status==1}
+                            <!-- 已实名 -->
+							<span class="cGray">{$Realnameinfo.realName}</span>
+                            {else}
+                            <input type="text" name="realName" class="jsUserName" placeholder="您的真实姓名" />
+                            {/if}
+						</div>
+					</div>
+
+					<div class="infoItem clearfix">
+						<label class="infoName">身份证</label>
+						<div class="infoCont">
+							{if !empty($Realnameinfo) && $Realnameinfo.status==1}
+							<span class="cGray">{$Realnameinfo.idCard}</span>
+                            {else}
+                            <input type="text" name="idCard" class="jsIdcardCheck" placeholder="您的身份证号" />
+                            {/if}
+						</div>
+					</div>
+
+
+
+					{literal}
+					<div class="infoItem clearfix J_selectBank" v-on:click="selectBank">
+						<template v-if="initial">
+							<div class="itemRight"><span class="rArrow"></span></div>
+							<i class="icon-bankcard J_icon"></i>
+							<span class="bankName J_bankName">请选择银行</span>
+						</template>
+						<template v-else>
+							<div class="itemRight"><span class="rArrow"></span></div>
+							<span class="bankIcon" v-bind:class="'bankIcon_' + bankCode"></span>
+							<span class="bankName">{{bankName}}</span>
+						</template>
+						<input type="hidden" name="bankName" class="jsBank" v-model="bankName.replace(/ 借记卡/, '')" />
+						<input type="hidden" name="bankCode" class="jsBankCode" v-model="bankCode" />
+					</div>
+					{/literal}
+					<div class="infoItem clearfix">
+						<label class="infoName">卡号</label>
+						<div class="infoCont">
+							<input type="tel" name="cardNo" class="jsCardNumCheck" placeholder="15-19位的银行卡号" >
+						</div>
+					</div>
+					<div class="itemTips">
+						<span class="icon-tips"></span>为保证资金安全，仅支持您本人的银行卡进行充值，充值成功后该卡将作为您唯一的充值和提现卡
+					</div>
+					<div class="infoItem clearfix">
+						<label class="infoName">银行预留手机号：</label>
+						<div class="infoCont">
+							<input type="number" name="mobilePhone" class="jsMobilePhone" placeholder="" >
+						</div>
+					</div>
+					
+					<div class="infoItem clearfix">
+						<label class="infoName">手机验证码：</label>
+						<div class="itemRight"><input type="button" class="comGetCode J_getCode" value="获取验证码" url="/my/realname/send_signBank_code" /></div>
+						<div class="infoCont">
+							<input type="number" name="securityCode" class="jsSmsCode" placeholder="" >
+						</div>				
+					</div>
+
+					<div class="infoItem clearfix">
+						<label class="infoName">充值金额：</label>
+						<div class="itemRight">元</div>
+						<div class="infoCont">
+							<input type="tel" name="amount" class="jsRecharge" placeholder="" >
+						</div>
+					</div>
+
+					<div class="isAgree">
+						<input type="checkbox" name="agree" checked="" class="protocol jsInputCheck" />同意 
+						<a href="javascript:;" class="agreementLink J_popPageBtn" data-name="withhold">代扣协议</a>
+					</div>
+				</div>
+				<div class="contentBt">
+					<!-- <div class="cRed J_errorTip">错误提示</div> -->
+					<button class="btn redBtn" type="submit">充值</button>
+				</div>
+			</form>
+		</section>
+		{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_realname_bindcard/init');
+</script>
+	</section>
+	<!-- 选择银行 -->
+	{literal}
+	<section class="popPage cashWrap J_bankList none" v-bind:class="{ 'slideInRight animated': isIn, 'slideOutRight animated': isOut }">
+		<header class="header">
+	        <a href="javascript:;" class="returnBtn" v-on:click="hideList"><i></i></a>
+	        <h1 class="txt">发卡银行</h1>
+	    </header>
+	    <!-- 银行列表 -->
+	    <div class="popPageMain">
+			<div class="bankList mt20" id="bankList">
+				<div v-for="item in items" class="bankInfo" v-on:click="selected(item)">
+					<span class="bankIcon" v-bind:class="'bankIcon_' + item.bankCode"></span>
+					<div class="infoCont">
+						<p class="bankName J_bankName">{{item.bankName}} 借记卡</p>
+						<p class="grayTxt">单次限额{{item.onceLimit}}，每日限额{{item.dayLimit}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{/literal}
+
+	<!-- 充值说明 -->
+	{include file="_common/statictpl/recharge_explain.htm" method="pop"}
+	<!-- 代扣协议 -->
+	{include file="_common/statictpl/withhold.htm" method="pop"}
+</div>
+</body>
+</html>

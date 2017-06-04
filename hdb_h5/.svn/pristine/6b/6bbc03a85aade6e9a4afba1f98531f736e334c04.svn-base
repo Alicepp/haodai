@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="fanjj" />
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="vueTpl">
+	<!-- 投标有记录开始 -->
+	<div class="appwrap">
+		<ul class="logWrap jsList" url="/bid/bidlog/{$bid}" v-cloak v-if="hasData">
+			{literal}
+			<li v-for="m in list" v-cloak>
+				<span class="logL"><i>{{m.uname}}</i><i>{{m.createDate}}</i></span>
+				<span class="logR">{{m.bidAmount}}元</span>
+			</li>
+			{/literal}
+		</ul>
+	</div>
+	<!-- 投标有记录结束 -->
+
+	<!-- 投标无记录开始 -->
+	<div class="container" v-cloak v-if="!hasData">
+		<div class="iconW"></div>
+	</div>
+	<!-- 投标无记录结束 -->
+</div>
+
+{include file="_common/footer.htm"}
+
+<script type="text/javascript">
+    require('common:static/widget/bid_bidlog/init');
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/help_content.css">
+</head>
+<body>
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="appwrap">
+		<section class="section help-subsets" data-section="busi-8" style="display: block;">
+			<div class="help-subset">
+				<div class="help-subset-title">借款人未按时还款怎么办</div>
+				<div class="help-subset-detail justify">
+					1、借款人未按照约定按时足额还付款时，则视为借款人逾期。
+					<br>
+					<br>
+					2、借款人逾期还款，应向出借人支付逾期利息和违约金。逾期利息：自逾期之日（应还款日的次日，下同）起每日按当期应还未还本金的0.08%计收，每期单独计算，直至当期欠款还清之日止。
+					<br>
+					<br>
+					3、借款人对任何一期还款逾期满15日的或累计逾期满3期（含本数）的，视为借款人根本违约，出借人有权自行或授权平台宣布借款合同项下全部借款提前到期。
+					<br>
+					<br>
+					4、 "好贷宝"有完善的催收机制，通过电话短信提醒、上门拜访、法律诉讼等多种方式，向被催收人申明欠款事项,告诫其及时还清欠款。
+				</div>
+			</div>
+		</section>
+	</div>
+	{include file="_common/footer.htm"}
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lvpp" />
+  <title>{$title}</title>
+  <script type="text/javascript" src="/static/lib/mod.js"></script>
+  {include file="_common/var.htm"}
+</head>
+<body class="payment_records">
+{include file="_common/header.htm" returnBtn="back"}
+<div class="container user-record-lp vueTpl">
+	<div class="nav-payment pullSetDivTop">
+		<div class="border-top-1 cf">
+			<span class="nav-wid fl active" type="2">待返现</span>
+			<span class="nav-wid fr" type="1">已返现</span>
+		</div>
+	</div>
+	<div class="innercon">
+		{literal}
+		<!--待返现-->
+		<ul class="list jsList" url="/my/subsidiary/payment_records" v-cloak v-if="hasData">
+			<li  v-for="m in list" v-cloak>
+				<div class="row-lp">
+					<div class="fl">
+						<p class="title">{{m.borrowTitle}}</p>
+					</div>
+				</div>
+				<div class="row-lp">
+					<div class="fl">
+						<span class="date">{{m.refundTime}}</span>
+					</div>
+				</div>
+				<div class="back-money"><i>{{m.refundMoney}}</i>元</div>
+			</li>
+		</ul>
+		{/literal}
+
+		<!-- 暂无记录提示 begin -->
+		<div class="container" v-cloak v-if="!hasData">
+			<div class="no-info-box">
+				<div class="no-info-icon"></div>
+			</div>
+			<div class="no-info">
+				还没有出借记录 | <a href="/bid/project">去出借 >></a>
+			</div>
+		</div>
+		<!-- 暂无记录提示 end -->
+	</div>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_subsidiary_payment_records/init');
+</script>
+</body>
+</html>

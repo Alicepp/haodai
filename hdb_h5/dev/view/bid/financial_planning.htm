@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm"}
+
+<!-- 内容 begin -->
+<div class="wrap-a">
+	<div class="modelTexta bg-gray">
+		<h2 class="mTitle">{$planning.planName}</h2>
+	</div>
+	<div class="modelTexta bg-white">
+		<span class="con-lt cGray">预期年化：</span>
+		<span class="con-rt">{$planning.rateMax}%</span>
+	</div>
+	<div class="modelTexta bg-white">
+		<span class="con-lt cGray">项目期限：</span>
+		<span class="con-rt">{$planning.periodLimit}{$planning.periodLimitType}</span>
+	</div>
+	<div class="modelTexta bg-white">
+		<span class="con-lt cGray">收益方式：</span>
+		<span class="con-rt">{$planning.interestRuleType}</span>
+	</div>
+	<!-- 投资期限 -->
+	<input type="hidden" class="jsBorrowExpired" value="{$planning.periodLimit}">
+	<!-- 年化收益 -->
+	<input type="hidden" class="jsInterestRate" value="{$planning.rateMin}">
+	<!-- 投资期限天/月/年 -->
+	<input type="hidden" class="jsBorrowExpiredUnit" value="{$planning.periodLimitUnit}">
+	<!-- 收益方式 -->
+	<input type="hidden" class="jsRepayType" value="{$planning.interestRule}">
+</div>
+
+<div class="wrap-a mt20">
+	<div class="modelLia2 border-top-1 cf">
+        <div class="con-a2 fl">
+            <input type="text" placeholder="10000" value="10000" class="borderInput jsBuyMoney">
+        </div>
+        <h5 class="title-a2 fr"><button class="btn jsAnIncomeBtn">开始计算</button></h5>
+    </div>
+
+	<div class="jsCalculators bg-white">
+		<!-- <div class="modelTexta">
+			<span class="con-lt">本息合计（元）：</span>
+			<span class="con-rt jsDayNum"></span>
+		</div>
+		<div class="modelTexta">
+			<span class="con-lt">利息合计（元）：</span>
+			<span class="con-rt jsMonthNum"></span>
+		</div>
+		<div class="modelTexta">
+			<span class="con-lt">每日回收利息（元）：</span>
+			<span class="con-rt jsLastMonthNum"></span>
+		</div> -->
+	</div>
+</div>
+<!-- 内容 end -->
+
+<!-- 错误提示弹框 -->
+<div class="f_bg jsFbg"></div>
+
+{include file="_common/footer.htm"}
+
+<script type="text/javascript">
+    require('common:static/widget/bid_financial_planning/init');
+</script>
+</body>
+</html>

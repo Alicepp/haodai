@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>{include file="_common/var.htm"}</head>
+<body>
+{include file="_common/header.htm"}
+	<div class="status_wrap">
+		<div class="bd">
+			<span class="pic"><img src="static/images/status/invest_success.png" /></span>
+			<h2 class="title">恭喜您投标成功！</h2>
+            <h3 class="mtitle">本次投标金额已打败<span class="cRed f36">{$ratio}</span>用户</h3>
+		</div>
+		<div class="ft">
+			<a href="{$button_top_url}" class="btn redBtn">查看我的投标记录</a>
+			<a href="{getRedirectStr('', '/bid/project')}" class="btn cancelBtn mt20">我知道了</a>
+		</div>
+	</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/bid_invest_success/init');
+</script>
+</body>
+</html>

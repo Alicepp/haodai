@@ -1,0 +1,47 @@
+{if isset($method) && $method eq 'pop'}
+<div class="popPage none J_popPage" data-name="explain">
+	<header class="header">
+        <a href="javascript:;" class="returnBtn J_popPageBack"><i></i></a>
+        <h1 class="txt">充值提现规则</h1>
+    </header>
+    <div class="popPageMain">
+{/if}
+		<section>
+			<div class="titleA">
+				<span class="lineBef"></span>
+				<h3 class="s30"><i></i>限额说明<i></i></h3>
+				<span class="lineAft"></span>
+			</div>
+			<ul class="listBox">
+				{if $banklist|count >=1}
+				{foreach from=$banklist item=i}
+				<li class="list">
+					<p class="listT">{$i.bankName} 借记卡</p>
+					<p class="listB">单笔限额{$i.onceLimit}，每日限额{$i.dayLimit}</p>
+				</li>
+				{/foreach}
+				{/if}
+			</ul>
+		</section>
+		<section>
+			<div class="titleB">
+				<div class="lineBef"></div>
+				<h3 class="s30"><i></i>提现说明<i></i></h3>
+				<div class="lineAft"></div>
+			</div>
+			<ul class="rule">
+				<li class="rule_1">
+					提现金额5万元以下：1元／笔<br>提现金额5万元（含）以上：5元／笔
+				</li>
+				<li class="rule_1">
+					好贷宝将对您的提现申请进行审核。如审核通过金额转入您的银行卡；如审核失败，金额退还至用户账户。
+				</li>
+				<li class="rule_1">
+					单笔金额不能超过30万元，每日最多提现3次。<br>预计到账时间：1～2个工作日。
+				</li>
+			</ul>
+		</section>
+{if isset($method) && $method eq 'pop'}
+	</div>
+</div>
+{/if}

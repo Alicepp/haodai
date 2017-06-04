@@ -1,0 +1,74 @@
+
+@import url('common/project.css?__inline');
+
+
+.more i, .more span {
+    float: left;
+}
+.more b {
+    float: right
+}
+.more span{
+    font-size: 0.3733rem;
+    color:#5f616b;
+}
+.more{
+    border-bottom:1px solid #eee;
+}
+.more li a{
+    display: block;
+    border-top:1px solid #eee;
+    padding: 0 0.4rem 0 0.3733rem;
+    height: 1.28rem;
+    line-height: 1.28rem;
+    background: #fff;
+    overflow: hidden;
+}
+
+.more i {
+    margin: 0.32rem 0.32rem 0 0;
+    width: 0.53rem;
+    height: 0.53rem;
+    background: url(../images/home_more/more_01.png) 0 0.06rem no-repeat;
+    background-size: 0.5333rem 4.2267rem
+}
+
+.more b {
+    margin-top: 0.4267rem;
+    width: 0.24rem;
+    height: 0.4267rem;
+    background: url(../images/home_more/more_0.png) 0 0 no-repeat;
+    background-size: 0.24rem 0.4267rem;
+}
+
+.more li:nth-child(1) i {
+    background-position: 0 -0.6rem;
+}
+
+.more li:nth-child(2) i {
+    background-position: 0 -1.3rem;
+}
+
+.more li:nth-child(3) i {
+    background-position: 0 -2.1rem
+}
+
+.more li:nth-child(4) i {
+    background-position: 0 -2.8rem
+    
+}
+
+.more li:nth-child(5) i {
+    background-position: 0 -3.64rem
+}
+
+
+.more .more_space1 {
+    margin-bottom: 0.4rem;
+    border-bottom: 0.0133rem solid #eee
+}
+
+.more .more_space2 {
+    margin-bottom: 0.2667rem;
+    border-bottom: 0.0133rem solid #eee
+}

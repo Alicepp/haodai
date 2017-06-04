@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/automatic_bid_explain.css">
+	<meta name="author" content="wuping" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<section class="explainWrap">
+	<dl class="explainMod">
+		<dt class="mod-title"><span>功能说明</span></dt>
+		<dd>1.自动投标是好贷宝推出的一个帮助用户快速投标的工具，在取得用户授权后，依据用户设定的条件，帮助用户高效投标。</dd>
+		<dd>2.使用自动投标后，您的投标资金会通过系统根据一定计算方法自动出借到多个项目。</dd>
+		<dd>3.自动投标功能仅是利用用户中已授权的可用余额进行自动复投，并不对所投标项目的收益做出任何承诺与保证。</dd>
+	</dl>
+	<dl class="explainMod">
+		<dt class="mod-title"><span>规则说明</span></dt>
+		<dd>1.自动投标工具仅适用于精选项目。</dd>
+		<dd>2.因开启自动投标人数数量、开启自动投标的时间、线上发布网络借贷项目数量、借款人借款金额等原因限制，平台不保证您账户内授权自动投标的金额能在当日全部出借完毕。</dd>
+		<dd>3.自动投标功能会根据用户设置，结合用户的账户可用余额向符合设置条件的精选项目进行出借，具体规则如下：
+			<p>a.可用余额大于保留余额，执行自动投标。</p>
+			<p>b.可用余额小于保留余额，不执行自动投标。</p>
+		</dd>
+		<dd>4.用户开启此功能，并完成条件设置后，自动投标功能将在十分钟内生效。</dd>
+		<dd>5.出借序列按照用户开启自动投标时间先后进行排序。</dd>
+		<dd>6.开启自动投标功能后，系统会将您的余额直投或散投至各个项目中。</dd>
+		<dd>7.自动投标进度可在我的“投标记录”---“精选项目”中查询。</dd>
+	</dl>
+</section>
+{include file="_common/footer.htm"}
+</body>
+</html>

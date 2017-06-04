@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+<div class="detailWrap">
+	{include file="_common/header.htm" returnBtn="back" rightLink="share"}
+	{if is_login()}<!-- 已登录 -->
+		{assign var="login_status" value="true"}
+    {else}<!-- 未登录 -->
+		{assign var="login_status" value="false"}
+    {/if}
+	<section class="pageMain">
+		<div class="proMain">
+			<!-- 新手专享 -->
+			{if $isNew eq 1 && $isNewBid eq 1}
+			<p class="newuserTip">此项目仅限于首次出借用户</p>
+			{/if}
+			<div class="yieldBox">
+				<div class="yieldCircle">
+					<svg width="100%" height="100%" viewBox="0 0 38 38" class="J_circle" data-pre="{$result.progress}">
+						<circle r="16" cx="19" cy="19" stroke-width="1" stroke="rgba(255,255,255,0.34)" fill="none"></circle>
+
+						<circle class="progressCircle J_preC" r="16" cx="19" cy="19" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbd46c" stroke-dasharray="0 100" fill="none" stroke-opacity="0" transform="rotate(-89, 19 19)" ></circle>
+						<circle class="lineEnd J_lineEnd" r="1.3" cx="19" cy="3" stroke-width="0.8" stroke="#fbd46c" fill="#fff"></circle>
+
+						</line>
+					</svg>
+					<div class="yieldNum">
+						<p class="yield">{$result.realFinanceRate}<span class="precent">%</span></p>
+						<p>预期年化</p>
+					</div>
+				</div>
+			</div>
+			<span class="investProgress">出借进度：{$result.progress}%</span>
+			<div class="otherInfos">
+				<span>{$result.min}元起投</span>
+				<span>{$result.refundWayStr}</span>
+				<span>项目期限 {$result.approvedPeriod}</span>
+			</div>
+		</div>
+		<ul class="proFund clearfix">
+			<li>
+				<p class="fundName">项目金额（元）</p>
+				<p class="fundNum">{$result.approvedAmount|formatMoney}</p>
+			</li>
+			<li>
+				<p class="fundName">剩余可投金额（元）</p>
+				<p class="fundNum cRed">{$result.sAmount|formatMoney}</p>
+			</li>
+		</ul>
+		{if $result.bidStatus lt 3}
+		<div class="pro-time J_countTime" data-time="{$result.SurplusTime}" data-settime="{$result.selltime}" data-showline="true">剩余筹标时间: <span class="leftTime"><i class="cRed J_day"></i> 天 <span class="leftTime"><i class="cRed J_hour"></i> 小时 <i class="cRed J_mini"></i> 分 <i class="cRed J_sec"></i> 秒</span></div>
+		{/if}
+		<ul class="relationLink">
+			<li>
+				<a href="/bid/intro/{$result.bid}">
+					<span class="rArrow"></span>
+					<i class="icon icon_moredetail"></i>
+					更多详情
+				</a>
+			</li>
+			<li>
+				<a href="/bid/bidlog/{$result.bid}">
+					<span class="rArrow"></span>
+					<i class="icon icon_record"></i>
+					投资记录
+				</a>
+			</li>
+			<li>
+				<a href="/bid/earn/{$result.bid}">
+					<span class="rArrow"></span>
+					<i class="icon icon_income"></i>
+					预计收益
+				</a>
+			</li>
+		</ul>
+		<div class="bulbRemind">
+			<i class="icon icon_bulb"></i>
+			预期收益不等于实际收益；借贷有风险，出借需谨慎。
+		</div>
+		<!-- 新手专享提示 -->
+		{if $isNew eq 1 && $isNewBid eq 1}
+        <p class="newuserTipBt">非首次出借用户不可投此标</p>
+        {/if}
+	</section>
+	<section class="pageBottom">
+    {$url = getRedirectStr('/bid/buy/'|cat:$result.bid, true)}
+		<!-- 按钮禁用class添加 disable, 已满标 添加 hasFull -->
+		{if $result.bidStatus >= 3}<!--已满标-->
+		<span class="btn redBtn hasFull">{$result.status_title}</span>
+		{elseif $result.bidStatus lte 1}<!--待发售-->
+			{if $isNew eq 1 && $isNewBid eq 1}
+			<!--新手标-->
+			<a href="javascript:;" class="btn redBtn disable J_login" data-islogin="{$login_status}">仅限新手</a>
+			{else}
+			<!--非新手标-->
+			<a href="{$url}" class="btn redBtn J_login" data-islogin="{$login_status}">立即投标</a>
+			{/if}
+		{else}<!--发售中-->
+
+			{if $isNew eq 1 && $isNewBid eq 1}
+            <!--新手标-->
+            <a href="javascript:;" class="btn redBtn disable J_login" data-islogin="{$login_status}">仅限新手</a>
+			{else}
+			<!--非新手标-->
+			<a href="{$url}" class="btn redBtn J_login" data-islogin="{$login_status}">立即投标</a>
+			{/if}
+
+		{/if}
+
+	</section>
+	{include file="_common/footer.htm"}
+</div>
+<!-- 登录弹窗 -->
+<div class="J_popLogin none">
+	{include file="_common/login.htm" method="pop"}
+</div>
+<script type="text/javascript">
+    require('common:static/widget/bid_regulardetail/init');
+</script>
+</body>
+</html>

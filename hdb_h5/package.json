@@ -1,0 +1,15 @@
+{
+  "name": "m.haodaibao.com",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "fis3 release -d ../ -wL",
+    "mini": "fis3 release -d ../ mini",
+    "build": "fis3 release -d ../ domain"
+  },
+  "devDependencies": {
+    "fis-optimizer-html-minifier": "^0.0.9",
+    "fis3-hook-commonjs": "^0.1.25",
+    "fis3-parser-less-2.x": "^0.1.4",
+    "fis3-postpackager-loader": "^2.1.4"
+  }
+}

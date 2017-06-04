@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm"}
+<div class="appwrap">
+	<button id="testshare">测试分享3.0</button>
+	<a id="testshare2" href="">测试分享2.4</a>
+
+	{if isset($verify)}
+		<h1 style="font-size: 0.5rem;text-align: center;">{$verify}</h1>
+		<pre>
+            {$userinfo|print_r}
+        </pre>
+	{/if}
+
+	<input type="text" value='{_get_cache_userinfo("mobilePhone")}'>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/testshare/init');
+</script>
+</body>
+</html>

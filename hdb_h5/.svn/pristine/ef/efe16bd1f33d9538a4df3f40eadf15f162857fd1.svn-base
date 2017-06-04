@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lvpp" />
+  <title>{$title}</title>
+  <script type="text/javascript" src="/static/lib/mod.js"></script>
+  {include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm"  returnBtn="back"}
+<form action="{$action_url}" class="forgetDealForm" forgetDeal="1">
+	<div class="container">
+		<div class="modelLia border-top-1">
+			<h5 class="title-a">手机号</h5>
+            <div class="con-a">{$mobilePhone}</div>
+            <input type="hidden" name="mobilePhone" class="jsMobilePhone" value="{$mobilePhone}" />
+		</div>
+		<div class="modelLia imgCode">
+			<h5 class="title-a">图形验证码</h5>
+			<div class="con-a">
+				<input type="text" name="imageCode" class="cInput jsImgCode" placeholder="请输入图形验证码" />
+			</div>
+			<div class="con-b">
+				<img src="{$code}" class="J_graphCode" data-url="/common/getCodeImg" />
+			</div>
+		</div>
+		<div class="modelLia">
+			<h5 class="title-a">验证码</h5>
+			<div class="con-a">
+				<input type="text" name="identifyCode" class="jsSmsCode" placeholder="请输入6位验证码" >
+			</div>
+            <div class="con-b">
+            	<input type="button" class="comGetCode" url="{$send_code}" value="获取验证码"/>
+            </div>
+		</div>
+		<div class="modelLia">
+			<h5 class="title-a">交易密码</h5>
+			<div class="con-a">
+				<input type="password" name="password" class="dealPassWord passWordCrypt" placeholder="6-20位的交易密码">
+			</div>
+			<div class="con-b">
+				<!-- 显示密码class icon_pwd_hide -->
+				<span class="icon"><a href="javascript:;" class="icon eye icon_pwd_hui_hide"></a></span>
+			</div>
+		</div>
+		<div class="modelLia">
+			<h5 class="title-a">确认交易密码</h5>
+			<div class="con-a">
+				<input type="password" name="passwordRepeat" data-recheck="dealPassWord" class="jsPassWordAffirm passWordCrypt" placeholder="请再次输入交易密码">
+			</div>
+			<div class="con-b">
+				<!-- 显示密码class icon_pwd_hide -->
+				<span class="icon"><a href="javascript:;" class="icon eye icon_pwd_hui_hide"></a></span>
+			</div>
+		</div>
+		<div class="ml30 mt30 tips-font">
+			6-20位数字、字母、符号，不允许有空格
+		</div>
+	</div>
+	<div class="content mt100">
+		<button class="btn redBtn" type="submit">确认</button>
+	</div>
+</form>
+
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_password_forget_deal/init');
+</script>
+</body>
+</html>

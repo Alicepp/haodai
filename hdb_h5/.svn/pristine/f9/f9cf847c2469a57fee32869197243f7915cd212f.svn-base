@@ -1,0 +1,14 @@
+@charset "utf-8";
+.planningExplain {padding-top:1.747rem;width:100%;height:8.96rem;background:url("../images/bid/explainbg.jpg") no-repeat;background-size:100% 100%;}
+.planningExplain .starBid {position:relative;margin:0 auto;width:8.04rem;height:2.573rem;text-align:center;background:url("../images/bid/bid_titlebg.png") no-repeat;background-size:100% 100%;}
+.planningExplain .starBid .starbidTit {padding:0.507rem 0 0.2rem;font-size:0.8rem;color:#ff4444;line-height: 1;}
+.planningExplain .starBid .duration {font-size:0.32rem;color:#0d507b;line-height:1;}
+.planningExplain .starBid .duration span {margin:0 0.133rem;}
+.planningExplain .explain {margin:0.4rem auto 0;width:8.04rem;color:#fff;}
+.planningExplain .explain dt {margin-bottom:0.053rem;text-align:center;}
+.planningExplain .explain .expName {position:relative;display:inline-block;padding:0 0.44rem;font-size:0.453rem;line-height:0.56rem;}
+.planningExplain .explain .expName:before, .planningExplain .explain .expName:after {position:absolute;top:0.293rem;display: block;content:' ';width:1.707rem;height:0.027rem;overflow:hidden;background-color:#fff;}
+.planningExplain .explain .expName:before {left:-1.707rem;}
+.planningExplain .explain .expName:after {right:-1.707rem;}
+.planningExplain .explain dd {margin-top:0.2rem;font-size:0.373rem;line-height:0.533rem;text-indent:0.533rem;}
+.planningExplain .starMark {position: absolute;right:0;top:0.133rem;display:block;padding:0 0.187rem;height:0.373rem;font-size:0.213rem;text-align:center;color:#fff;line-height:0.373rem;background-color:#ffae00;border-radius:0.16rem 0 0 0.16rem / 0.187rem 0 0 0.187rem;}

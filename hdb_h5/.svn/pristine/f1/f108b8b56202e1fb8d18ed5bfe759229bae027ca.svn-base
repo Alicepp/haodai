@@ -1,0 +1,104 @@
+@import url('common/pulldown.css?__inline');
+@import url('common/noticeDetail.css?__inline'); /*加载消息公用样式*/
+
+/*弹出框定位*/
+.popPage {
+    position: fixed;
+    height: 100%;
+}
+
+.head{
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+    height: 1.2rem;
+    border-bottom:0.0133rem solid #eee;
+    background-color: #f9f9f9;
+    z-index: 99;
+}
+.head h3{
+    float:left;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width:50%;
+    height:1.1733rem;
+    font-size:0.4rem;
+    color:#5f616b;
+}
+.head span{
+    padding:0.1333rem 0.1rem;
+}
+/*公告的红色样式*/
+.head .active span{
+    display: inline-block;
+    border-bottom:3px solid #ff6159;
+    color:#ff6159;
+}
+.listCon{
+    padding-top: 1.2rem;
+}
+.notice_list{
+    border-bottom:0.0133rem solid #eee;
+    padding:0 0.4rem 0 0.1333rem;
+    width:100%;
+    height:1.7733rem;
+    background:#fff;
+    display:-webkit-box;
+    -webkit-box-pack:justify;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:justify;
+    box-align:center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.notice_list .listL{
+    padding-left:0.2533rem;
+    position:relative;
+}
+.notice_list .listL span{
+    display: block;
+}
+.arrows{
+    width:0.24rem;
+    height:0.4267rem;
+    background:url(./../images/home_more/more_0.png) 0 0 no-repeat;background-size:0.24rem 0.4267rem;
+}
+.notice_list .list_t{
+    font-size:0.4267rem;
+    line-height:0.8rem;
+    color:#5f616b;
+}
+.notice_list .list_b{
+    font-size:0.32rem;
+    line-height:0.6rem;
+    color:#b7b9c5;
+}
+.notice_list .gray{
+    color:#b7b9c5;
+}
+.notice_list .dot{
+   position:absolute;
+    left:0;
+    top:0.2rem;
+    width:0.16rem;
+    height:0.16rem;
+    border-radius:50%;
+    background:#ff6159;
+}
+/*消息*/
+.noMsg{font-size:0.373rem;padding-top:1.6rem;text-align: center;}

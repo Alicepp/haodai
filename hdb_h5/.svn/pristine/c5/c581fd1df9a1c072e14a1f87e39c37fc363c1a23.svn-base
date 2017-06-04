@@ -1,0 +1,9 @@
+
+@import url('common/button.css?__inline');
+
+body{background-color: #fff;}
+.error_wrap .bd{padding-bottom: 1.547rem;}
+.error_wrap .bd .bg{background:url(../images/error/error.png) no-repeat;background-size: 100%;width: 7.867rem;height: 5.093rem;margin:1.787rem auto 1.2rem auto;}
+.error_wrap .bd .title{font-size: 0.427rem;text-align: center;}
+.error_wrap .ft{padding:0 1.7rem;}
+.error_wrap .ft a{margin-bottom: 0.533rem;}

@@ -1,0 +1,61 @@
+
+
+@import url('common/subsidiary.css?__inline');
+@import url('common/pulldown.css?__inline');
+
+.payment_records .mb90{
+    margin-bottom: 0;
+}
+.payment_records .container{ margin: 0;}
+.nav-payment {
+    width: 100%;
+    background: #fff;
+    color: #828490;
+    height: 1.0rem;
+    line-height: 1.0rem;
+    border-bottom: 1px #eee solid;
+    border-top:0.267rem solid #f9f9f9;
+    box-sizing: border-box;
+    clear: both;
+    display: table;
+    font-size: 0.45rem;
+    position: fixed;
+    top:1.2rem;
+    z-index: 98;
+}
+[data-dpr="1"] .nav-payment {
+    border-top-width:0.267rem !important;
+}
+.border-top-30{border-top:0.4rem solid #fff;}
+.border-top-1{width: 100%;padding: 0 1.07rem;border-top: 1px #eee solid;}
+
+.nav-payment .nav-wid {
+    width: 2.67rem;
+    text-align: center;
+}
+
+.nav-payment .nav-wid.active {
+    border-bottom: 3px solid #fe564e;
+    color: #fe564e;
+}
+.innercon{
+    box-sizing: border-box;
+    margin-top: 1.333rem;
+    /*border-top:1.4rem solid transparent;*/
+    border-bottom:0.2rem solid transparent;
+}
+
+.user-record-lp .list .back-money {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 1.73rem;
+    margin: 0;
+    right: 0.4rem;
+    font-size:0.45rem;
+}
+.user-record-lp .list{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}

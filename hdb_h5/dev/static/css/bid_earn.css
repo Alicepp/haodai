@@ -1,0 +1,41 @@
+
+@import url('common/button.css?__inline');
+
+.projectInfo h2 {
+	padding:0 0.4rem;
+	height:1.027rem;
+	line-height: 1.027rem;
+	font-size:0.4rem;
+}
+.projectInfo .infoItem {
+	padding:0 0.4rem;
+	overflow:hidden;
+	font-size:0.4rem;
+}
+.projectInfo .number {
+	color:#ff6159;
+	font-size:0.48rem;
+}
+.countIncome {
+	margin-top:0.267rem;
+}
+.countIncome .countIpt {
+	padding:0 0.24rem;
+	width:4.587rem;
+	height:0.907rem;
+	border:0.013rem solid #ddd;
+	border-radius: 0.093rem;
+	-webkit-border-radius: 0.093rem;
+}
+.blueBtn {
+	display: inline-block;
+	width:2.267rem;
+	height:0.907rem;
+	line-height:0.907rem;
+	text-align: center;
+	color:#fff;
+	font-size:0.4rem;	
+	background-color:#00a8ff;
+	border-radius:0.093rem;
+	-webkit-border-radius:0.093rem;
+}

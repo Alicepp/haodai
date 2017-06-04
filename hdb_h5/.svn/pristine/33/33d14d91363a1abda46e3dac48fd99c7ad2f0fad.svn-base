@@ -1,0 +1,187 @@
+@import url('modelLia.css?__inline'); /*加载公共左右行样式*/
+@import url('button.css?__inline'); /*加载botton样式*/
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+html,body{
+    /*background-color: #ffd17a;*/
+}
+.hideScroll {
+    height:100%;
+    overflow:hidden;
+}
+.loginDiv {
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color:#ffd17a;
+    background-image:-webkit-linear-gradient(top,#ff5f50,#ffad55);
+    background-image:-o-linear-gradient(top,#ff5f50,#ffad55);
+    background-image:-ms-linear-gradient(top,#ff5f50,#ffad55);
+    background-image:linear-gradient(top,#ff5f50,#ffad55);
+    background-repeat: repeat-x;
+    
+}
+.header .returnBtn:active{
+    background: none;
+}
+
+.loginDiv .header{position:absolute;background: none;border-bottom: 0;}
+.loginDiv .header .returnBtn i{background-image: url(../../images/common/arrow_white.png);}
+.loginDiv .wrap{height:100%;background: url(../../images/login/bg1.png) no-repeat;background-size: 100%;}
+.loginDiv .main{position: relative;}
+.loginDiv .main .hd .logo{background: url(../../images/login/logo.png) no-repeat;background-size:100%;width: 2.493rem;height: 1.013rem;margin:0 auto;}
+.loginDiv .main .bd{padding-top: 1.867rem;position:relative;top:0;left:0;right:0;bottom:0;z-index: 99;}
+.loginDiv .main .bd .loginForm{margin:0 1.333rem;color: #fff;}
+.loginDiv .main .bd .modelLia{background:none;border-bottom-color: #fff;padding:0 0.1rem;}
+.loginDiv .main .bd .modelLia input{background: none;color: #fff;}
+.loginDiv .main .bd .modelLia input::-webkit-input-placeholder {color:#fff;}
+.loginDiv .main .bd .modelLia input:-moz-placeholder {color:#fff;}
+.loginDiv .main .bd .modelLia input::-moz-placeholder{color: #fff;}
+.loginDiv .main .bd .modelLia input:-ms-input-placeholder{color: #fff;}
+.loginDiv .main .bd .is{padding:0 0.2rem;font-size: 0.42rem;}
+.loginDiv .main .bd .txt a{color: #fff;font-size: 0.4rem;}
+.loginDiv .ft{background: url(../../images/login/p3.png) no-repeat;background-size: 100%;position: absolute;bottom:0;left: 0;width: 100%;height: 2.72rem;z-index: 9;}
+.loginDiv .ft p{font-size: 0.36rem;color: #fff;text-align: center;line-height: 0.6rem;}
+.loginDiv .icon_pwd_hui_hide{background-image: url(../../images/icon/icon_pwd_hide.png?__inline);padding:0.34rem;} /*密码眼睛隐藏状态*/
+.loginDiv .icon_pwd_hui_show{background-image: url(../../images/icon/icon_pwd_show.png?__inline);padding:0.34rem;} /*显示状态*/
+
+/*错误提示*/
+.loginDiv .customForm{margin-top: -1.9rem;color: #ffe822;}
+
+@media screen and (max-height: 465px) {
+    .ft{
+        position: relative;
+        color: #c00;
+        top:11rem;
+    }
+}
+
+/*飘带定义动画*/
+@-webkit-keyframes float2 {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0px)
+    }
+
+    25% {
+        -webkit-transform: translateY(15px)
+    }
+
+    75% {
+        -webkit-transform: translateY(-15px)
+    }
+
+}
+
+@-moz-keyframes float2 {
+    0%,
+    50%,
+    100% {
+        -moz-transform: translateY(0px)
+    }
+
+    25% {
+        -moz-transform: translateY(15px)
+    }
+
+    75% {
+        -moz-transform: translateY(-15px)
+    }
+
+}
+
+@keyframes float2 {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px)
+    }
+
+    25% {
+        transform: translateY(15px)
+    }
+
+    75% {
+        transform: translateY(-15px)
+    }
+}
+
+@-webkit-keyframes float1 {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0px)
+    }
+
+    25% {
+        -webkit-transform: translateY(-15px)
+    }
+
+    75% {
+        -webkit-transform: translateY(15px)
+    }
+
+}
+
+@-moz-keyframes float1 {
+    0%,
+    50%,
+    100% {
+        -moz-transform: translateY(0px)
+    }
+
+    25% {
+        -moz-transform: translateY(-15px)
+    }
+
+    75% {
+        -moz-transform: translateY(15px)
+    }
+
+}
+
+@keyframes float1 {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px)
+    }
+
+    25% {
+        transform: translateY(-15px)
+    }
+
+    75% {
+        transform: translateY(15px)
+    }
+
+}
+
+/*飘带背景*/
+.loginDiv .wall{position: absolute;left:0;bottom:0;width: 100%;}
+.loginDiv .wall.bg1{background: url('../../images/login/p1.png') no-repeat;
+    background-size: 100%;
+    -webkit-animation: float2 4s linear 0s  infinite;
+    -moz-animation: float2 4s linear 0s  infinite;
+    animation: float2 4s linear 0s  infinite;height: 1.68rem;}
+.loginDiv .wall.bg2{background:url('../../images/login/p2.png') no-repeat;
+    z-index: 1;background-size: 100%;
+    -webkit-animation: float1 4s linear 0s  infinite;
+    -moz-animation: float1 4s linear 0s  infinite;
+    animation: float1 4s linear 0s  infinite;height: 1.587rem;}
+
+/*动画时间*/
+.slideInUp {
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+}
+.slideOutDown {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

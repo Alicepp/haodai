@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+<div class="J_mainView">
+	{include file="_common/header.htm" returnBtn="back" rightLink="withdrawExp"}
+	<section class="cashWrap mt20">
+		<form action="{getRedirectStr('/common/common_verificationTradePwd', true)}" class="validForm" method="post">
+			<div class="infoList">
+				<div class="bankInfo">
+					<span class="bankIcon bankIcon_{$dkBankCode}"></span>
+					<div class="infoCont">
+						<p class="bankName">{$bank}<span class="grayTxt">**** **** ****{$bankCard}</span></p>
+						<p class="grayTxt">可提现金额 <span class="cRed J_leftSum">{$usableAmount|formatMoney}</span> 元</p>
+					</div>
+				</div>
+				<div class="infoItem clearfix">
+					<div class="itemRight"><a href="javascript:;" class="getAll J_getAllLeft">全部提现</a></div>
+					<label class="infoName">提现金额：</label>
+					<div class="infoCont">
+						<input type="tel" name="" class="jsWithdraw" placeholder="请输入大于2元金额">
+					</div>
+				</div>
+			</div>
+			<div class="relatedInfo">
+				<p class="infoRow">手续费: <span class="J_factorage">1.00</span>元</p>
+				<p class="infoRow">预计到账时间: <span>1-2个</span>工作日</p>
+			</div>
+			<div class="contentBt">
+				<button class="btn redBtn J_withdrawBtn" type="submit" disabled="true">提现</button>
+			</div>
+		</form>
+	</section>
+	{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_cashvalue_withdraw/init');
+</script>
+</div>
+<div class="none J_dialogHtml">
+	<div class="dialogInner">
+		<a href="javascript:;" class="closeDialog J_closeWithdraw"></a>
+		<form action="{getRedirectStr('/my/cashvalue/do_withdraw', true)}" method="post" class="widthdrawForm">
+			<div class="mTitle">本次提现</div>
+			<div class="money">
+				<div class="cRed"><!-- <span>￥</span>  --> <span class="num J_getNum f72"></span></div>
+				<div>（手续费<span class="J_fact">1.00</span>元）</div>
+				<input type="hidden" name="withdrawAmount" class="J_getNumHidd" />
+			</div>
+			<div class="pwBox">
+				<input type="password" name="tradePwd" class="pwIpt dealPassWord passWordCrypt" />
+			</div>
+			<div class="dialogBtn">
+				<button type="submit" class="btn redBtn confirm">确定</button>
+			</div>
+		</form>
+		<div class="forgetPw"><a href="{getRedirectStr('/my/password/forget_deal', true)}">忘记密码？</a></div>
+	</div>
+</div>
+<!-- 充值说明 -->
+{include file="_common/statictpl/recharge_explain.htm" method="pop"}
+</body>
+</html>

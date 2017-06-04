@@ -1,0 +1,8 @@
+
+@import url('common/modelLia.css?__inline'); /*加载公共左右行样式*/
+@import url('common/button.css?__inline'); /*加载botton样式*/
+
+
+
+.modelLia .title-a{color:#5f616b;}
+.modelLia .title-a{width:3.2rem;}

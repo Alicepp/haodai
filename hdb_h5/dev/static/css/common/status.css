@@ -1,0 +1,10 @@
+/*各种成功失败提示*/
+body{background-color:#fff;}
+.status_wrap{padding:0 0.373rem;}
+.status_wrap .bd{text-align: center;padding: 1.333rem 0 2.0rem 0;}
+.status_wrap .bd .pic img{margin:0 auto;width: 60%;}
+.status_wrap .bd .title{padding-top:1.2rem;font-size: 0.533rem;}
+.status_wrap .bd .title .cRed{padding:0 0.1rem;}
+.status_wrap .bd .mtitle{font-size: 0.4rem;padding-top: 0.3rem;}
+.status_wrap .bd .f36{font-size: 0.48rem;}
+.status_wrap .bd .f46{font-size: 0.613rem;}

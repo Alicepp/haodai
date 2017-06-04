@@ -1,0 +1,74 @@
+
+.help-box{
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.help-subset .help-subset-title{
+    width: 100%;
+    height: 1.27rem;
+    border-bottom: 0.013rem solid #fff;
+    border-top: 0.013rem #e8ecf0 solid;
+    background: #ffffff;
+    line-height: 1.33rem;
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+    clear: both;
+    display: table;
+    font-size: 16px;
+}
+.help-subset .help-subset-title p{
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.37rem;
+    color: #282828;
+}
+.help-subset .help-subset-title .rightArrow{
+    overflow: hidden;
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    background: url("../images/common/tr.png") center center no-repeat;
+    width: 0.48rem;
+    height: 0.48rem;
+    padding: 0;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 500ms;
+    transition-property: -webkit-transform;
+    transition-duration: 500ms;
+    background-size: 0.19rem;
+}
+.help-subset .help-subset-title.open  .rightArrow{
+    transform:rotate(180deg);
+    -ms-transform:rotate(90deg);    /* IE 9 */
+    -moz-transform:rotate(90deg);   /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);     /* Opera */
+}
+.help-subset .help-subset-detail {
+    background-color: #f4f4f4;
+    padding: 0.26rem 0.53rem 0.38rem;
+    line-height: 0.59rem;
+    font-size: 0.35rem;
+    color: #666;
+    display: none;
+}
+.help-subset .help-subset-detail.show{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

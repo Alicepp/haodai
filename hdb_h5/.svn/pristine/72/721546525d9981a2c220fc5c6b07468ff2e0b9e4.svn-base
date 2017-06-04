@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/bid_earn.css">
+	<meta name="author" content="wuping" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<section class="projectInfo">
+	<h2>精选项目第2333期</h2>
+	<ul class="details">
+		<li class="infoItem clearfix border-top-1">
+			<div class="itemRight"><span class="number">130,000</span></div>
+			<div class="infoCont">
+				剩余可投金额(元)
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span>11%</span></div>
+			<div class="infoCont">
+				预期年化
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span>1个月</span></div>
+			<div class="infoCont">
+				出借期限
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span>按月付息,到期还本</span></div>
+			<div class="infoCont">
+				收益方式
+			</div>				
+		</li>
+	</ul>
+	<ul class="countIncome">
+		<li class="infoItem clearfix border-top-1">
+			<div class="itemRight">
+				<button class="blueBtn">开始计算</button>
+			</div>
+			<div class="infoCont">
+				<input type="number" name="" class="countIpt" placeholder="10000" />
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">1291.66</span></div>
+			<div class="infoCont">
+				本息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				利息合计
+			</div>				
+		</li>
+	</ul>
+</section>
+{include file="_common/footer.htm"}
+</body>
+</html>

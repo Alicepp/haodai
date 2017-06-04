@@ -1,0 +1,50 @@
+/*消息详情*/
+.noticeDetailDiv .wrap{
+    border:0.0133rem solid #eee;
+    padding-left:0.4rem;
+    width:100%;
+    background: #fff;
+}
+.noticeDetailDiv .title{
+    border-bottom:0.0133rem solid #eee;
+    padding-right:0.4rem;
+    width:100%;
+    height:1.16rem;
+    overflow:hidden;
+}
+.noticeDetailDiv .title .titleL{
+    float:left;
+    line-height:1.16rem;
+    font-size:0.4267rem;
+    color:#5f616b;
+}
+.noticeDetailDiv .title .titleR{
+    float:right;
+    line-height:1.16rem;
+    font-size:0.32rem;
+    color:#b7b9c5;
+}
+.noticeDetailDiv .message{
+    padding:0.3867rem 0.6rem 0.3867rem 0;
+    line-height:0.6667rem;
+    font-size:0.3733rem;
+    color:#51616b;
+    word-wrap:break-word;
+}
+
+/*无公告详情*/
+.noticeDetailDiv .no-notice-detail{text-align: center;}
+.noticeDetailDiv .no-notice-detail .iconNotice{
+    margin:0 auto;
+    margin-top:0.96rem;
+    border:0.0267rem dashed #d4d4d4;
+    border-radius:50%;
+    width:3.5333rem;
+    height:3.5333rem;
+    background: url(./../images/bid/norecord.png) 65% 45% no-repeat;
+    background-size:2.12rem 2.0667rem;
+}
+.noticeDetailDiv .no-notice-detail .txt{
+    font-size: 0.373rem;
+    margin-top: 0.4rem;
+}

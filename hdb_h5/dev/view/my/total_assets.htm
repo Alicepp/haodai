@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="wrap">
+	<div class="bd">
+		<div class="mhd cf">
+			<span class="cRed fr">{$myinfo.totalAssets|formatMoney}</span>
+			<span>总资产：</span>
+		</div>
+		<div class="mbd">
+			<div class="myChart" id="myChart"></div>
+		</div>
+	</div>
+	<div class="ft">
+		<dl>
+			<dt>资金明细</dt>
+			<dd class="cf">
+				<span class="fr jsUsableAmount" usableA="{$myinfo.usableAmount}">{$myinfo.usableAmount|formatMoney}</span>
+				<span class="icon_bg icon_usable"></span>
+				<span>可用余额</span>
+			</dd>
+			<dd class="cf">
+				<span class="fr jsFrozenAmount" frozenAmount="{$myinfo.frozenAmount}">{$myinfo.frozenAmount|formatMoney}</span>
+				<span class="icon_bg icon_freeze"></span>
+				<span>冻结金额</span>
+			</dd>
+			<dd class="cf">
+				<span class="fr jsTotalCollection" totalCollection="{$myinfo.totalCollection}">{$myinfo.totalCollection|formatMoney}</span>
+				<span class="icon_bg icon_await"></span>
+				<span>待收金额</span>
+			</dd>
+			<dd class="cf">
+				<span class="fr jsAccountRemin" accountRemin="{$myinfo.accountRemin}">{$myinfo.accountRemin|formatMoney}</span>
+				<span class="icon_bg icon_rxb"></span>
+				<span>日息宝金额</span>
+			</dd>
+		</dl>
+	</div>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_total_assets/init');
+</script>
+</body>
+</html>

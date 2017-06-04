@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/my_realname_bankcard.css">
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<!-- 未绑卡 -->
+{if empty($result)}
+<section class="bankBox">
+	<div class="nocard">
+		<a href="{getRedirectStr('/my/realname/bindcard',true)}" class="goBindcard">
+			<p>您还未绑卡，完成一笔充值即绑定银行卡</p>
+			<p class="goText"><i class="plus">＋</i><span>点击去绑卡</span></p>
+		</a>
+	</div>
+	<dl class="cardTips">
+		<dt>温馨提示</dt>
+		<dd>
+			为了保证您的资金安全，每位用户只能绑定一张银行卡，用于全程资金交易和提现。
+		</dd>
+	</dl> 
+</section>
+{else}
+<!-- 已绑卡 -->
+<section class="bankBox">
+	<div class="bankcardInfo">
+		<h3>{$result.bank}</h3>
+		<p>**** **** **** {$result.bankCard}</p>
+	</div>
+	<dl class="cardTips">
+		<dt>温馨提示</dt>
+		<dd>
+			1. 为了保证您的资金安全，每位用户只能绑定一张银行卡，用于全程资金交易和提现。
+		</dd>
+		<dd>
+			2. 如需更换银行卡请联系客服 : <a href="tel:4006288800" class="telephone">400-628-8800</a>
+		</dd>
+	</dl> 
+</section>
+{/if}
+{include file="_common/footer.htm"}
+</body>
+</html>

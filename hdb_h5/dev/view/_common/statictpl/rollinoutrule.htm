@@ -1,0 +1,63 @@
+{if isset($method) && $method eq 'pop'}
+<div class="popPage none J_popPage" data-name="roll">
+	<header class="header">
+        <a href="javascript:;" class="returnBtn J_popPageBack"><i></i></a>
+        <h1 class="txt">转入转出说明</h1>
+    </header>
+    <div class="popPageMain">
+{/if}
+	<section class="rollSection mt20">
+		<p class="title">转出说明</p>
+		<p class="descr">日息宝转出无限制。</p>
+		<p class="title">转入说明</p>
+		<p class="descr">每日<span class="tag">11:00</span>点，日息宝更新额度。</p>
+		<div class="row">
+			<table class="tab-view">
+				<tr>
+					<th>申购时间</th>
+					<th>开始计息</th>
+					<th>利息到账</th>
+				</tr>
+				<tr>
+					<td>周一</td>
+					<td>周二</td>
+					<td>周三8:00</td>
+				</tr>
+				<tr>
+					<td>周二</td>
+					<td>周三</td>
+					<td>周四8:00</td>
+				</tr>
+				<tr>
+					<td>周三</td>
+					<td>周四</td>
+					<td>周五8:00</td>
+				</tr>
+				<tr>
+					<td>周四</td>
+					<td>周五</td>
+					<td>周六8:00</td>
+				</tr>
+				<tr>
+					<td>周五</td>
+					<td>下周一</td>
+					<td>下周二8:00</td>
+				</tr>
+				<tr>
+					<td>周六</td>
+					<td>下周一</td>
+					<td>下周二8:00</td>
+				</tr>
+				<tr>
+					<td>周日</td>
+					<td>下周一</td>
+					<td>下周二8:00</td>
+				</tr>
+			</table>
+		</div>
+		<p class="descr descr-note">* 如遇国家法定节假日，开始计息日均为节假日结束的第一个工作日。</p>
+	</section>
+{if isset($method) && $method eq 'pop'}
+	</div>
+</div>
+{/if}

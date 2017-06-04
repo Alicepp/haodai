@@ -1,0 +1,62 @@
+
+
+.rollSection {
+    /*margin-top: -20px;*/
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+    padding: 0 0.4rem 0.4rem;
+}
+.rollSection .title {
+    color: #444;
+    line-height: 0.4rem;
+    font-weight: bold;
+    font-size: 0.43rem;
+    padding-top: 0.53rem;
+}
+.rollSection .descr {
+    color: #666;
+    line-height: 1;
+    font-size: 0.37rem;
+    margin-top: 0.4rem;
+}
+.rollSection .tag {
+    color: #f5572d;
+}
+.rollSection .row {
+    width: 100%;
+    clear: both;
+}
+.rollSection .row .tab-view {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+.rollSection .row .tab-view th {
+    background: #f9f9f9;
+    height: 70px;
+    line-height: 70px;
+    color: #444;
+    text-indent: 36px;
+    border: 0.013rem solid #e6e6e6;
+    font-size: 0.37rem;
+}
+.rollSection .row .tab-view td {
+    background: #fff;
+    height: 70px;
+    line-height: 70px;
+    text-indent: 36px;
+    border: 1px solid #e6e6e6;
+    font-size: 0.37rem;
+}
+.rollSection .descr.descr-note {
+    line-height: 46px;
+}
+
+
+
+
+
+

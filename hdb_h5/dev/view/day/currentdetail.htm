@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+<div class="detailWrap">
+	{include file="_common/header.htm" returnBtn="back" rightLink="help"}
+	<section class="pageMain">
+		<div class="projectMain">
+			<div class="topinfo">
+                {if is_login()}<!-- 已登录 -->
+					{assign var="login_status" value="true"}
+					<input type="hidden" name="login_status" value="true" />
+					<p class="modtxt">昨日收益 （元）</p>
+					<div class="amount">{$bid_info.yesterdaygains}</div>
+                {else}<!-- 未登录 -->
+					{assign var="login_status" value="false"}
+					<input type="hidden" name="login_status" value="false" />
+					<a href="/login/index?hdburl=/day/currentdetail" class="loginLink J_login" data-islogin="{$login_status}">请登录后查看</a>
+                {/if}
+			</div>
+			<span class="updateTime">每日{$info.releasetime}:00更新额度</span>
+			<ul class="twoColum clearfix">
+				<li class="colum">
+					<p>总金额（元）</p>
+                    <p class="accountRemin" data-accountRemin={$bid_info.accountRemin}>{($bid_info.accountRemin)|formatMoney}</p>
+				</li>
+				<li class="colum">
+					<p>累计收益（元）</p>
+                    <p>{($bid_info.allinterest)|formatMoney}</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="projectChart">
+			<ul class="twoColum clearfix">
+				<li class="colum">
+					<p class="incomeTop">七日预期年化</p>
+					<p class="incomeBt">{$info.sevenDayRate}<span>%</span></p>
+				</li>
+				<li class="colum">
+					<p class="incomeTop">万份收益</p>
+					<p class="incomeBt">{$info.wanfensy}<span>元</span></p>
+				</li>
+			</ul>
+			<div class="chartBox">
+				<div id="incomeEcharts" data-date="{$date}" data-rate="{$rate}">
+				</div>
+			</div>
+		</div>
+		<div class="bulbRemind"><i class="icon icon_bulb"></i>预期收益不等于实际收益；借贷有风险，出借需谨慎。</div>
+	</section>
+	<section class="pageBottom">
+			<ul class="buttons clearfix">
+				{if is_login()}<!-- 已登录 -->
+					{assign var="login_status" value="true"}
+
+					{if $bid_info.accountRemin gt 0}
+					<!-- 余额>0 按钮可点击 -->
+					<li><a class="rollout J_login cRed" href="/bid/roll_out" data-islogin="{$login_status}">转出</a></li>
+					{else}
+					<!-- 余额==0  按钮置灰 -->
+					<li><a class="rollout J_login" href="javascript:;" data-islogin="{$login_status}">转出</a></li>
+					{/if}
+
+					{if $info.remainnum gt 0}
+					<li><a href="/bid/shift_to" class="J_login cRed" data-islogin="{$login_status}">转入</a></li>
+					{else}
+					<li><a class="J_login" href="javascript:;" data-islogin="{$login_status}">转入</a></li>
+					{/if}
+				{else}<!-- 未登录 -->
+					{assign var="login_status" value="false"}
+					<li><a class="rollout J_login cRed" href="/bid/roll_out" data-islogin="{$login_status}">转出</a></li>
+					<li><a class="J_login cRed" href="/bid/shift_to" data-islogin="{$login_status}">转入</a></li>
+                {/if}
+			</ul>
+		</section>
+	{include file="_common/footer.htm"}
+</div>
+<script type="text/javascript">
+    require('common:static/widget/day_currentdetail/init');
+</script>
+<!-- 登录弹窗 -->
+<div class="J_popLogin none">
+	{include file="_common/login.htm" method="pop"}
+</div>
+</body>
+</html>

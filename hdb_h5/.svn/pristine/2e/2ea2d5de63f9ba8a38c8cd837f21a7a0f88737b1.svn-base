@@ -1,0 +1,122 @@
+
+/*** 提现弹层 ***/
+.withdrawDialog {
+	width:8.667rem;
+	margin-left: -4.333rem;
+}
+@media all and (max-width:540px) {
+  .withdrawDialog {
+    right: 15px;
+    left: 15px;
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
+  }
+}
+.dialogInner {
+	padding:0.24rem 0 0.293rem;
+	/*width:8.667rem;*/
+	font-size:0.373rem;
+	text-align: center;
+	line-height: 0.56rem;
+}
+.dialogInner .money .cRed {
+	margin: 0.013rem 0 0.027rem;
+	height: 1.173rem;
+	overflow: hidden;
+}
+.dialogInner .money .cRed .num {
+	position: relative;
+	display: inline-block;
+	height: 1.173rem;
+	line-height: 1.173rem;
+	font-size: 0.96rem;
+}
+.dialogInner .money .cRed .num:before {
+	display: inline-block;
+	content: '￥';
+	position: absolute;
+	left: -0.907rem;
+	bottom: 0.2rem;
+	font-size: 0.48rem;
+	line-height: 0.48rem;
+}
+.dialogInner .pwBox {
+	margin:0.347rem 0.6rem 0.96rem;
+}
+.withdrawDialog .pwBox .pwIpt {
+	display: block;
+	margin: 0;
+	width: 100%;
+	height: 0.907rem;
+	border: none;
+	border-bottom: 0.013rem solid #d2d5e4;
+	box-shadow: none;
+	text-align: center;
+	font-size: 0.64rem;
+	color: #5f616b;
+}
+.withdrawDialog .dialogBtn .redBtn {
+	display: block;
+	margin: 0;
+	height: 1.28rem;
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	font-size: 0.56rem;
+	color: #fff !important;
+	background-color: #fe564e !important;
+}
+.dialogInner .pwBox .errorTips {
+	margin-top:0.16rem;
+}
+.dialogInner .dialogBtn {
+	margin:0 0.573rem;
+}
+.dialogInner .forgetPw {
+	margin-top:0.16rem;
+}
+.dialogInner .forgetPw a {
+	color:#00a8ff;
+}
+.dialogInner .closeDialog {
+	position: absolute;
+	top:0.027rem;
+	left:0.133rem;
+	display: block;
+	width:1.2rem;
+	height:1.2rem;
+	overflow:hidden;
+}
+.dialogInner .closeDialog:before {
+	position: absolute;
+	top:50%;
+	left:50%;
+	display: block;
+	content: '';
+	width:0.507rem;
+	height:0.507rem;
+	margin: -0.253rem 0 0 -0.253rem;
+	background: url('../../images/icon/icon_close.png?__inline') no-repeat center center;
+	background-origin: 100% 100%;
+}
+
+.sweet-alert.withdrawDialog {
+	border-radius: 0.24rem;
+}
+.sweet-alert.withdrawDialog h2 {
+	margin-bottom:0;
+	height:1.04rem;
+	font-size:0.427rem;
+	color:#5f616b;
+	line-height: 0.933rem;
+	border-bottom: 0.013rem solid #d2d5e4;
+}
+.sweet-alert.withdrawDialog p{
+	position: static;
+	padding:0;
+	font-weight: normal;
+}
+.sweet-alert.withdrawDialog .sa-button-container {
+	display: none;
+}
+

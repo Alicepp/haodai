@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/help_content.css">
+</head>
+<body>
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="appwrap">
+		<section class="section help-subsets" data-section="secur-3" style="display: block;">
+			<div class="help-subset">
+				<div class="help-subset-title">借款人会不会负担不了每月的还款</div>
+				<div class="help-subset-detail justify">
+					1.借款人通过平台借款需向出借人即平台方支付“利息”和“服务费”两部分。"利息"是基于借贷双方个人之间的借贷关系，"服务费用"是基于服务提供方（平台企业）和服务接受方（个人客户）之间的服务关系。
+					<br>
+					<br>
+					2.目前通过“好贷宝”平台撮合实现的借款预期年化限定在我国关于民间借贷利率相关法律法规认可和支持的范围之内。
+					<br>
+					<br>
+					3."服务费"部分是平台为客户提供信息服务收取的服务费用，在双方自愿约定的合理范围内。借款人对借款成本的承受能力经过"好贷宝"平台的严格审核，由双方自主约定，符合借款人实际承受能力，也符合国家相应的法律法规。
+				</div>
+			</div>
+		</section>
+	</div>
+	{include file="_common/footer.htm"}
+</body>
+</html>

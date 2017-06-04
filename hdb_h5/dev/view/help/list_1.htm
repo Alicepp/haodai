@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/help_title_list.css">
+</head>
+<body>
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="appwrap">
+	{if $list|count neq 0}
+	<ul>
+		{foreach from=$list item=i key=k}
+		<li>
+			<a href="/help/content?type={$title_id}&index={$k}">{$i}</a>
+			<span class="rightArrow"></span>
+		</li>
+		{/foreach}
+	</ul>
+	{/if}
+	</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

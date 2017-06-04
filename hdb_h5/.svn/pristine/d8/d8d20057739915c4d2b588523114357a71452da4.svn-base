@@ -1,0 +1,23 @@
+/*默认button*/
+.btn{width:100%;box-sizing:border-box;color:#fff;border-radius: 1rem;-webkit-border-radius:1rem;-moz-border-radius:1rem;-o-border-radius:1rem;text-align: center;font-size: 0.56rem;height: 1.28rem;line-height:1.28rem;font-family: 'Microsoft YaHei';display: inline-block;}
+
+/*可点击*/
+.redBtn{background-color: #fe564e;}
+.redBtn:hover{color:#fff;text-decoration: none;}
+.redBtn:active{color:#fff;opacity: 0.8;}
+/*置灰*/
+.comDisabled{opacity: 0.6;}
+
+/*下一步*/
+.next-red-btn{
+	background: #ffa29d;
+}
+/*知道了按钮*/
+.cancelBtn{border:1px solid #4cb5e4;color: #4cb5e4;}
+.cancelBtn:hover{color: #4cb5e4;text-decoration: none;}
+
+/*获取验证码button*/
+.comGetCode,.btn2{border-radius: 0.11rem;border: 1px #0094ff solid;color: #fff;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width: 2.4rem !important;height: 0.9rem !important;display: inline-block;text-align: center;line-height: 0.9rem;font-size: 0.34rem;background-color: #0094ff;}
+.comGetCode:hover,.btn2:hover{color: #fff;}
+/*不可点击*/
+.comGetCode.comDisabled{border: 1px solid #999;color: #999;background-color: #fff;}

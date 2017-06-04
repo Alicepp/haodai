@@ -1,0 +1,31 @@
+
+
+.appwrap>ul li{
+	display: block;
+	background: #fff;
+	font-size: 0.37rem;
+	height: 1.28rem;
+	line-height: 1.28rem;
+	padding: 0 0.4rem;
+	border-bottom: 0.0133rem solid #e8ecf0;
+	position: relative;
+}
+.appwrap>ul li:nth-child(1){
+	border-top: 0.0133rem solid #e8ecf0;
+}
+.appwrap>ul li a{
+	display: block;
+}
+
+.rightArrow{
+	display: inline-block;
+    background: url("../images/common/tr.png") center center no-repeat;
+    width: 0.48rem;
+    height: 0.48rem;
+    background-size: 0.19rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.4rem;
+    margin: auto;
+}

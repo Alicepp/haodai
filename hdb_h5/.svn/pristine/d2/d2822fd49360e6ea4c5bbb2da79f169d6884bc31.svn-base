@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    {include file="_common/var.htm"}
+    <link rel="stylesheet" href="static/css/common/common.css">
+    <link rel="stylesheet" href="static/css/bid_intro.css">
+    <meta name="author" content="fanjj"/>
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="bidIntro">
+{if !empty($moreDetail)}
+
+    {foreach from=$bidList item=i}
+        <section class="introMod bidDetail">
+            <h2 class="title">{$i['title']}</h2>
+            <div class="introContent"><p>{$i['content']}</p></div>
+        </section>
+    {/foreach}
+
+    {if  $moreDetail.omsSource === 'xd_v2'}
+    <section class="introMod">
+        <h2 class="title">项目详情</h2>
+        <div class="introContent">
+            <table>
+                <tbody>
+                {foreach from=$bidList_vehicle_info item=i}
+                <tr>
+                    <td>{$i.name}</td>
+                    <td>{$i.value}</td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </section>
+    {/if}
+    {if isset($moreDetail.memberType)}
+    <section class="introMod">
+        <h2 class="title">基本信息</h2>
+        {if $moreDetail.memberType eq '2'}
+        <div class="introContent">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>企业名称</td>
+                        <td>{$moreDetail.busiName}</td>
+                    </tr>
+                    <tr>
+                        <td>营业执照编号</td>
+                        <td>{$moreDetail.bizLicense}</td>
+                    </tr>
+                    <tr>
+                        <td>注册资本</td>
+                        <td>{$moreDetail.busiRegCapital} 万</td>
+                    </tr>
+                    <tr>
+                        <td>注册日期</td>
+                        <td>{$moreDetail.busiRegDate}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {else}
+        <div class="introContent">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>用户名</td>
+                        <td>{$moreDetail.uName}</td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            {if $moreDetail.memberGender eq '0'}男{/if}
+                            {if $moreDetail.memberGender eq '1'}女{/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>年龄</td>
+                        <td>{$moreDetail.age}</td>
+                    </tr>
+                    <tr>
+                        <td>信用等级</td>
+                        <td>
+                            <div class="circle circle-green">
+                                {if $moreDetail.qualityRating eq '8'}AAA{/if}
+                                {if $moreDetail.qualityRating eq '1'}AA{/if}
+                                {if $moreDetail.qualityRating eq '2'}A{/if}
+                                {if $moreDetail.qualityRating eq '3'}B{/if}
+                                {if $moreDetail.qualityRating eq '4'}C{/if}
+                                {if $moreDetail.qualityRating eq '5'}D{/if}
+                                {if $moreDetail.qualityRating eq '6'}E{/if}
+                                {if $moreDetail.qualityRating eq '7'}HR{/if}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>学历</td>
+                        <td>
+                            {if $moreDetail.maxEdu eq '1'}高中或以下{/if}
+                            {if $moreDetail.maxEdu eq '2'}大专{/if}
+                            {if $moreDetail.maxEdu eq '3'}本科{/if}
+                            {if $moreDetail.maxEdu eq '4'}研究生或以上{/if}
+                            {if $moreDetail.maxEdu eq '5'}高中或以上{/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>婚姻状态</td>
+                        <td>
+                            {if $moreDetail.marriage eq '0'}已婚{/if}
+                            {if $moreDetail.marriage eq '1'}未婚{/if}
+                            {if $moreDetail.marriage eq '2'}离异{/if}
+                            {if $moreDetail.marriage eq '3'}丧偶{/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>籍贯</td>
+                        <td>{$moreDetail.workCity}</td>
+                    </tr>
+                    <tr>
+                        <td>职位</td>
+                        <td>{$moreDetail.duty}</td>
+                    </tr>
+                    <tr>
+                        <td>收入</td>
+                        <td>
+                            {if $moreDetail.monthIncome eq '1'}1000元及以下{/if}
+                            {if $moreDetail.monthIncome eq '2'}1001-2000元{/if}
+                            {if $moreDetail.monthIncome eq '3'}2001-5000元{/if}
+                            {if $moreDetail.monthIncome eq '4'}5001-10000元{/if}
+                            {if $moreDetail.monthIncome eq '5'}10001-20000元{/if}
+                            {if $moreDetail.monthIncome eq '6'}20001-50000元{/if}
+                            {if $moreDetail.monthIncome eq '7'}50000元以上{/if}
+                            {if $moreDetail.monthIncome eq '8'}10000元以下{/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>房产状态</td>
+                        <td>
+                            {if $moreDetail.haveHouse eq '1'}有房{/if}
+                            {if $moreDetail.haveHouse eq '2'}无房{/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>车产状态</td>
+                        <td>
+                            {if $moreDetail.haveCar eq '1'}有车{/if}
+                            {if $moreDetail.haveCar eq '2'}无车{/if}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {/if}
+    </section>
+    {/if}
+
+    {if !empty($moreDetail.memberDataAuthList)}
+    <section class="introMod auditRecord">
+        <h2 class="title">审核记录</h2>
+        <div class="introContent">
+            <table>
+                <tbody>
+                {foreach from=$moreDetail.memberDataAuthList item=i}
+                <tr>
+                    <td>{$i.name}</td>
+                    <td>{formatStrtotime($i.createDate,'Y-m-d')}</td>
+                    <td><span class="icon-bidstatus"></span></td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </section>
+    {/if}
+{else}
+    <div style="text-align:center">项目不存在</div>
+{/if}
+</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

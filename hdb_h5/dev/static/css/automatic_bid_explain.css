@@ -1,0 +1,30 @@
+
+
+/*标题样式*/
+.mod-title {
+	margin: 0 0.373rem 0.667rem;
+	height: 0.373rem;
+	border-bottom:0.013rem solid #e5e5e5;
+	text-align:center;
+}
+.mod-title span {
+	display: inline-block;
+	padding:0 0.533rem;
+	line-height:0.667rem;
+	font-size:0.427rem;
+	vertical-align:top;
+	background-color:#f9f9f9;
+}
+
+.explainWrap {
+	margin-top:0.533rem;
+	padding:0 0.667rem;
+	line-height: 0.587rem;
+	font-size:0.32rem;
+}
+.explainWrap .explainMod {
+	padding-bottom:0.533rem;
+}
+.explainWrap .explainMod p {
+	padding-left:0.24rem;
+}

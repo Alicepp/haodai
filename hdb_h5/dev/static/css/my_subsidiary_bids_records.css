@@ -1,0 +1,77 @@
+
+@import url('common/subsidiary.css?__inline');
+@import url('common/project.css?__inline');
+@import url('common/pulldown.css?__inline');
+
+.user-record-lp .list .red{
+	color:#fc5341;
+}
+.user-record-lp .list li{
+	padding:0;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom:0.267rem;
+
+}
+.user-record-lp .list .padlr{
+	padding: 0 0.4rem;
+}
+.user-record-lp .list .earn-ratio,.user-record-lp .list .bids-term,.user-record-lp .list .bids-date{
+	line-height: 1.0rem;
+	font-size:0.37rem;
+}
+.user-record-lp .list .earn-ratio{
+	width:2.66rem;
+	text-align: left;
+}
+.user-record-lp .list .bids-term{
+	text-align: center;
+}
+.user-record-lp .list .bids-date{
+	width: 2.4rem;
+	text-align: right;
+}
+.user-record-lp .list .blue{
+	color:#0094ff;
+}
+.user-record-lp .list .bidding-icon,.user-record-lp .list .full-bids-icon,.user-record-lp .list .repayment-icon,
+.user-record-lp .list .settled-icon,
+.user-record-lp .list .fail-bids-icon{
+	background: url('../images/subsidiary_bids_records/shouzhi-icon.png') no-repeat;
+	background-size: 100%;
+}
+.user-record-lp .list .bidding-icon,.user-record-lp .list .full-bids-icon,.user-record-lp .list .repayment-icon,
+.user-record-lp .list .settled-icon,
+.user-record-lp .list .fail-bids-icon{
+	position: absolute;
+	width:1.28rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	color:#fff;
+	font-size: 0.27rem;
+	top: 0.26rem;
+	right:0;
+    text-align: center;
+}
+.user-record-lp .list .full-bids-icon{
+	background-position: 0 -0.46rem;
+}
+.user-record-lp .list .repayment-icon{
+	background-position: 0 -0.91rem;
+}
+.user-record-lp .list .settled-icon{
+	background-position: 0 -1.37rem;
+}
+.user-record-lp .list .fail-bids-icon{
+	background-position: 0 -1.84rem;
+}
+.user-record-lp .list .jixi{
+	font-size: 0.32rem;
+}
+.user-record-lp .list .jixi{
+	line-height: 0.92rem;
+	color:#8e919f;
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+</head>
+<body>
+{include file="_common/header.htm"}
+	<div class="status_wrap">
+		<div class="bd">
+			<span class="pic"><img src="static/images/status/tied_card_success.png" /></span>
+			<h2 class="title">恭喜您成功绑定银行卡！</h2>
+		</div>
+		<div class="ft">
+			<a href="#" class="btn redBtn">马上充值</a>
+			<a href="#" class="btn cancelBtn mt20">我知道了</a>
+		</div>
+	</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

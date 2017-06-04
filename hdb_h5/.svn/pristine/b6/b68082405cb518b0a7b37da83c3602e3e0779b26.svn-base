@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<section class="projectInfo">
+	<h2>精选项目第2333期</h2>
+	<ul class="details">
+		<li class="infoItem clearfix border-top-1">
+			<div class="itemRight"><span class="number">130,000</span></div>
+			<div class="infoCont">
+				剩余可投金额(元)
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span>11%</span></div>
+			<div class="infoCont">
+				预期年化
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span>1个月</span></div>
+			<div class="infoCont">
+				出借期限
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span>按月付息,到期还本</span></div>
+			<div class="infoCont">
+				收益方式
+			</div>				
+		</li>
+	</ul>
+	<ul class="countIncome">
+		<li class="infoItem clearfix border-top-1">
+			<div class="itemRight">
+				<button class="blueBtn">开始计算</button>
+			</div>
+			<div class="infoCont">
+				<input type="number" name="" class="countIpt" placeholder="10000" />
+			</div>				
+		</li>
+		<!-- （1）	每日返息，到期还本 -->
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">1291.66</span></div>
+			<div class="infoCont">
+				本息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				利息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				每日回收利息
+			</div>				
+		</li>
+		<!-- （2）	一次性还本息（按日计息）|| （3）	一次性还本息（按月计息） -->
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">1291.66</span></div>
+			<div class="infoCont">
+				本息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				利息合计
+			</div>				
+		</li>
+		<!-- （4）	月返息计费规则（按月返息，到期还本） -->
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">1291.66</span></div>
+			<div class="infoCont">
+				本息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				利息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				每月回收利息
+			</div>				
+		</li>
+		<!-- （5）	按月等额还本息 -->
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">1291.66</span></div>
+			<div class="infoCont">
+				本息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				利息合计
+			</div>				
+		</li>
+		<li class="infoItem clearfix">
+			<div class="itemRight"><span class="number">101.66</span></div>
+			<div class="infoCont">
+				每月回收本息
+			</div>				
+		</li>
+	</ul>
+</section>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/bid_calculator/init');
+</script>
+</body>
+</html>

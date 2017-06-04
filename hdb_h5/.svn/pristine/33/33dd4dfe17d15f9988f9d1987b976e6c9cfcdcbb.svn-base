@@ -1,0 +1,204 @@
+/*下拉刷新css*/
+/*===下拉刷新组件===*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+html, body {
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+.animates{
+    -webkit-transition: .32s;
+    transition: .32s;
+    transform:translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,0) ;
+}
+.dropload-layer {
+    height: 0;
+    overflow: hidden;
+    background-color: #383838;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: .32s;
+    transition: .32s;
+    position: relative;
+    transform:translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,0) ;
+    z-index: -2;
+    margin-top: -2px;
+}
+
+.dropload-layer .inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dropload-layer .down {
+    display: inline-block;
+    opacity: 0
+}
+
+.dropload-layer .refresh, .dropload-layer .up {
+    display: none
+}
+
+.dropload-layer .refresh {
+    position: fixed;
+    font-size: 14px;
+    top: 25px;
+    width: 91px;
+    height: 35px;
+    text-align: center;
+    left: 50%;
+    margin-left: -46px;
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    color: #999;
+    background: url("../../images/common/point.png") top left no-repeat;
+    background-size: 100%;
+    -webkit-animation:bgRun 600ms steps(3) infinite;
+    animation:bgRun 600ms steps(3) infinite;
+}
+[data-dpr="2"] .dropload-layer .refresh{
+    top: 70px;
+    font-size: 20px;
+    -webkit-transform:scale(0.6) ;
+    transform: scale(0.6);
+}
+[data-dpr="3"] .dropload-layer .refresh{
+    top: 110px;
+    font-size: 30px;
+    -webkit-transform:scale(0.9) ;
+    transform: scale(0.9);
+}
+@-webkit-keyframes bgRun {
+    0% {background-position:0px -0px;}
+    100% {background-position:0px -105px;}
+}
+@keyframes bgRun {
+    0% {background-position:0px -0px;}
+    100% {background-position:0px -105px;}
+}
+
+.dropload-layer .up {
+    opacity: 0
+}
+.dropload-layer .arrow {
+    display: inline-block;
+    width: 130px;
+    height: 53px;
+    background-size: 100%;
+    background: url("../../images/common/png24.png") no-repeat top;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    position: fixed;
+    left: 50%;
+    margin-left: -63px;
+    top: -4px;
+    z-index: -1;
+}
+[data-dpr="2"] .dropload-layer .arrow{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    margin-left: -65px;
+    top: 16px;
+}
+[data-dpr="3"] .dropload-layer .arrow{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    margin-left: -65px;
+    top: 32px;
+}
+.dropload-layer .loader {
+    display: none;
+}
+
+.dropload-layer .loader:after {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pull-up .down, .refreshing .down {
+    display: none
+}
+
+.pull-up .arrow {
+    display: inline-block;
+}
+
+.pull-up .up {
+    display: inline-block
+}
+
+.pull-down .arrow {
+    display: inline-block
+}
+
+.pull-down .down {
+    display: inline-block;
+    opacity: 0;
+}
+
+.touching .dropload-layer {
+    -webkit-transition: 0s;
+    transition: 0s;
+}
+
+/*加载中*/
+.refreshing .dropload-layer {
+    height: 80px;
+}
+.refreshing .loader {
+    display: inline-block
+}
+
+.refreshing .refresh {
+    display: inline-block
+}
+
+
+/*等待加载框*/
+
+/*底部加载等待条*/
+.lastext{
+    display: none;
+    font-size: 0.37rem;
+    margin-top: 0.3rem;
+}
+.btmDIv{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #ccc;
+    margin-top: -0.3rem;
+    display: none;
+}
+.btmRefreshing{
+    width: 91px;
+    height: 35px;
+    text-align: center;
+    color: #999;
+    background: url(../../images/common/point.png) top left no-repeat;
+    background-size: 100%;
+    -webkit-animation: bgRun 600ms steps(3) infinite;
+    animation: bgRun 600ms steps(3) infinite;
+    margin: 0.6rem auto 0 auto;
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+
+}
+[data-dpr="2"] .btmRefreshing{
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+}
+[data-dpr="3"] .btmRefreshing{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}

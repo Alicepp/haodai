@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+<div class="wrap">
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="main">
+		<div class="bd">
+			<!-- 第一步 -->
+			<form action="/login/do_forget_two" class="forgetFormSetp_1 validForm" method="post" style="position:absolute;width: 100%">
+				<div class="container">
+					<div class="modelLia border-top-1">
+						<h5 class="title-a sm"><i class="icon icon_mobile_gray"></i></h5>
+						<div class="con-a">
+							<input type="text" name="mobilePhone" class="jsMobilePhone" placeholder="请输入11位手机号" />
+						</div>
+					</div>
+					<div class="modelLia imgCode">
+						<h5 class="title-a">图形验证码</h5>
+						<div class="con-a">
+							<input type="text" name="imageCode" class="cInput jsImgCode" placeholder="请输入图形验证码" />
+						</div>
+						<div class="con-b">
+							<img src="{$code}" class="J_graphCode" data-url="/common/getCodeImg" />
+						</div>
+					</div>
+					<div class="modelLia">
+						<h5 class="title-a sm"><i class="icon icon_code_gray"></i></h5>
+						<div class="con-a">
+							<input type="text" name="randomCode" class="jsSmsCode" placeholder="请输入6位验证码" >
+						</div>
+						<div class="con-b">
+							<input type="button" class="comGetCode" url="/login/do_forget_one" value="获取验证码">
+						</div>
+					</div>
+				</div>
+				<div class="content mt100">
+					<button class="btn redBtn" type="submit">下一步</button>
+				</div>
+			</form>
+
+			<!-- 第二步 -->
+			<form action="/login/Realname_auth" class="forgetFormSetp_2 validForm hide" method="post" style="position:absolute;width: 100%">
+				<div>
+					<div class="modelLia border-top-1">
+						<h5 class="title-a sm"><i class="icon icon_user"></i></h5>
+						<div class="con-a">
+							<input type="text" name="username" class="jsUserName" placeholder="请输入姓名" >
+						</div>
+					</div>
+					<div class="modelLia">
+						<h5 class="title-a sm"><i class="icon icon_idcard"></i></h5>
+						<div class="con-a">
+							<input type="text" name="idCard" class="jsIdcardCheck" placeholder="请输入身份证号" >
+						</div>
+					</div>
+				</div>
+				<div class="content mt100">
+					<button class="btn redBtn" type="submit">下一步</button>
+				</div>
+			</form>
+		
+			<!-- 第三步 -->
+			<form action="/login/do_forget_three" class="forgetFormSetp_3 validForm hide" method="post" style="position:absolute;width: 100%">
+				<div class="container">
+					<div class="modelLia border-top-1">
+						<h5 class="title-a sm"><i class="icon icon_pwd_gray"></i></h5>
+						<div class="con-a">
+							<input type="password" name="password" class="jsPassWord passWordCrypt" placeholder="请设置新登录密码" >
+						</div>
+					</div>
+					<div class="tips mt20 ml30">6-20位数字、字母、符号，不允许有空格</div>
+				</div>
+				<div class="content mt100">
+					<button class="btn redBtn" type="submit">完成</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/login_forget/init');
+</script>
+</body>
+</html>

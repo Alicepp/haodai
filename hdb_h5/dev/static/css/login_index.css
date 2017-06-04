@@ -1,0 +1,17 @@
+
+
+@import url('common/commonLogin.css?__inline'); /*公共登录样式*/
+
+body {
+    height:100%;
+}
+/*body{
+	background-color:#ffd17a;
+	background-image:-webkit-linear-gradient(top,#ff5f50,#ffad55);
+	background-image:-o-linear-gradient(top,#ff5f50,#ffad55);
+	background-image:-ms-linear-gradient(top,#ff5f50,#ffad55);
+	background-image:linear-gradient(top,#ff5f50,#ffad55);
+	background-repeat: repeat-x;
+	
+}
+*/

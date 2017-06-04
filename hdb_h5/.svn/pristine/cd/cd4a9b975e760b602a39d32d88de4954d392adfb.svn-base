@@ -1,0 +1,4 @@
+@import url('common/reset.css?__inline');
+@import url('common/header.css?__inline');
+.section .content{line-height:45px;padding:30px;font-size:28px;background:#fff;border-top:1px solid #eee;}
+.section .content img{width:100%;padding:10px 0px;}

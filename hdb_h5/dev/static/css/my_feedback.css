@@ -1,0 +1,83 @@
+
+@import url('common/button.css?__inline'); /*加载button样式*/
+
+.feedback {
+    width: 100%;
+    height: 5.0533rem;
+    padding: 0.3867rem 0.4rem;
+    font-size: 0.4rem;
+    color: #afb0be;
+    resize: none;
+    outline: none;
+    border: none
+}
+
+.validate {
+     display:-webkit-box;
+    -webkit-box-pack:justify;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:justify;
+    box-align:center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    border-top: 0.0133rem solid #eee;
+    border-bottom: 0.0133rem solid #eee;
+    padding: 0 0.4rem;
+    width: 100%;
+    height: 1.2533rem;
+    background: #fff;
+}
+
+.validateR {
+    border: 1px solid #cfd1d7;
+    border-radius: 0.08rem;
+    width: 2.32rem;
+    height: 0.88rem;
+}
+
+.validateL {
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.preV {
+    display: inline-block;
+    padding-right: 0.5333rem;
+    font-size: 0.4rem;
+    color: #5f616b;
+}
+
+input[type=text] {
+    width: 4rem;
+    font-size: 0.3467rem;
+    color: #b7b9c5;
+}
+
+.bottom {
+    padding: 0.9333rem 0.3733rem 0;
+    width: 100%;
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 1.28rem;
+    border-radius: 1.28rem;
+    background: #ff6159;
+    font-size: 0.5333rem;
+    color: #fff;
+}

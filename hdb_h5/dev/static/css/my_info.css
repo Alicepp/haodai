@@ -1,0 +1,193 @@
+
+@import url('common/button.css?__inline');
+@import url('common/project.css?__inline');
+@import url('common/commonLogin.css?__inline'); /*公共登录样式*/
+
+/*头文件logo*/
+.header h1 {
+    width:1.493rem;
+    height:0.6rem;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+    background-image: url("../images/icon/icon_hdb.png?__inline");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.hd .hdCont{background-color: #ffd17a;
+	background-image: -webkit-linear-gradient(top,#ff5f50,#ffad55);
+	background-image: -o-linear-gradient(top,#ff5f50,#ffad55);
+	background-image: -ms-linear-gradient(top,#ff5f50,#ffad55);
+	background-image: linear-gradient(top,#ff5f50,#ffad55);color: #fff;height: 4.987rem;position:relative;}
+/*未登录*/
+.hd .hdCont .notLogin{text-align: center;padding-top: 2.027rem;}
+.hd .hdCont .notLogin a{width: 3.947rem;height: 1.013rem;line-height: 1.01rem;text-align: center;color: #fff;font-size: 0.533rem;border:2px solid #fff;display: inline-block;border-radius: 1rem;}
+.hd .hdCont .notLogin .txt{font-size: 0.373rem;padding-top: 0.347rem;}
+
+/*已登录*/
+.hd .hdCont .hasLogin .mhd{padding:0.5rem 0.453rem 1.04rem 0.533rem;}
+.hd .hdCont .hasLogin .mhd .user{font-size: 0.427rem;}
+.hd .hdCont .hasLogin .mhd .user .icon_user2{background-image: url(../images/icon/icon_user2.png?__inline);margin-right: 0.293rem}
+.hd .hdCont .hasLogin .mhd .msg{position: relative;top: 0;left: 0;}
+.hd .hdCont .hasLogin .mhd .msg .icon_msg{background-image: url(../images/icon/icon_msg.png?__inline);display: inline-block;}
+.hd .hdCont .hasLogin .mhd .msg .icon_msg .newMsg{position: absolute;top: -0.2rem;right: -0.12rem;color: #fff;}
+.hd .hdCont .hasLogin .mbd{text-align: center;}
+.hd .hdCont .hasLogin .mbd .mainTitle{padding-bottom: 0.14rem;font-size:0.347rem;}
+.hd .hdCont .hasLogin .mbd .mainTitle .icon{margin-left: 0.14rem;}
+.hd .hdCont .hasLogin .mbd .property{font-size: 0.907rem;line-height:1;position: relative;top:0;color: #fff;display: block;}
+.hd .hdCont .hasLogin .mbd .property .totalAssets{position:relative;display:inline-block;max-width: 80%;}
+.hd .hdCont .hasLogin .mbd .property .arrow{position:absolute;bottom:0.067rem;right:-0.533rem;border: 0.187rem solid #fff;border-left-color: transparent;border-top-color: transparent;display: inline-block;border-width: 0.13rem !important;}
+.hd .mft{background-color: #fff;border-bottom: 1px solid #eee;}
+.hd .mft ul li{float: left;margin:0.32rem 0;width: 33.33%;text-align: center;border-right:1px solid #eee;}
+.hd .mft ul li:last-child{border-right:0;}
+.hd .mft ul li h6{font-size: 0.293rem;color: #808697;}
+.hd .mft ul li span{font-size: 0.4rem;color: #5f616b;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.hd .icon_pwd_hui_hide{background-image: url(../images/icon/pw_white_hide.png?__inline);} /*密码眼睛隐藏状态*/
+.hd .icon_pwd_hui_show{background-image: url(../images/icon/pw_white_show.png?__inline);} /*显示状态*/
+/*飘带定义动画*/
+@-webkit-keyframes float2 {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0px)
+    }
+
+    25% {
+        -webkit-transform: translateY(6px)
+    }
+
+    75% {
+        -webkit-transform: translateY(-6px)
+    }
+
+}
+
+@-moz-keyframes float2 {
+    0%,
+    50%,
+    100% {
+        -moz-transform: translateY(0px)
+    }
+
+    25% {
+        -moz-transform: translateY(6px)
+    }
+
+    75% {
+        -moz-transform: translateY(-6px)
+    }
+
+}
+
+@keyframes float2 {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px)
+    }
+
+    25% {
+        transform: translateY(6px)
+    }
+
+    75% {
+        transform: translateY(-6px)
+    }
+}
+
+@-webkit-keyframes float1 {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0px)
+    }
+
+    25% {
+        -webkit-transform: translateY(-6px)
+    }
+
+    75% {
+        -webkit-transform: translateY(6px)
+    }
+
+}
+
+@-moz-keyframes float1 {
+    0%,
+    50%,
+    100% {
+        -moz-transform: translateY(0px)
+    }
+
+    25% {
+        -moz-transform: translateY(-6px)
+    }
+
+    75% {
+        -moz-transform: translateY(6px)
+    }
+
+}
+
+@keyframes float1 {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px)
+    }
+
+    25% {
+        transform: translateY(-6px)
+    }
+
+    75% {
+        transform: translateY(6px)
+    }
+
+}
+
+/*飘带背景*/
+.wall{position: absolute;left:0;bottom:-0.2rem;width: 100%;}
+.wall.bg1{background: url('../images/my/hd_bg1.png') no-repeat;
+				background-size: 100%;
+				 -webkit-animation: float2 5s linear 0s  infinite;
+    -moz-animation: float2 5s linear 0s  infinite;
+    animation: float2 5s linear 0s  infinite;height: 0.92rem;
+}
+.wall.bg2{background:url('../images/my/hd_bg2.png') no-repeat;
+				z-index: 1;background-size: 100%;
+			 -webkit-animation: float1 5s linear 0s  infinite;
+    -moz-animation: float1 5s linear 0s  infinite;
+    animation: float1 5s linear 0s  infinite;height: 0.867rem;
+}
+.bd .list{border-top:1px solid #eee;margin-top: 0.32rem;background: #fff;}
+.bd .list li a{float: left;width: 33.33%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-right: 1px solid #eee;border-bottom: 1px solid #eee;height: 2.667rem;text-align: center;padding-top: 0.68rem;display: block;}
+.bd .list li a:active{background-color: #f6f6f6;}
+.bd .list li:nth-child(3n+0){border-right:0;}
+.bd .list li .title{padding-top: 0.433rem;font-size: 0.32rem;}
+.bd .list li .icon{background:url(../images/my/bd_bg.png) no-repeat;padding:0;width: 0.8rem;height: 0.587rem;display: inline-block;background-size:7.53rem 6.013rem;height: 0.693rem;}
+.bd .list li .icon_cash{background-position:-3.333rem 0;}
+.bd .list li .icon_bidRecord{background-position: -6.733rem 0;}
+.bd .list li .icon_income{background-position: -0.12rem -2.587rem;width: 0.627rem;background-size: 7.6rem 5.9rem;}
+.bd .list li .icon_receivable{background-position: -3.333rem -2.68rem;}
+.bd .list li .icon_bank{background-position: -6.733rem -2.68rem;}
+.bd .list li .icon_coupon{background-position: -0.067rem -5.3rem;width: 0.76rem;background-size: 7.5rem 5.98rem;}
+.bd .list li .icon_pwdmanage{background-position: -3.44rem -5.28rem;width: 0.64rem;background-size: 7.5rem 5.94rem;}
+.bd .list li .icon_activity{background-position: -6.733rem -5.253rem;width: 0.72rem;background-size: 7.54rem 5.94rem;position: relative;}
+.bd .list li .icon_activity .dot{background: #ff6946;border-radius:0.133rem;width: 0.133rem;height: 0.133rem;display: inline-block;position: absolute;top: -0.04rem;right: -0.16rem;}
+
+/*弹框*/
+.isLogin{position: relative;bottom:-0.26rem;}
+.isLogin .popup_dot{background:url(../images/my/popup_dot.png) no-repeat center;background-size:100%;position: absolute;top: -2.573rem;left:50%;width: 3.84rem;height: 3.84rem;margin-left:-1.92rem;z-index: 999999}
+.isLogin .title{padding:1.2rem 0 0.2rem 0;}
+.isLogin .btn{margin-top: 1.067rem;width:86%;}
+.isLogin .cBlue{text-decoration: underline;display:inline-block;}
+
+.hideMemony{
+    display: none;
+}
+.showMemony{
+    display: none;
+}

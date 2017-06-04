@@ -1,0 +1,15 @@
+
+@import url('common/project.css?__inline');
+@import url('common/pulldown.css?__inline');
+
+.listContainer {
+	/*height: 20rem;*/
+	/*padding-bottom:0.667rem;*/
+}
+
+
+.proItem .status-mark {
+    position: absolute;
+    right: -1rem;
+    bottom: .1rem;
+}

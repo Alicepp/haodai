@@ -1,0 +1,20 @@
+@import url('common/reset.css');
+@import url('common/header.css');
+@import url('common/button.css');
+@import url('common/modelLia.css');
+@import url('common/sweetalert.css'); /*弹框*/
+
+
+/*预计收益左右行样式*/
+.modelTexta.bg-gray{font-size: 0.4rem;background-color: #f9f9f9;}
+.modelTexta .mTitle{font-size:0.453rem;}
+.bg-white{background-color: #fff;}
+.modelLia2{background-color: #fff;padding:0.267rem 0.4rem;border-bottom: 1px #e8ecf0 solid;}
+.modelLia2 .con-a2{width: 68%;}
+.modelLia2 .title-a2{width: 27%;}
+.modelLia2 .con-a2 .borderInput{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border:1px solid #c2c2c2;border-radius: 6px;padding:0.6rem 0.2rem;width:100%;height: 1rem;font-size: 0.347rem;color: #60626c;}
+.btn{background-color: #00a9ff;font-size: 0.427rem;border-radius: 0.1rem;height: 1.23rem;line-height: 1.23rem;}
+.cRed{color: #ff625b;}
+
+/*错误提示*/
+.f_bg{background-color:rgba(000,0,0,0.5);color: #fff;width: 60%;height:1.4rem;line-height:1.4rem;padding:0 0.42rem;text-align: center;font-size: 0.48rem;border-radius: 0.2rem;position: absolute;top:50%;left:50%;margin:-1.94rem 0 0 -30%;display: none;}

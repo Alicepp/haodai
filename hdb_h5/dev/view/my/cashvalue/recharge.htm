@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+<div class="J_mainView">
+	{include file="_common/header.htm" returnBtn="back" rightLink="rechargeExp"}
+	<section class="cashWrap mt20">
+        <form action="{getRedirectStr('/my/cashvalue/do_recharge', false)}" class="validForm" method="post">
+			<div class="infoList">
+				<div class="bankInfo">
+	                <span class="bankIcon bankIcon_{$dkBankCode}"></span>
+					<div class="infoCont">
+	                    <p class="bankName">{$bank}<span class="grayTxt">尾号{$bankCard}</span></p>
+	                    <p class="grayTxt">单次交易限额{$onceLimit}，每日限额{$dayLimit}</p>
+					</div>
+				</div>
+				<div class="infoItem clearfix">
+					<label class="infoName">充值金额：</label>
+					<div class="infoCont">
+						<input type="tel" name="amount" class="jsRecharge" placeholder="请输入充值金额">
+					</div>
+				</div>
+			</div>
+			<div class="isAgree">
+				<input type="checkbox" name="agree" checked="" class="protocol jsInputCheck"/>同意
+				<a href="javascript:;" class="agreementLink J_popPageBtn" data-name="withhold">代扣协议</a>
+			</div>
+			<div class="contentBt">
+				<button class="btn redBtn" type="submit" disabled="true">充值</button>
+			</div>
+		</form>
+	</section>
+	{include file="_common/footer.htm"}
+	<script type="text/javascript">
+    require('common:static/widget/my_cashvalue_recharge/init');
+	</script>
+</div>
+<!-- 充值说明 -->
+{include file="_common/statictpl/recharge_explain.htm" method="pop"}
+<!-- 代扣协议 -->
+{include file="_common/statictpl/withhold.htm" method="pop"}
+</body>
+</html>

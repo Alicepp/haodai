@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    {include file="_common/var.htm"}
+    <meta name="author" content="fanjj" />
+</head>
+<body>
+<div class="appwrap">
+{include file="_common/header.htm" returnBtn="back" rightLink="menu"}
+    <ul class="more">
+        <li>
+            <a href="/activity">
+                <i></i>
+                <span>活动中心</span>
+                <b></b>
+            </a>
+        </li>
+        <li class="more_space1">
+            <a href="/notice">
+                <i></i>
+                <span>系统公告</span>
+                <b></b>
+            </a>
+        </li>
+        <li>
+            <a href="/help">
+                <i></i>
+                <span>帮助说明</span>
+                <b></b>
+            </a>
+        </li>
+        <li class="more_space2">
+            <a href="/my/feedback">
+                <i></i>
+                <span>意见反馈</span>
+                <b></b>
+            </a>
+        </li>
+        <li>
+            <a href="/home/service">
+                <i></i>
+                <span>关于我们</span>
+                <b></b>
+            </a>
+        </li>  
+    </ul>
+</div>
+{include file="_common/footer.htm"}
+{include file="_common/downapp.htm"}
+<script type="text/javascript">
+    require('common:static/widget/home_more/init');
+</script>
+</body>
+</html>

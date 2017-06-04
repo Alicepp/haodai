@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    {include file="_common/var.htm"}
+    <meta name="author" content="wuping" />
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    <!-- <link rel="stylesheet" href="static/css/common/common.css">
+    <link rel="stylesheet" href="static/css/activity_index.css"> -->
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="appwrap">
+    <ul class="inner">
+        {if $result|count neq 0}
+        {foreach from=$result item=i}
+        {if $i.flag == 2}<!--未结束的活动  可点击查看-->
+        <li>
+            {if !empty({$i.detailUrl})}
+            <a href="{$i.detailUrl}?id={$i.id}&share={$i.share}&hdbtitle={$i.topic}{$token}" class="hot">
+            {else}
+            <a href="javascript:;" class="hot">
+            {/if}
+                <img src="static/images/common/blank.gif" alt="{$i.topic}" data-echo="{$i.imgUrl}" />
+                <p class="title">
+                    <span>{$i.topic}</span>
+                    <i class="ico_hot"></i>
+                </p>
+                <p class="time">
+                    <span>活动时间：{$i.beginDate|date_format:'%Y.%m.%d'}—{$i.endDate|date_format:'%Y.%m.%d'}</span>
+                    <span>查看详情</span>
+                </p>
+            </a>
+        </li>
+        {else if $i.flag == 1}<!--过期活动  可点击查看-->
+        <li>
+            {if !empty({$i.detailUrl})}
+            <a href="{$i.detailUrl}?id={$i.id}&share={$i.share}&hdbtitle={$i.topic}{$token}" class="overdue">
+            {else}
+            <a href="javascript:;" class="overdue">
+            {/if}
+                <img src="static/images/common/blank.gif" alt="{$i.topic}" data-echo="{$i.imgUrl}">
+                <p class="title">
+                    <span>{$i.topic}</span>
+                </p>
+                <p class="time">
+                    <span>活动时间：{$i.beginDate|date_format:'%Y.%m.%d'}—{$i.endDate|date_format:'%Y.%m.%d'}</span>
+                    <span>查看详情</span>
+                </p>
+                <div class="mask">
+                    <i class="maskI"></i>
+                </div>
+            </a>
+        </li>
+        {else if $i.flag == 0}<!-- 过期活动 不可点击查看-->
+        <li>
+            <a href="javascript:;" class="overdue">
+                <img src="static/images/common/blank.gif" alt="{$i.topic}" data-echo="{$i.imgUrl}">
+                <p class="title">
+                    <span>{$i.topic}</span>
+                </p>
+                <p class="time">
+                    <span>活动时间：{$i.beginDate|date_format:'%Y.%m.%d'}—{$i.endDate|date_format:'%Y.%m.%d'}</span>
+                    <span>查看详情</span>
+                <div class="mask">
+                    <i class="maskI"></i>
+                </div>
+            </a>
+        </li>
+        {/if}
+        {/foreach}
+        {/if}
+    </ul>
+    <div class="boxW">
+        <div class="boxT">
+            <span class="lineB"></span>
+            <span class="lineC">没有更多活动啦~</span>
+            <span class="lineA"></span>
+        </div>
+        <p class="hint">后续精彩活动即将呈现，敬请期待</p>
+    </div>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/activity_index/init');
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@import url('common/modelLia.css?__inline'); /*加载公共左右行样式*/
+@import url('common/button.css?__inline'); /*加载button样式*/
+@import url('register_agreement.css?__inline'); /*加载服务协议样式*/
+
+.icon {
+    overflow: hidden;
+}
+.icon > .icon {
+    position: relative;
+    left: -20px;
+    -webkit-filter: drop-shadow(rgb(179, 179, 179) 0 0px);
+    filter: drop-shadow(rgb(179, 179, 179) 0 0px);
+}
+
+.slideInRight.animated {
+  -webkit-animation-duration:0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.slideOutRight.animated{
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

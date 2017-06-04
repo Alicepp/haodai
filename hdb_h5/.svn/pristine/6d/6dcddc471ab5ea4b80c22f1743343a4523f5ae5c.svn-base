@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+</head>
+<body>
+<div class="pageWrap">
+<!-- {include file="_common/header.htm" returnBtn="back" rightLink="menu"} -->
+{include file="_common/header.htm" rightLink = "menu"}
+<div class="wrap">
+	{if !is_login()}
+		{assign var="login_status" value="false"}
+	{else}
+		{assign var="login_status" value="true"}
+	{/if}
+	<!-- 未登录 begin -->
+    {if !is_login()}
+	<div class="hd">
+		<div class="hdCont">
+			<div class="notLogin">
+                <a href="{$login_url}" class="J_login" data-islogin="{$login_status}">马上登录</a>
+				<p class="txt">马上登录开启财富人生</p>
+			</div>
+			<!-- 飘带背景 -->
+			<div class="wall bg1"></div>
+			<div class="wall bg2"></div>
+		</div>
+	</div>
+    <!-- 未登录 end -->
+    {else}
+    <!-- 已登录 begin -->
+    <div class="hd">
+        <div class="hdCont">
+            <div class="hasLogin">
+                <div class="mhd cf">
+                    <a href="/notice/index/usermsg" class="msg fr">
+                        <i class="icon icon_msg">
+                            {if $myinfo.msgUnReadCount neq 0}<i class="newMsg">{$myinfo.msgUnReadCount}</i>{/if}<!--有新消息-->
+                        </i>
+                    </a>
+                    <h2 class="user"><i class="icon icon_user2"></i>
+                        <span class="phone">{getMaskStr($myinfo.mobilePhone,3,4)}</span>
+                    </h2>
+                </div>
+                <div class="mbd">
+                    <h2 class="mainTitle">总资产 （元）<i class="icon icon_pwd_hui_show jsTotalAssetsBtn"></i></h2>
+                    <a class="property" href="/my/total_assets">
+                    <span class="totalAssets jsTotalAssets">
+						<cite class="showMemony">{$myinfo.totalAssets|formatMoney}</cite>
+						<cite class="hideMemony">***</cite>
+                    	<i class="arrow"></i>
+                	</span>
+                    </a>
+                </div>
+            </div>
+            <!-- 飘带背景 -->
+            <div class="wall bg1"></div>
+            <div class="wall bg2"></div>
+        </div>
+        <div class="mft J_proMoney">
+            <ul class="cf">
+                <li>
+                    <h6>昨日收益(元)</h6>
+                    <span>
+						<cite class="showMemony">{$myinfo.yesterdayIncome|formatMoney}</cite>
+						<cite class="hideMemony">***</cite>
+					</span>
+                </li>
+                <li>
+                    <h6>累计收益(元)</h6>
+                    <span>
+						<cite class="showMemony">{$myinfo.earnedAmount|formatMoney}</cite>
+						<cite class="hideMemony">***</cite>
+
+					</span>
+                </li>
+                <li>
+                    <h6>可用余额(元)</h6>
+                    <span>
+						<cite class="showMemony">{$myinfo.usableAmount|formatMoney}</cite>
+						<cite class="hideMemony">***</cite>
+					</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 已登录 end -->
+    {/if}
+    
+	<div class="bd">
+		<ul class="list cf">
+			<li>
+                <a href="/my/cashvalue/recharge" class="J_login jsIsRNameLink"
+                   data-islogin="{$login_status}">
+					<span class="icon icon_recharege"></span>
+					<h6 class="title">我要充值</h6>
+				</a>
+			</li>
+			<li>
+                <a href="/my/cashvalue/withdraw" class="J_login jsIsRNameLink"
+                   data-islogin="{$login_status}">
+					<span class="icon icon_cash"></span>
+					<h6 class="title">我要提现</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/my/subsidiary/bids_records" class="J_login" data-islogin="{$login_status}">
+					<span class="icon icon_bidRecord"></span>
+					<h6 class="title">投标记录</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/my/subsidiary/balance" class="J_login" data-islogin="{$login_status}">
+					<span class="icon icon_income"></span>
+					<h6 class="title">收支明细</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/my/subsidiary/payment_records" class="J_login" data-islogin="{$login_status}">
+					<span class="icon icon_receivable"></span>
+					<h6 class="title">回款记录</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/my/realname/bankcard" class="J_login jsIsRNameLink" data-islogin="{$login_status}">
+					<span class="icon icon_bank"></span>
+					<h6 class="title">银行卡</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/my/coupon" class="J_login" data-islogin="{$login_status}">
+					<span class="icon icon_coupon"></span>
+					<h6 class="title">优惠券</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/my/password/manage" class="J_login" data-islogin="{$login_status}">
+					<span class="icon icon_pwdmanage"></span>
+					<h6 class="title">密码管理</h6>
+				</a>
+			</li>
+			<li>
+				<a href="/activity/index">
+					<span class="icon icon_activity">
+						<i class="dot"></i><!--有新消息-->
+					</span>
+					<h6 class="title">活动中心</h6>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{include file="_common/footer.htm"}
+{include file="_common/downapp.htm"}
+</div>
+<script type="text/javascript">
+    require('common:static/widget/my_info/init');
+</script>
+<!-- 判断用户是否实名 -->
+<!-- is_realname==1 已实名-->
+<!-- is_realname==0 未实名 -->
+<input type="hidden" name="is_realname" class="jsIsRealName" value="{$Realnameinfo.status}"
+	   message="{$Realnameinfo.msg}" url="{$Realnameinfo.url}"/>
+
+<!-- 登录弹窗 -->
+<div class="J_popLogin none">
+	{include file="_common/login.htm" method="pop"}
+</div>
+</body>
+</html>

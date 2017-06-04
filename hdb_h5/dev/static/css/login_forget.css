@@ -1,0 +1,15 @@
+
+@import url('common/modelLia.css?__inline'); /*加载公共左右行样式*/
+@import url('common/button.css?__inline'); /*加载button样式*/
+
+.icon {
+    overflow: hidden;
+}
+.icon > .icon {
+    position: relative;
+    left: -20px;
+    /*border-right: 0 solid transparent;*/
+    -webkit-filter: drop-shadow(rgb(179, 179, 179) 0 0px);
+    filter: drop-shadow(rgb(179, 179, 179) 0 0px);    
+}
+.tips{font-size: 0.293rem}

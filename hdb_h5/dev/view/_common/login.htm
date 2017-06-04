@@ -1,0 +1,53 @@
+<div class="loginDiv">
+	<div class="wrap">
+	{include file="_common/header.htm" returnBtn="login" headTitle="login" method={$method}}
+	<div class="main pt30">
+		<div class="hd">
+			<h1 class="logo"></h1>
+		</div>
+		<div class="bd">
+			<form action="{getRedirectStr('/login/do_login', '/home/index')}" method="post" class="loginForm">
+				<div class="modelLia">
+					<h5 class="title-a sm"><i class="icon icon_mobile"></i></h5>
+					<div class="con-a">
+						<input type="tel" value="" placeholder="请输入用户名/手机号" name="mobilePhone" class="cInput jsUserPhone J_loginName" />
+					</div>
+				</div>
+				<div class="modelLia">
+					<h5 class="title-a sm"><i class="icon icon_pwd"></i></h5>
+					<div class="con-a">
+						<input type="password" value="" placeholder="请输入登录密码" name="pwd" class="cInput jsPassWord passWordCrypt" onpaste="return false" onselectstart="return false" />
+					</div>
+					<div class="con-b">
+						<!-- 显示密码class icon_pwd_hide -->
+						<a href="javascript:;" class="icon eye icon_pwd_hui_hide"></a>
+					</div>
+				</div>
+				
+				<div class="modelLia imgCode J_graphCodeMod" style="display: none;">
+					<h5 class="title-a sm"><i class="icon icon_code"></i></h5>
+					<div class="con-a">
+						<input type="text" name="" class="cInput J_imgcodeIpt jsImgCode" ignore="ignore" placeholder="请输入图形验证码" />
+					</div>
+					<div class="con-b">
+						<img src="" class="J_graphCode" data-url="/common/getCodeImg/login" />
+					</div>
+				</div>
+                
+				<div class="mt90">
+					<button class="btn redBtn" type="submit">登录</button>
+				</div>
+				<div class="mt40 center txt">
+					<a href="/login/forget">忘记密码</a><span class="is">|</span><a href="/register/index">注册账号</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="ft">
+		<p>客服热线：400-620-8800</p>
+		<p>工作时间 9:00-18:00</p>
+		<div class="wall bg1"></div>
+		<div class="wall bg2"></div>
+	</div>
+	</div>
+</div>

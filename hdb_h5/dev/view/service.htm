@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    {include file="_common/var.htm"}
+    <meta name="author" content="fanjj" />
+</head>
+<body>
+<div class="outwrap">
+    {include file="_common/header.htm" returnBtn="back"}
+    <ul class="service">
+        <li class="service_phone">
+            <div class="phoneL">
+                <i class="phone_icon"></i>
+                <span class="phone">客服热线</span>
+            </div>
+            <div class="phoneR"><a href='tel:4006208800' class=''>400-620-8800</a></div>
+        </li>
+        <li class="service_qq">
+            <div class="qqL">
+                <i class="qq_icon"></i>
+                <span class="qq">客服QQ</span>
+            </div>
+            <div class="qqR">4006208800</div>
+        </li>
+        <li class="service_wx">
+            <div class="wxL">
+                <i class="wx_icon"></i>
+                <span class="wx">微信服务号</span>
+            </div>
+            <div class="wxR">qianbao_qq</div>
+        </li>
+    </ul>
+    {include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/home_service/init');
+</script>
+</div>
+</body>
+</html>

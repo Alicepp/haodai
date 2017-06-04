@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="lvpp"/>
+    <title>{$title}</title>
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    {include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<form action="{$action_url}" class="revisedDealForm" method="post">
+    <div class="container">
+        <div class="modelLia border-top-1">
+            <h5 class="title-a">当前交易密码</h5>
+            <div class="con-a">
+                <input type="password" name="oldpassword" class="jsOldPwd passWordCrypt" placeholder="请输入原交易密码">
+            </div>
+        </div>
+        <div class="modelLia border-top-1 mt20">
+            <h5 class="title-a">新交易密码</h5>
+            <div class="con-a">
+                <input type="password" name="password" class="jsNewPwd passWordCrypt" placeholder="6-20位的交易密码">
+            </div>
+            <div class="con-b">
+                <!-- 显示密码class icon_pwd_hide -->
+                <span class="icon"><a href="javascript:;" class="icon eye icon_pwd_hui_hide"></a></span>
+            </div>
+        </div>
+        <div class="modelLia border-top-1 mt20">
+            <h5 class="title-a">确认新交易密码</h5>
+            <div class="con-a">
+                <input type="password" name="newTradePwdRepeat" data-recheck="jsNewPwd" class="jsPassWordAffirm passWordCrypt" placeholder="请再次输入交易密码">
+            </div>
+            <div class="con-b">
+                <!-- 显示密码class icon_pwd_hide -->
+                <span class="icon"><a href="javascript:;" class="icon eye icon_pwd_hui_hide"></a></span>
+            </div>
+        </div>
+        <div class="ml30 mt30 tips-font">
+            6-20位数字、字母、符号，不允许有空格
+        </div>
+        <div class="error-mes animated Js-error"></div>
+        <div class="Js-title" msg="修改成功"></div>
+    </div>
+    <div id="Validform_msg">
+        <div class="Validform_title">提示信息<a class="Validform_close" href="javascript:void(0);">χ</a></div>
+        <div class="Validform_info"></div>
+        <!--<div class="iframe">-->
+            <!--<iframe frameborder="0" scrolling="no" height="100%" width="100%"></iframe>-->
+        <!--</div>-->
+    </div>
+    <div class="content mt100">
+        <button class="btn redBtn" type="submit">提交</button>
+    </div>
+</form>
+
+<!--成功提示对话框-->
+{include file="_common/dialog.htm"}
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_password_revised_deal/init');
+</script>
+</body>
+</html>

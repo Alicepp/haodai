@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/help_content.css">
+</head>
+<body>
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="appwrap">
+		<section class="section help-subsets pg-record in-record" data-section="intro-1" style="display: block;">
+			<div class="help-subset">
+				<div class="help-subset-title">项目介绍</div>
+				<div class="help-subset-detail">
+					<div class="content">
+						<ul>
+							<li>
+								<div class="row box">
+									<div class="col-left rec-name text-right">主要借款用途</div>
+									<div class="col-right flex1 rec-detail txt-left box">企业经营借款、个人消费借款</div>
+								</div>
+							</li>
+							<li>
+								<div class="row box">
+									<div class="col-left rec-name text-right">借款额度</div>
+									<div class="col-right flex1 rec-detail txt-left box">1万~30万</div>
+								</div>
+							</li>
+							<li>
+								<div class="row box">
+									<div class="col-left rec-name text-right">预期年化</div>
+									<div class="col-right flex1 rec-detail txt-left box">7.5%-15%</div>
+								</div>
+							</li>
+							<li>
+								<div class="row box">
+									<div class="col-left rec-name text-right">期限</div>
+									<div class="col-right flex1 rec-detail txt-left box">1个月、3个月、6个月、12个月、24个月、36个月</div>
+								</div>
+							</li>
+							<li>
+								<div class="row box">
+									<div class="col-left rec-name text-right">还款方式</div>
+									<div class="col-right flex1 rec-detail txt-left box">
+										●每日返息,到期还本（每日返息，到期一次性回本，仅“日息宝”项目使用此方式）
+										<br>
+										●一次性还本息（到期一次性回收全部本金和利息）
+										<br>●按月等额本息（借款人每月偿还同等数额的本息）</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{include file="_common/footer.htm"}
+</body>
+</html>

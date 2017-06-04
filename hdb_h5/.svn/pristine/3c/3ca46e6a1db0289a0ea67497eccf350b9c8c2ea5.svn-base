@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/help_content.css">
+</head>
+<body>
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="appwrap">
+		<section class="section help-subsets" data-section="busi-6" style="display: block;">
+			<div class="help-subset">
+				<div class="help-subset-title">信用等级是如何分的</div>
+				<div class="help-subset-detail justify">
+					信用等级是借款人的信用属性，由好贷宝的风险控制专业团队，根据借款人的资料和历史信贷情况评定。一般来说，借款人信用等级越高，其违约率越低。目前，好贷宝的信用等级由高到低分为：AAA、AA、A、B、C、D、E、HR。
+				</div>
+			</div>
+		</section>
+	</div>
+	{include file="_common/footer.htm"}
+</body>
+</html>

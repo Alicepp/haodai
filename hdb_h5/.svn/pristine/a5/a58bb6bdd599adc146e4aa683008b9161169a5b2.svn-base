@@ -1,0 +1,309 @@
+/***** 项目 *****/
+.icon-clock {
+	display: inline-block;
+	width:0.4rem;
+	height:0.4rem;
+	background: url("../../images/icon/icon_clock.png?__inline") no-repeat;
+	background-size: 100%;
+	vertical-align:top;
+}
+.bluetxt {
+	color:#3faadc;
+}
+/*标题样式*/
+.list-title {
+	margin: 0 0.4rem 0.4rem;
+	height:0.4rem;
+	border-bottom:0.013rem solid #eee;
+	color:#9da1ab;
+	font-size:0.32rem;
+	text-align:center;
+}
+.list-title span {
+	display: inline-block;
+	margin-top:0.173rem;
+	padding:0 0.267rem;
+	line-height:0.427rem;
+	background-color:#f9f9f9;
+}
+
+/*状态标识*/
+.status-mark {  /*100*30*/
+	display: inline-block;
+	width:2.667rem;
+	height: 0.8rem;
+	text-align: center;
+	line-height:0.8rem;
+	color:#fff;
+	font-size:0.533rem;
+	border-radius: 0.373rem 0.4rem;
+	-webkit-border-radius: 0.373rem 0.4rem;
+	background-color:#ff6950;
+	transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+	transform-origin: left;
+	-webkit-transform-origin: left;
+}
+.status-gray {
+	background-color: #c2c2c2;
+}
+
+.project-mod {
+	margin-top:0.267rem;
+	border-width:0.013rem 0;
+	border-style: solid;
+	border-color:#eee transparent;
+	background-color:#fff;
+}
+.project-mod a {
+	display: block;
+}
+.project-mod a:active {
+	background-color: #f6f6f6;
+}
+.project-mod .mod-title {
+	padding:0.2rem 0.467rem 0.173rem 0.6rem;
+	height:0.933rem;
+	line-height: 0.56rem;	
+	font-size:0.347rem;
+}
+.project-mod .mod-title .mod-name {
+	margin-right:0.267rem;
+}
+.project-mod .title-right {	
+	color:#a6aab0;
+}
+.project-mod .title-right .more-arr {
+	display: inline-block;
+	width:0.267rem;
+	height:0.267rem;
+	border-style: solid;
+	border-width:0.013rem 0.013rem 0 0;
+	border-color:#dcdcdc #dcdcdc transparent transparent;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+.project-mod .icon-clock {
+	margin:0.04rem 0.24rem 0 0;
+}
+.project-mod .graytext {
+	color:#afb0be;
+	font-size:0.32rem;
+}
+.pro-item {
+	display: block;
+	padding-left:0.533rem;
+}
+.pro-detail {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;	
+	display: flex;
+	-webkit-box-align: center; 
+	-moz-box-align: center;
+	-ms-flex-align: center; 
+	-webkit-align-items: center;
+	align-items: center;
+	position:relative;
+	padding:0.187rem 0.507rem 0.16rem 0;
+	min-height:1.947rem;
+	border-top:0.013rem solid #eee;
+	transition: padding 0.2s;
+	-webkit-transition: padding 0.2s;
+}
+.pro-detail .pro-earnings {
+	width:2.213rem; 
+	line-height:1;
+}
+.pro-detail .exrnings {
+	margin-bottom:0.107rem;
+	font-size:0.64rem;
+}
+.pro-detail .exrnings i {
+	font-size:0.4rem;
+}
+.pro-detail .pro-earnings .graytext {
+	font-size:0.293rem;
+	line-height:0.4rem;
+}
+.pro-detail .pro-info {
+	position: relative;
+	/*overflow:hidden;*/
+	padding:0 0 0 0.533rem;
+	font-size:0.32rem;
+	line-height:0.48rem;
+	-moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.pro-detail .pro-info:before {
+	position: absolute;
+	left:0;
+	top:50%;
+	margin-top:-0.547rem;
+	display: block;
+	content: "";
+	width:0;
+	overflow: hidden;
+	height:1.093rem;
+	border-left:0.013rem solid #eee;
+}
+[data-dpr="1"] .pro-detail .pro-info:before {
+	border-left-width:1px;
+}
+.pro-detail .pro-name {
+	margin-bottom:0.12rem;
+	font-size:0.373rem;
+	color:#5f616b;
+}
+.pro-detail .pro-status {
+	text-align:right;
+}
+
+/*进度*/
+.progress-box {
+	position: relative;
+	width:1.587rem;
+	height:1.587rem;
+	overflow:hidden;
+}
+.progress-box .progress-number {
+	position: absolute;
+	top:0;
+	color:#fc625a;
+	font-size:0.32rem;
+	height:100%;
+	width:100%;
+	line-height:1.573rem;
+	text-align: center;
+}
+.progress-box .progress-number .num {
+	font-size:0.48rem;
+}
+.progress-box .progress-number .fulltxt {
+	line-height:1.4;
+	font-size:0.293rem;
+}
+
+.progress-box svg {
+	-webkit-transform: rotate(-89deg);
+	transform: rotate(-89deg);
+}
+.progress-box .progressCircle {
+    transition: stroke-dasharray 0.4s linear 0.2s;
+    -webkit-transition: stroke-dasharray 0.4s linear 0.2s;
+}
+/*满标*/
+.full-item .pro-detail .exrnings {
+	color:#afb0be;
+}
+.full-item .progress-box .progress-number {
+	padding-top:0.427rem;
+	line-height: 1;
+}
+/*未开始*/
+.pro-notBegin .pro-detail {
+	padding-top:0.533rem;
+	padding-bottom:0.36rem;
+}
+.pro-notBegin .pro-detail .exrnings {
+	margin-bottom:0.24rem;
+}
+
+.pro-info .pro-time {
+	margin-top:0.027rem;
+	height:0.48rem;
+	border:none;
+	font-size:0.293rem;
+	color:#afb0be;
+	text-align: left;
+	line-height: 0.48rem;
+}
+
+/*定期日息宝列表项*/
+.proItem {
+	position: relative;
+	margin:0.267rem 0.267rem 0;
+	border:0.013rem solid #eee;
+	background-color:#fff;
+	border-radius:0.16rem;
+	-webkit-border-radius:0.16rem;
+}
+.proItem a {
+	display: block;
+}
+.proItem a:active {
+	background-color:#edebeb;
+}
+.proItem .mainInfo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;	
+	display: flex;
+	position: relative;
+	padding:0.56rem 0;
+	height:3.2rem;
+	line-height:1;
+}
+.proItem .mainInfo .itemLeft {
+	width:3.0rem;
+	padding-left:0.267rem;
+	color:#afb0be;
+	font-size:0.32rem;
+}
+.proItem .itemLeft .exrnings {
+	margin:0.267rem 0 0.173rem;
+	font-size: 0.453rem;
+	color:#b3b3b3;
+}
+.proItem .itemLeft .exrnings .cRed {
+	font-size: 0.88rem;
+}
+
+.proItem .itemRight {
+	margin:0.027rem 0;
+	padding:0 0.2rem 0 0.4rem;
+	border-left:0.013rem solid #e5e5e5;
+	-webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.proItem .itemRight h3 {
+	padding-top:0.08rem;
+	margin-bottom:0.333rem;
+	font-size:0.48rem;
+}
+.proItem .deadline {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;	
+	display: flex;
+	color:#afb0be;
+	font-size:0.32rem;
+	line-height:1;
+}
+.proItem .deadline li {
+	width:1.6rem
+}
+
+.proItem .deadline .investNum {
+	margin-top:0.213rem;
+	font-size:0.4rem;
+	color:#424242;
+}
+
+.endedPro .exrnings .cRed, .endedPro .itemRight h3, .endedPro .deadline .investNum {
+	color:#afb0be;
+}
+
+.proItem .status-mark {
+	position: absolute;
+	right:0.16rem;
+	bottom:0.16rem;
+}

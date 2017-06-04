@@ -1,0 +1,92 @@
+
+@import url('common/modelLia.css?__inline');
+@import url('common/button.css?__inline');
+@import url('help_rechargerule.css?__inline');
+@import url('my_withhold.css?__inline'); 
+
+
+html {
+	overflow-x:hidden;
+}
+/*icon*/
+.icon-tips {
+	display:inline-block;
+	width:0.32rem;
+	height:0.32rem;
+	overflow:hidden;
+	background: url("../images/icon/icon_tips.png?__inline") no-repeat center center;
+	background-size:100%;
+}
+.icon-bankcard {
+	display: inline-block;
+	width:0.56rem;
+	height:0.453rem;
+	background: url("../images/icon/icon_bankcard.png?__inline") no-repeat center center;
+	background-size:100%
+}
+
+.bindInfos .icon-bankcard {
+	margin-right: 0.427rem;
+}
+.bindInfos .icon-bankcard, .bindInfos .bankName {
+	vertical-align: middle;
+}
+.bindInfos .itemTips {
+	padding:0.24rem 0.307rem 0.24rem 0.827rem;
+	border-bottom:0.013rem solid #eee;
+	font-size:0.293rem;
+	color:#7c7e86;
+	line-height:0.427rem;
+}
+.bindInfos .itemTips .icon-tips {
+	margin:0.027rem 0.133rem 0 -0.453rem;
+	vertical-align: top;
+}
+.contentBt {
+	position: relative;
+	margin:1.267rem 0.4rem 0;
+}
+.contentBt .cRed {
+	position: absolute;
+	left:0;
+	right:0;
+	top:-0.533rem;
+	line-height:0.4rem;
+	text-align:center;
+}
+.bindInfos .comGetCode {
+	width:2.373rem;
+	height:0.64rem;
+	line-height:0.613rem;
+	vertical-align: middle;
+}
+
+.bindInfos .bankIcon {
+  display: inline-block;
+  margin-right: 0.467rem;
+  width:1.027rem;
+  height:1.027rem;
+  vertical-align: middle;
+}
+
+
+/*银行列表*/
+.cashWrap .bankList .bankInfo {
+	border-top:none;
+}
+.cashWrap .bankList .bankInfo:first-child {
+	border-top:0.013rem solid #eee;
+}
+
+.slideInRight.animated {
+  -webkit-animation-duration:0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.slideOutRight.animated{
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lvpp" />
+  <title>{$title}</title>
+  <script type="text/javascript" src="/static/lib/mod.js"></script>
+  {include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm"  returnBtn="back"}
+<div class="container">
+	<a href="/my/password/revised_login" class="modelLia border-top-1">
+		<div class="con-b wid39">
+			<span class="change-login-icon mar-rt30"></span>
+		</div>
+		<div class="con-a">
+			修改登录密码
+		</div>
+		<div class="con-b">
+			<span class="icon pw-jt-icon"></span>
+		</div>
+	</a>
+	<a href="/my/password/revised_deal" class="modelLia border-top-1 mt30">
+		<div class="con-b wid39">
+			<span class="con-pw-jy mar-rt30"></span>
+		</div>
+		<div class="con-a">
+			修改交易密码
+		</div>
+		<div class="con-b">
+			<span class="icon pw-jt-icon"></span>
+		</div>
+	</a>
+	<a href="/my/password/forget_deal" class="modelLia">
+		<div class="con-b wid39">
+			<span class="con-pw-forget mar-rt30"></span>
+		</div>
+		<div class="con-a">
+			忘记交易密码
+		</div>
+		<div class="con-b">
+			<span class="icon pw-jt-icon"></span>
+		</div>
+	</a>
+	<a href="/my/realname/certification" class="modelLia border-top-1 mt30">
+		<div class="con-a jsIsRNameLink">
+			实名认证
+		</div>
+		<div class="con-b">
+			<span class="icon pw-jt-icon"></span>
+		</div>
+	</a>
+</div>
+
+<!-- 判断用户是否实名 -->
+<!-- is_realname==1 已实名-->
+<!-- is_realname==0 未实名 -->
+<input type="hidden" name="is_realname" class="jsIsRealName" value="{$Realnameinfo.status}"
+	   message="{$Realnameinfo.msg}" url="{$Realnameinfo.url}"/>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_password_manage/init');
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+@import url('common/modelLia.css?__inline'); /*加载公共左右行样式*/
+@import url('common/button.css?__inline'); /*加载botton样式*/
+.modelLia .con-b{
+	text-align: right;
+}
+.modelLia .con-a{
+	font-size:0.4rem;
+}
+.change-login-icon{
+	background: url('../images/password_manage/pw_01.png') no-repeat;
+	background-size: 100%;
+	display: block;
+	padding: 0.28rem 0.2rem;
+}
+.modelLia .con-a{color:#5f616b;}
+.modelLia .con-b.wid39{ width: 0.52rem }
+.modelLia .mar-rt30{
+	margin-right:0.4rem;
+}
+.con-pw-jy{
+	background: url('../images/password_manage/pw_02.png') no-repeat;
+	background-size:100%;
+	display: block;
+	padding:0.27rem 0.25rem;
+	/*margin:0 0.35rem -0.09rem 0;*/
+}
+.con-pw-forget{
+	background: url('../images/password_manage/pw_03.png') no-repeat;
+	background-size:100%;
+	display:block;
+	padding:0.22rem 0.25rem;
+}

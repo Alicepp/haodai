@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back" rightLink="register"}
+<div class="wrap">
+	<div class="main">
+		<div class="bd">
+			<form action="{$action_url}" class="registerForm" method="post">
+				<div class="container">
+					<div class="modelLia border-top-1">
+						<h5 class="title-a">手机号</h5>
+						<div class="con-a">
+							<input type="text" name="mobilePhone" class="jsMobilePhone" placeholder="请输入您的手机号码" value="" />
+						</div>
+					</div>
+					<div class="modelLia imgCode">
+						<h5 class="title-a">图形验证码</h5>
+						<div class="con-a">
+							<input type="text" name="imageCode" class="cInput jsImgCode" placeholder="请输入图形验证码" />
+						</div>
+						<div class="con-b">
+							<img src="{$code}" class="J_graphCode" data-url="/common/getCodeImg" />
+						</div>
+					</div>
+					<div class="modelLia">
+						<h5 class="title-a">短信验证码</h5>
+						<div class="con-a">
+							<input type="text" name="identifyingCode" class="jsSmsCode" placeholder="请输入6位验证码" autocomplete="off" />
+						</div>
+						<div class="con-b"><input type="button" class="comGetCode" url="{$send_code}" value="获取验证码"/>
+						</div>
+					</div>
+					<div class="modelLia mt20">
+						<h5 class="title-a">设置登录密码</h5>
+						<div class="con-a">
+							<input type="password" name="pwd" class="jsPassWord passWordCrypt" placeholder="请设置6-16位登录密码，含字母和数字" autocomplete="off" />
+						</div>
+						<div class="con-b">
+							<!-- 显示密码class -->
+							<span class="icon"><a href="javascript:;" class="icon eye icon_pwd_hui_hide"></a></span>
+						</div>
+					</div>
+					<div class="ml30 mt30 checkboxWrap">
+						<input type="checkbox" checked="checked" class="protocol jsInputCheck">我已阅读并同意 <a href="javascript:;" data-name="register_agreement" class="protocolLink J_popPageBtn">《用户服务协议》</a>
+					</div>
+				</div>
+				<div class="content mt100">
+					<button class="btn redBtn" type="submit">注册</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{include file="_common/footer.htm"}
+
+<!-- 用户服务协议 -->
+{include file="register/agreement.htm"}
+
+<script type="text/javascript">
+    require('common:static/widget/register_index/init');
+</script>
+</body>
+</html>

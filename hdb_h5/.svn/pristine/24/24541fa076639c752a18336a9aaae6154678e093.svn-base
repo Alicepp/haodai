@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    {include file="_common/var.htm"}
+    <meta name="author" content="fanjj" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="appwrap">
+    <form action="/my/feedback/do_content" method="post" class="feedBackForm">
+        <textarea name="content" id="" placeholder="非常欢迎您提出宝贵意见～" class="feedback jsFeedback" autofocus="autofocus"></textarea>
+        <div class="validate">
+            <div class="validateL">
+                <span class="preV">图形验证码</span>
+                <input type="text" class="jsImgCode" placeholder="请输入图形验证码" name="imageCode" autofocus="autofocus" />
+            </div>
+            <img src="{$code}" class="validateR J_graphCode" data-url="/common/getCodeImg" />
+        </div>
+        <div class="bottom"><button class="btn redBtn" type="submit">提交</button></div>
+    </form>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_feedback/init');
+</script>
+</body>
+</html>

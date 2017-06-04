@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    {include file="_common/var.htm"}
+    <link rel="stylesheet" href="static/css/common/common.css">
+    <link rel="stylesheet" href="static/css/notice_detail.css">
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="appwrap noticeDetailDiv">
+    {if !empty($result)}
+    <section class="wrap">
+        <div class="title">
+            <h3 class="titleL">{$result.topic}</h3>
+            <div class="titleR">{$result.operateDate}</div>
+        </div>
+        <p class="message">{$result.contentRich}</p>
+    </section>
+    {else}
+    <!-- 暂无内容提示 begin -->
+    <div class="no-notice-detail">
+        <div class="iconNotice"></div>
+        <p class="txt">暂无内容</p>
+    </div>
+    <!-- 暂无内容提示 end -->
+    {/if}
+</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

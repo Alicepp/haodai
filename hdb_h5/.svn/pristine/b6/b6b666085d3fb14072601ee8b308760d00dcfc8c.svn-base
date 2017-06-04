@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<section class="cashWrap mt20">
+	<div class="bankList">
+		<div class="bankInfo">
+			<span class="bankIcon"></span>
+			<div class="infoCont">
+				<p class="bankName">招商银行 借记卡</p>
+				<p class="grayTxt">单次限额122，每日限额122</p>
+			</div>
+		</div>
+		<div class="bankInfo">
+			<span class="bankIcon"></span>
+			<div class="infoCont">
+				<p class="bankName">招商银行 借记卡</p>
+				<p class="grayTxt">单次限额122，每日限额122</p>
+			</div>
+		</div>
+		<div class="bankInfo">
+			<span class="bankIcon"></span>
+			<div class="infoCont">
+				<p class="bankName">招商银行 借记卡</p>
+				<p class="grayTxt">单次限额122，每日限额122</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_cashvalue_banklist/init');
+</script>
+</body>
+</html>

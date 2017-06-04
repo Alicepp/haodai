@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>{include file="_common/var.htm"}</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+
+<div class="appwrap myCoupon">
+	<div class="tabBg pullSetDivTop" ></div>
+	<div class="hdTab jsTabTitle mb30 pullSetDivTop">
+		<a href="javascript:;" class="active" v-on:click="changeList($event,0)">可使用</a><a href="javascript:;" v-on:click="changeList($event,4)">已使用</a><a href="javascript:;" v-on:click="changeList($event,2)">已失效</a>
+	</div>
+	<div class="nocouponswrap" v-show="list.length==0" v-cloak>
+		<div class="nocoupons"></div>
+		<div class="infowrap">
+			暂无可用优惠券 |
+			<a class="lookOldCoupons" href="/activity/index">去领劵 >></a>
+		</div>
+	</div>
+
+	{literal}
+	<div id="iscrollwrap" v-cloak>
+		<div id="scroller">
+
+			<ul class="couponwrap" v-show="list.length>0">
+				<li v-bind:class="computedClass(item)"  v-for="item in list" v-bind:style="item.status==='4'?'opacity: 0.4':''">
+					<div class="topwrap">
+						<div class="leftCol">
+							<div class="leftTop">{{item.resourceTypeDes}}</div>
+							<div style="height:0.46rem"></div>
+							<div class="deswrap">
+								<h2></h2>
+								<p>{{item.resourceProperties}}</p>
+							</div>
+						</div>
+						<div class="rightCol">
+							<div class="conInfo">
+								<span class="symbol">¥</span>
+                                <span class="money">{{item.resourceAmount}}</span>
+							</div>
+						</div>
+					</div>
+					<div class="foo">
+						<span class="leftCol">有效期：{{item.fromTime | date}} — {{item.thruTime | date}}</span>
+						<span class="rightCol">{{couputedEnabledText(item.status)}}</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	{/literal}
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_coupon_index/init');
+</script>
+</div>
+</body>
+</html>

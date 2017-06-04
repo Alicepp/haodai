@@ -1,0 +1,59 @@
+
+@import url('common/pulldown.css?__inline');
+
+/*投标记录样式开始*/
+.logWrap{
+    border-top:0.0133rem solid #eee;
+}
+.logWrap li{
+    border-bottom:0.0133rem solid #eee;
+    padding:0 0.4267rem 0 0.4rem;
+    height:1.7733rem;
+    background:#fff;
+    overflow:hidden;
+}
+.logWrap .logL{
+    float:left;
+}
+.logWrap .logL i{
+    display:block;
+    padding-top:0.293rem;
+    font-size:0.427rem;
+    line-height: 1;
+    color:#5f616b;
+    }
+.logWrap .logL i:nth-child(2){
+    padding-top:0.453rem;
+    font-size:0.32rem;
+    color:#b7b9c5;
+}
+.logWrap .logR{
+    float:right;
+    padding-top:0.4267rem;
+    font-size:0.453rem;
+    line-height: 1;
+    color:#5f616b;
+}
+
+/*投标记录样式结束*/
+/*投标无记录样式开始*/
+.iconW{
+    position: relative;
+    margin:0 auto;
+    margin-top:0.96rem;
+    border:0.0267rem dashed #d4d4d4;
+    border-radius:50%;
+    width:3.5333rem;
+    height:3.5333rem;
+    background: url(./../images/bid/norecord.png) 65% 45% no-repeat;
+    background-size:2.12rem 2.0667rem;
+}
+.iconW:after{
+    position: absolute;
+    content:"暂无记录";
+    font-size:0.4267rem;
+    color:#878a97;
+    bottom:-0.9rem;
+    left:0.95rem;
+}
+/*投标无记录样式结束*/

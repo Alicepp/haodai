@@ -1,0 +1,225 @@
+
+@import url('common/commonLogin.css?__inline'); /*公共登录样式*/
+
+/*详情页布局*/
+.detailWrap .header {
+	color:#fff;
+	border:none;
+}
+.detailWrap .pageMain {
+	margin-top:-1.2rem;
+}
+.header .returnBtn i {
+	background-image: url("../images/common/arrow_white.png");
+}
+.header .returnBtn:active {
+	background-color: transparent;
+}
+.detailWrap .header {
+	background-image: linear-gradient(top, #fe3e34, #fe4435);
+	background-image: -webkit-linear-gradient(top, #fe3e34, #fe4435);
+	background-image: -ms-linear-gradient(top, #fe3e34, #fe4435);
+	background-color: transparent;
+}
+
+.pageMain {
+	padding-bottom:1.467rem;
+}
+.twoColum .colum {
+	position:relative;
+	float:left;
+	width:50%;
+	height:100%;
+	text-align:center;
+}
+/*** 1px 竖边框 ***/
+.twoColum .colum:last-child:before, .pageBottom .buttons li:last-child:before {
+	display:block;
+	content: "";
+	position:absolute;
+	top:50%;
+	left:0;
+	margin-top:-0.52rem;
+	width:1px;
+	height:1.04rem;
+	overflow:hidden;
+	background-color: #d9dae0;
+}
+/*** 1px 上边框 ***/
+.pageBottom:before, .projectChart .chartBox:before, .projectChart:before, .projectChart:after {
+	display:block;
+	content: "";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:1px;
+	overflow:hidden;
+	background-color: #eee;
+}
+.projectChart:after {
+	top:100%;
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio:2){
+  .pageBottom:before, .projectChart .chartBox:before, .projectChart:before, .projectChart:after {
+        -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  .twoColum .colum:last-child:before, .pageBottom .buttons li:last-child:before {
+  		-webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+        -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+}
+
+.projectMain {
+	padding-top:1.2rem;
+	height:6.387rem;
+	color:#fff;
+	text-align:center;
+	line-height:1;
+	background-image: linear-gradient(top, #fe3e34, #fe6a3c);
+	background-image: -webkit-linear-gradient(top, #fe3e34, #fe6a3c);
+	background-image: -ms-linear-gradient(top, #fe3e34, #fe6a3c);
+}
+.projectMain .topinfo {
+	padding-top:0.4rem;
+	height:2.427rem;
+}
+.projectMain .topinfo .loginLink {
+	display: block;
+	margin-top:0.427rem;
+	font-size:0.56rem;
+	color:#fff;
+	line-height:1.2rem;
+	text-decoration: underline;
+}
+.projectMain .modtxt {
+	font-size:0.347rem;
+}
+.projectMain .amount {
+	margin-top:0.333rem;
+	font-size:1.333rem;
+}
+.projectMain .updateTime {
+	position: relative;
+	margin-top:0.2rem;
+	padding:0 0.267rem;
+	display:inline-block;
+	/*width:3.2rem;*/
+	height:0.507rem;
+	/*border:0.013rem solid rgba(255, 255, 255, .5);*/
+	text-align: center;
+	font-size:0.293rem;
+	line-height:0.507rem;
+	border-radius:0.24rem / 50%;
+	-webkit-border-radius:0.24rem /50%;
+}
+.projectMain .updateTime:after {
+	display: block;
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(255, 255, 255, .5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    border-radius:0.48rem / 50%;
+	-webkit-border-radius:0.48rem /50%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.projectMain .twoColum {
+	margin-top:0.453rem;
+	height:1.133rem;
+	font-size:0.32rem;
+}
+.projectMain .twoColum .colum p:last-child {
+	margin-top:0.187rem;
+	font-size:0.613rem;
+}
+.projectMain .twoColum .colum:last-child:before {
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.projectChart {
+	position: relative;
+	/*border-style:solid;
+	border-color:#eee transparent;
+	border-width:0.013rem 0;
+	background-color:#fff;*/
+}
+.projectChart .twoColum {
+	height:1.84rem;
+	font-size:0.32rem;
+}
+.projectChart .twoColum .colum {
+	padding-top:0.347rem;
+}
+.projectChart .twoColum .incomeTop {
+	line-height:0.4rem;
+	color:#8e91a0;
+}
+.projectChart .twoColum .incomeBt {
+	margin-top:0.2rem;
+	font-size:0.587rem;
+	line-height:1;
+}
+.projectChart .twoColum .incomeBt span {
+	font-size:0.4rem;
+}
+
+.projectChart .chartBox {
+	position: relative;
+	height:6.667rem;
+	/*border-top:0.013rem solid #eee;*/
+}
+
+.pageBottom {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	/*border-top:0.013rem solid #eee;*/
+	background-color:#fff;
+}
+
+.pageBottom .buttons li {
+	position: relative;
+	float:left;
+	width:50%;
+	height:1.467rem;
+	line-height: 1.467rem;
+	text-align: center;
+}
+.pageBottom .buttons a {
+	display: block;
+	width:100%;
+	height:100%;
+	font-size:0.587rem;
+	color:#B3B3B3;
+}
+.pageBottom .buttons .cRed {
+	color:#ff6159;
+}
+
+.pageBottom .buttons a:active {
+	background-color: #f6f6f6;
+}
+.pageBottom .buttons li:last-child:before {
+	height:1.04rem;
+	background-color: #eee;
+}
+
+#incomeEcharts {
+	width:100%;
+	height:100%;
+}

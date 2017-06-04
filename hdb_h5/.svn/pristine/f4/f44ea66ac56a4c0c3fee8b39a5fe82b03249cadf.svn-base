@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back" rightLink="shiftto"}
+
+<!-- 判断用户是否实名 -->
+<!-- is_realname==1 已实名-->
+<!-- is_realname==0 未实名 -->
+<input type="hidden" name="is_realname" class="jsIsRealName" value="{$Realnameinfo.status}" message="{$Realnameinfo.msg}" url="{$Realnameinfo.url}"/>
+<div class="warp shiftTo">
+    <form action="{getRedirectStr('/bid/do_shift_to')}" class="projectBidForm" method="post">
+		<div class="container vueTpl">
+			<div class="modelLia no-bg">
+				<h5 class="title-a">账户余额：</h5>
+				<div class="con-a">
+                    <span class="cRed"><i class="jsUsableAmount" amount="{$usableAmount}">{formatMoney($userMoney)}</i></span><span
+						class="label">元</span>
+				</div>
+				<div class="con-b">
+					<a href="/my/cashvalue/recharge" class="btn2 jsIsRNameLink">去充值</a>
+				</div>
+			</div>
+			<div class="modelLia border-top-1 mt20">
+				<h5 class="title-a">转入金额：</h5>
+				<div class="con-a">
+					<input type="text" name="money" v-model="money" class="jsShiftToAmount" placeholder="输入1元以上整数金额">
+				</div>
+				<div class="con-b">
+					<a href="javascript:;" class="blue_link" v-on:click="allPut()">全部转入</a>
+				</div>
+			</div>
+			<div class="txt mt20">
+				<p class="f28">剩余可投金额：<i class="jsRemaiNum" remainnum="{$remainnum}">{formatMoney($remainnum)}</i><span
+						class="cGray2"></span> 元</p>
+				<p class="f28">预计收益到账时间：<span class="cGray2">{$icome_time}</span></p>
+			</div>
+			<div class="content mt100">
+				<button :class="['btn redBtn',isRemainNum ? 'comDisabled' : '']" type="submit" v-bind:disabled="isRemainNum">确认转入</button>
+			</div>
+		</div>
+	</form>
+</div>
+{include file="_common/footer.htm"}
+
+<!-- 转入说明 -->
+{include file="_common/statictpl/rollinoutrule.htm" method="pop"}
+
+<script type="text/javascript">
+    require('common:static/widget/bid_shift_to/init');
+</script>
+</body>
+</html>

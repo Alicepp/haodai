@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    {include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="vueTpl">
+    <section class="head">
+        <h3 class="active nav-wid" url="/notice/usermsglist"><span>系统消息</span></h3>
+        <h3 class="nav-wid" url="/notice/noticelist"><span>公告</span></h3>
+    </section>
+    <section class="listCon">
+        <!--系统消息开始 -->
+        <ul class="jsList">
+            {literal}
+            <li v-for="m in list" v-cloak>
+                <a v-show="m.title" href="javascript:;" data-name="usermsg" :id="m.id" class="notice_list J_popPageBtn jsMsgListBtn">
+                    <div class="listL">
+                        <!-- isRead==0  消息未读 -->
+                        <input type="hidden" class="jsIsRead" :value="m.isRead" />
+                        <i v-show="m.isRead==0"><i :class="['jsDot',m.isRead==0 ? 'dot' : '']"></i></i>
+                        <span :class="['list_t titleAllCon jsTitleCon',m.isRead==0 ? '' : 'gray'] " :allContent="m.allContent">{{m.title}}</span>
+                        <span class="list_b publishDate">{{m.publishDate}}</span>
+                    </div>
+                    <div class="arrows"></div>
+                </a>
+            </li>
+            {/literal}
+        </ul>
+        <!-- 系统消息结束 -->
+
+        <!--公告开始 -->
+        <ul class="jsList">
+            {literal}
+            <li v-for="n in list" v-cloak>
+                <a v-show="n.topic" :href="'/notice/detail/'+n.id" class="notice_list">
+                    <div class="listL">
+                        <span class="list_t">{{n.topic}}</span>
+                        <span class="list_b">{{n.operateDate}}</span>
+                    </div>
+                    <div class="arrows"></div>
+                </a>
+            </li>
+            {/literal}
+        </ul>
+        <div class="noMsg" v-cloak v-if="!hasData">暂无消息</div>
+        <!-- 公告结束 -->
+    </section>
+</div>
+<!-- 消息详情 -->
+{include file="_common/usermsgdetail.htm" method="pop"}
+<!-- footer -->
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/notice_index/init');
+</script>
+</body>
+</html>

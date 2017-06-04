@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>{$title}</title>
+    {include file="_common/var.htm"}
+    <link rel="stylesheet" href="static/css/common/common.css">
+    <link rel="stylesheet" href="static/css/home_safe.css">
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div>
+    <div class="headA box">
+            <h1 class="headerF">互联网金融服务管家</h1>
+    </div>
+    <div class="boxA">
+        <!-- <div class="headA box">
+            <h1 class="headerF">互联网金融服务管家</h1>
+        </div> -->
+        <div class="zrj">
+        <div class="profileH">
+                <span class="lineBef"></span>
+                <h3 class="s30"><i></i>中融金<i></i></h3>
+                <span class="lineAft"></span>
+        </div>
+        <p class="zrj_profile">中融金成立于2014年9月，注册资金2222.2222万元，是A股上市公司奥马电器(股票代码:002668)旗下互联网事业板块的核心企业之一,致力于搭建便捷高效的场景大数据平台和金融科技生态体系，在网络借贷信息服务等众多领域拥有丰富的实践经验。已为多家企业提供互联网化平台技术解决方案，同时拥有自主运营的互联网借贷平台 “好贷宝”。
+        </p>
+    </div>
+    <div class="am">
+            <div class="profileH">
+                <span class="lineBef"></span>
+                <h3 class="s30 aM"><i></i>奥马电器<i></i></h3>
+                <span class="lineAft"></span>
+            </div>
+            <div class="am_profile box">
+                <span class="a">奥马电器于2012年4月在A股上市，证券代码002668</span>
+                <span class="a">截至2015年第三季度</span>
+            </div>
+            <div class="assetsW box">
+                <div class="assets box">
+                    <span class="s21">总资产</span>
+                    <span class="s32">34.9</span>
+                    <span class="s21">亿</span>
+                </div>
+                <div class="assets box">
+                    <span class="s21">市值</span>
+                    <span class="s32">200</span>
+                    <span class="s21">亿</span>
+                </div>
+                <div class="assets box">
+                    <span class="s21">营收</span>
+                    <span class="s32">38</span>
+                    <span class="s21">亿</span>
+                </div>
+                <div class="assets box">
+                    <span class="s21">营利</span>
+                    <span class="s32">2.38</span>
+                    <span class="s21">亿</span>
+                </div>
+            </div>
+        </div>
+</div>
+<div>
+    <div class="headB box">
+        <h1 class="haoDb">为什么选择好贷宝？</h1>
+        <div class="bgL"></div>
+        <div class="bgR"></div>
+    </div>
+    <div class="haoDb_list">
+        <div class="iconL icon_a"></div>
+        <div class="list">
+            <h4 class="listT">银行监督</h4>
+            <p class="listB">好贷宝与国内数十家国内银行等金融机构进行产品方面的合作，接受银行监督。
+            </p>
+        </div>
+    </div>
+    <div class="haoDb_list">
+        <div class="iconL icon_b"></div>
+        <div class="list">
+            <h4 class="listT">精英风控</h4>
+            <p class="listB">
+                专业的精英风控团队，从项目设计到项目审核，
+                再到运维监测，均由具备数十年金融运营经验
+                的专业风控管理团队把关。
+            </p>
+        </div>
+    </div>
+    <div class="haoDb_list">
+        <div class="iconL icon_c"></div>
+        <div class="list">
+            <h4 class="listT">资金监管 同卡进出</h4>
+            <p class="listB">
+                银行存管  风险保证金 同卡进出
+            </p>
+        </div>
+    </div>
+    <div class="haoDb_list last">
+        <div class="iconL icon_d"></div>
+        <div class="list">
+            <h4 class="listT">自主研发 信息安全</h4>
+            <p class="listB">
+                信息加密   实时备份  隐私保护
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

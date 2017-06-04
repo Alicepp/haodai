@@ -1,0 +1,67 @@
+<div class="selectCouponDiv popPage none J_popPage" data-name="selectCoupon">
+    <div class="header">
+        <a href="javascript:;" class="returnBtn J_popPageBack"><i></i></a>
+        <h1 class="txt">选择优惠券</h1>
+    </div>
+    <div class="mb90"></div>
+    <div class="appwrap myCoupon">
+        {if $list != 0}
+        <!-- <div id="iscrollwrap"> -->
+        <div id="scroller" class="">
+            <ul id="couponwrap" class="couponwrap jsCouponWrap">
+                {foreach from=$list item=i}
+                {if $i.status != 0}
+                <!--已失效-->
+                <li class="ysx">
+                    {else}
+                    {if $i.resourceType == 101}<!--返现券-->
+                <li class="fxq" v-on:click="select_coupon_list($event)">{else}<!--代金券-->
+                <li class="djq" v-on:click="select_coupon_list($event)">{/if}
+                    {/if}
+
+                    <div class="topwrap">
+                        <div class="leftCol">
+                            <div class="leftTop">{$i.resourceTypeDes}</div>
+                            <div class="deswrap">
+                                <h2></h2>
+                                <p>{$i.resourceProperties}</p>
+                            </div>
+                            </div>
+                        <div class="rightCol">
+                            <!-- 选中状态 begin -->
+                            <div class="dot jsDot none"></div>
+                            <!-- 选中状态 end -->
+                            <div class="conInfo">
+                                <span class="symbol">¥</span>
+                                <span class="money jsAmountTxt">{$i.resourceAmount}</span>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="foo">
+                        <span class="leftCol">有效期：{date('Y-m-d',$i.thruTime/1000)}-{date('Y-m-d',$i.thruTime/1000)}</span>
+                        <span class="rightCol">{$i.statusDes}</span>
+                    </div>
+                    <input type="hidden" name="code" value="{$i.resourceCode}">
+                    <input type="hidden" name="status" value="{$i.status}"><!--判断是否可点 状态（0未使用；2已使用；4已经过期）-->
+                </li>
+                {/foreach}
+            </ul>
+            <div class="content mt30">
+                <a href="javascript:;" class="btn redBtn J_popPageBack">确定</a>
+            </div>
+
+        </div>
+        <!-- </div> -->
+        {else}
+        <!-- 暂无可用优惠券 begin -->
+        <div class="nocouponswrap mt230">
+            <div class="nocoupons"></div>
+            <div class="infowrap">
+                暂无可用优惠券 |
+                <a class="lookOldCoupons" href="/activity/index">去领券 &gt;&gt;</a>
+            </div>
+        </div>
+        <!-- 暂无可用优惠券 end -->
+        {/if}
+    </div>
+</div>

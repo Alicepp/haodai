@@ -1,0 +1,12 @@
+
+/*@import url('./my_cash_coupon.css?__inline');*/
+
+/*iscroll start*/
+#iscrollwrap {
+	/*height: 100%;
+	overflow-y: hidden;*/
+	bottom:0;
+}
+/*iscroll end*/
+
+html {filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(100%);}

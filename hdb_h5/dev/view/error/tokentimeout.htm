@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+	{include file="_common/header.htm"}
+	<div class="appwrap">
+		<img class="loading" style="-webkit-user-select: none" src="/static/images/common/loading.gif" width="30%" alt="">
+	</div>
+	{include file="_common/footer.htm"}
+	<input type="hidden" name="backurl" value="{$backurl}">
+	<input type="hidden" name="userPhone" value="{$userPhone}">
+	<script type="text/javascript">
+    require('common:static/widget/error_tokentimeout/init');
+</script>
+</body>
+</html>

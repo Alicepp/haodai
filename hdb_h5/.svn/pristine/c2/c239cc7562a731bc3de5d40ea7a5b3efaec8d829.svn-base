@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+	<link rel="stylesheet" href="static/css/common/common.css">
+	<link rel="stylesheet" href="static/css/my_rules.css">
+</head>
+<body>
+	{include file="_common/header.htm" returnBtn="back"}
+	<div class="appwrap">
+		<section class="section">
+			<div class="title">限额说明</div>
+			<ul class="intro-content">
+				{if $result neq 0}
+				{foreach from=$result item=i name=foo}
+				<li>
+					<p class="intro-title">{$i.bankName} 借记卡</p>
+					<!-- <p class="intro-detail">单笔限额，每日限额{$i.dayLimit}</p>
+				-->
+					<p class="intro-detail">单笔限额{$i.onceLimit}，每日限额{$i.dayLimit}</p>
+				</li>
+				{/foreach}
+				{/if}
+		</ul>
+	</section>
+	<section class="section">
+		<div class="title">银行卡充值（非刷卡器）</div>
+		<ul class="content">
+			<li class="descr">1. 根据同卡进出原则，用户只能使用唯一一张绑定的银行卡进行充值和提现。</li>
+			<li class="descr">2. 没有在好贷宝网站上绑定过提现银行卡的用户，第一次充值成功后，系统自动绑定这张银行卡。</li>
+			<li class="descr">3. 在好贷宝网站上绑定过提现银行卡的用户，第一次充值成功后，系统自动绑定这张银行卡，同时其他原有的提现卡作废。</li>
+			<li class="descr">
+				4. 暂时不支持变更绑定的银行卡。如需帮助，请拨打客服电话：
+				<a href="tel:400-620-8800" class="txt-color">400-620-8800</a>
+			</li>
+		</ul>
+	</section>
+	<section class="section">
+		<div class="title">提现说明</div>
+		<ul class="content">
+			<li class="descr">
+				<table>
+					<tr>
+						<th>提现金额</th>
+						<td>5万元以下</td>
+						<td>5万元(含以上)</td>
+					</tr>
+					<tr>
+						<th>费用</th>
+						<td>1元/笔</td>
+						<td>5元/笔</td>
+					</tr>
+				</table>
+			</li>
+			<li class="descr">提现金额5万元以下：1元/笔 提现金额5万元（含）以上：5元/笔</li>
+			<li class="descr">好贷宝将对您的提现申请进行审核。如审核通过，金额转入您的银行卡；如审核失败，金额退还至用户账户。</li>
+			<li class="descr">单笔金额不能超过30万元，每日最多提现3次。</li>
+			<li class="descr">预计到账时间：1~2个工作日。</li>
+		</ul>
+	</section>
+
+</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

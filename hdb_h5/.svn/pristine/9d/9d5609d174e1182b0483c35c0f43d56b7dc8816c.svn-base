@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    {include file="_common/var.htm"}
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    <meta name="author" content="wuping" />
+</head>
+<body>
+<div class="pageWrap">
+    {include file="_common/header.htm" rightLink = "menu" returnBtn='user'}
+    <section class="home-wrap J_scrollWrap">
+        <!-- 轮播图 -->
+
+        <div class="home-banner{if $banner|count > 1} J_swiper{/if}">
+            <ul class="swiper-wrapper">
+                {if $banner|count > 1}
+                    {foreach from=$banner item=i}
+                    <li class="swiper-slide">
+                        <img data-src="{$i.imgUrl}" class="swiper-lazy"/>
+                        <div class="swiper-lazy-preloader"></div>
+                    </li>
+                    {/foreach}
+                {elseif $banner|count == 1}
+                    <li class="swiper-slide">
+                        <img src="{$i.imgUrl}" />
+                    </li>
+                {else}
+                    <li class="swiper-slide">
+                        <img src="static/images/home/banner01.jpg" />
+                    </li>
+                {/if}
+            </ul>
+            {if $banner|count > 1}
+            <div class="swiper-pagination"></div>
+            {/if}
+        </div>
+
+        {if $notice|count >= 1}
+        <!-- 公告 -->
+        <div class="home-notice">
+            <span class="notice-mark"><i class="icon-notice"></i>公告：</span>
+            <a href="/notice" class="moretxt">更多</a>
+            <div class="swiperNotice {if $notice|count > 1}J_swiperNotice{/if}">
+                <div class="swiper-wrapper">
+                    {foreach from=$notice item=i}
+                    <div class="notice-item swiper-slide">
+                        <a href="/notice/detail/{$i.id}">{$i.topic}</a>
+                    </div>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+        {/if}
+
+        {if $nav|count >= 1}
+        <nav class="home-nav">
+            {foreach from=$nav item=i}
+            <div class="nav-item">
+                <a href="{$i.detailUrl}">
+                    <span class="nav-icon"><img src="{$i.imgUrl}" alt=""></span>
+                    <p>{$i.topic}</p>
+                </a>
+            </div>
+            {/foreach}
+        </nav>
+        {/if}
+        <!-- 项目 -->
+        <section class="project-list">
+            <!-- 定期日息宝 -->
+            {if !empty($result.top)}
+            {foreach from=$result.top item=i}
+            <div class="proItem">
+                <a href="/bid/regulardetail/{$i.bid}">
+                    <div class="proTitle">{$i.type_title}</div>
+                    <div class="mainInfo">
+                        <div class="itemLeft">
+                            <p class="exrnings"><span class="cRed">{$i.realFinanceRate}</span>%</p>
+                            <p class="pl5">预期年化</p>
+                        </div>
+                        <div class="itemRight">
+                            <h3>{$i.borrowTitle}</h3>
+                            <ul class="deadline">
+                                <li>
+                                    <p>投资期限</p>
+                                    <p class="investNum">{$i.approvedPeriod}</p>
+                                </li>
+                                <li>
+                                    <p>投资进度</p>
+                                    <p class="investNum">{$i.process}%</p>
+                                </li>
+                                <li>
+                                    <p>剩余可投</p>
+                                    <p class="investNum">{$i.surplusAmount|formatMoney}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-time J_countdown" data-time="{$i.min*1000}">距离发行时间: <span class="leftTime"><i class="cRed J_mini"></i> 分 <i class="cRed J_sec"></i> 秒</span></div>
+                </a>
+            </div>
+            {/foreach}
+            {/if}
+
+            <!--VIP专享-->
+            <!--<div class="project-mod">
+                <a href="/bid/prolist">
+                    <div class="mod-title clearfix">
+                        <h3 class="fl mod-name">VIP专享</h3>
+                        <span class="fl graytext">VIP专享特权项目</span>
+                        <span class="fr title-right">更多<i class="more-arr"></i></span>
+                    </div>
+                </a>
+                <a href="/bid/regulardetail" class="pro-item">
+                    <div class="pro-detail">
+                        <div class="pro-earnings">
+                            <p class="exrnings cRed">47.50<i>%</i></p>
+                            <p class="graytext">预期年化</p>
+                        </div>
+                        <div class="pro-info">
+                            <h4 class="pro-name">VIP专享第1期</h4>
+                            <p class="graytext">投资期限 90天</p>
+                        </div>
+                        <div class="progress-box">
+                            <svg width="100%" height="100%" viewBox="0 0 36 36" class="J_circle" data-pre="30">
+                                <circle r="16" cx="18" cy="18" stroke-width="2" stroke="#e5e5e5" fill="none"></circle>
+                                <circle class="progressCircle J_preC" r="16" cx="18" cy="18" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="#ff6159" stroke-opacity="0" stroke-dasharray="0 100" fill="none"></circle>
+                            </svg>
+                            <div class="progress-number">
+                                <p class="num">30%</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>-->
+
+            {if !empty($result.rookieBid) && $isNew == 0}
+            <!--新手专区-->
+            {foreach from=$result.rookieBid item=i}
+            <div class="project-mod">
+                <a href="/bid/prolist/1">
+                    <div class="mod-title clearfix">
+                        <h3 class="fl mod-name">新手专区</h3>
+                        <span class="fl graytext">此项目仅限于首次出借用户</span>
+                        <span class="fr title-right">更多<i class="more-arr"></i></span>
+                    </div>
+                </a>
+                <!-- 已满标 增加class full-item -->
+                <a href="/bid/regulardetail/{$i.bid}" class="pro-item{if $i.process == 100} full-item{/if}">
+                    <div class="pro-detail">
+                        <div class="pro-earnings">
+                            <p class="exrnings cRed">{$i.realFinanceRate}<i>%</i></p>
+                            <p class="graytext">预期年化</p>
+                        </div>
+                        <div class="pro-info">
+                            <h4 class="pro-name">{$i.borrowTitle}</h4>
+                            <p class="graytext">{$i.approvedPeriod}</p>
+                        </div>
+                        <div class="progress-box">
+                            <svg width="100%" height="100%" viewBox="0 0 36 36" class="J_circle" data-pre="100">
+                                <circle r="16" cx="18" cy="18" stroke-width="2" stroke="#e5e5e5" fill="none"></circle>
+                                <circle class="progressCircle J_preC" r="16" cx="18" cy="18" stroke-width="2"
+                                        stroke-linejoin="round" stroke-linecap="round" stroke="#ff6159"
+                                        stroke-opacity="0" stroke-dasharray="{$i.process} 100" fill="none"></circle>
+                            </svg>
+                            <div class="progress-number">
+                                {if $i.process == 100}
+                                <p class="num">100%</p>
+                                <p class="fulltxt">{work_array_key_exists($i.globalStatus,'globalstatus')}</p>
+                                {else if $i.process lt 100}<!--进行中-->
+                                <p class="num">{$i.process}%</p>
+                                <p class="fulltxt">{work_array_key_exists($i.globalStatus,'globalstatus')}</p>
+                                {else}
+                                <p>敬请期待</p>
+                                {/if}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {/foreach}
+            {/if}
+
+
+            {if !empty($result.hqrxb)}
+            {foreach from=$result.hqrxb item=i}
+            <!--活期日息宝-->
+            <div class="project-mod">
+                <a href="/day/currentdetail">
+                    <div class="mod-title clearfix">
+                        <h3 class="fl mod-name">活期日息宝</h3>
+                        <span class="fr title-right"><i class="icon-clock"></i>每日{$i.releasetime}.00更新额度</span>
+                    </div>
+                    <div class="pro-item">
+                        <div class="pro-detail">
+                            <div class="pro-earnings">
+                                <p class="exrnings cRed">{$i.sevenDayRate|formatMoney}<i>%</i></p>
+                                <p class="graytext">七日年化收益</p>
+                            </div>
+                            <div class="pro-info">
+                                <h4 class="pro-name">{$i.refundWayStr}</h4>
+                                <div class="pro-status"><span class="status-mark">{work_array_key_exists($i.status,'home_status')}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {/foreach}
+            {/if}
+        </section>
+
+        <section class="project-list">
+            <h3 class="list-title"><span>推荐项目</span></h3>
+            <div class="project-mod">
+                <a href="/bid/prolist/2">
+                    <div class="mod-title clearfix">
+                        <h3 class="fl mod-name">定期日息宝</h3>
+                        <span class="fr title-right">更多<i class="more-arr"></i></span>
+                    </div>
+                    <div class="pro-item">
+                        <div class="pro-detail pro-recommend">
+                            <div class="pro-earnings">
+                                <p class="exrnings cRed">11.50<i>%~</i>41.50<i>%</i></p>
+                                <p class="graytext">预期年化</p>
+                            </div>
+                            <div class="pro-info">
+                                <h4 class="pro-name">每日返息，到期还本</h4>
+                                <p class="graytext">最低出借金额100元</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-mod">
+                <a href="/bid/prolist/4">
+                    <div class="mod-title clearfix">
+                        <h3 class="fl mod-name">精选项目</h3>
+                        <span class="fr title-right">更多<i class="more-arr"></i></span>
+                    </div>
+                    <div class="pro-item">
+                        <div class="pro-detail pro-recommend">
+                            <div class="pro-earnings">
+                                <p class="exrnings cRed">11.50<i>%~</i>15.50<i>%</i></p>
+                                <p class="graytext">预期年化</p>
+                            </div>
+                            <div class="pro-info">
+                                <h4 class="pro-name">按月付息，到期还本</h4>
+                                <p class="graytext">最低出借金额100元</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <a href="/bid/project" class="home-more">查看更多项目</a>
+        <div class="relation-links">
+            <a href="/home/service"><i class="link-icon icon-aboutus"></i>关于我们</a>
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.haodaibao.android"><i class="link-icon icon-downapp"></i>下载APP</a>
+            <a href="javascript:;" class="J_siteMap"><i class="link-icon icon-map"></i>网站地图</a>
+            <a href="/help/title_list?type=5"><i class="link-icon icon-ques"></i>常见问题</a>
+        </div>
+        <div class="home-footer">
+            <p>借贷有风险，出借需谨慎 <br />
+                客服热线：400-620-8800
+            </p>
+            <p>Copyright © 2015 中融金（北京）科技有限公司 版权所有 <br />
+               京ICP证150681号 | 京ICP备15007154号
+            </p>
+        </div>
+
+    </section>
+    <!-- 网站地图 -->
+    <section class="sitemap J_siteMapWrap">
+        <a href="javascript:;" class="closemap J_closemap">×</a>
+        <div class="sitemap_title">
+            <h2>网站地图 <i class="icon-map"></i></h2>
+        </div>
+        <dl>
+            <dt>公司介绍与安全</dt>
+            <dd><a href="/home/safe">公司介绍</a> <a href="/home/service">关于我们</a></dd>
+            <dt>理财产品</dt>
+            <dd><a href="/bid/prolist">活期日息宝</a> <a href="/bid/prolist">定期日息宝</a> <a href="/bid/prolist">精选项目</a></dd>
+            <dt>活动专区</dt>
+            <dd>{foreach from=$nav item=i}<a href="{$i.detailUrl}">{$i.topic}</a> {/foreach}</dd>
+            <dt>客户服务</dt>
+            <dd><a href="/home/service">联系我们</a> <a href="/help/title_list?type=5">常见问题</a></dd>
+            <dt>下载APP</dt>
+            <dd><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.haodaibao.android">下载好贷宝APP</a></dd>
+        </dl>
+    </section>
+    {include file="_common/footer.htm"}
+</div>
+<script type="text/javascript">
+    require('common:static/widget/home/init');
+</script>
+<!-- 登录弹窗 -->
+<div class="J_popLogin none">
+    {include file="_common/login.htm" method="pop"}
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.selectCouponDiv .appwrap{background-color: #F9F9F9;}
+.selectCouponDiv .appwrap .couponwrap{margin-top: 0;}
+
+/*优惠券选择打勾按钮*/
+.selectCouponDiv .appwrap .couponwrap .topwrap .rightCol .dot{
+	width: 0.533rem;
+	height: 0.533rem;
+	border-radius:0.533rem;
+	background-color: #ff7251;
+	color: #fff;
+	position: absolute;
+	right: 0.373rem;
+	top: 0.293rem;
+}
+.selectCouponDiv .appwrap .couponwrap .topwrap .rightCol .dot:before {
+	content: "";
+    position: absolute;
+    top: 12%;
+    left: 0.164rem;
+    width: 0.16rem;
+    height: 0.28rem;
+    border-width:0 5px 5px 0;
+    border-style:solid;
+    border-color:#fff;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+.selectCouponDiv .appwrap .couponwarp .topwrap .rightCol .dot:after{
+	content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+/*确定按钮*/
+.selectCouponDiv .content{background-color: #fff;padding:0.267rem 0.933rem;border-top:1px solid #eee;}

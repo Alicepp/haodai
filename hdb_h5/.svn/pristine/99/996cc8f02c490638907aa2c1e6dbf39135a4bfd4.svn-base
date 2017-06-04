@@ -1,0 +1,19 @@
+
+@import url('common/button.css?__inline');
+@import url('common/modelLia.css?__inline');
+@import url('day_faq.css?__inline');
+
+.shiftTo .txt{padding: 0 0.4rem;line-height: 0.6rem;font-size: 0.32rem;color: #818492;}
+
+.slideInRight.animated {
+  -webkit-animation-duration:0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.slideOutRight.animated{
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

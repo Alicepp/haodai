@@ -1,0 +1,139 @@
+{if !is_app()}
+<header class="header">
+
+    {if isset($returnBtn)}
+        {if $returnBtn eq 'back'}
+            <a href="javascript:history.go(-1);" class="returnBtn fastclick"><i></i></a>
+        {elseif $returnBtn eq 'home'}
+            <a href="{$smarty.const.DOMAIN}" class="getHome fastclick" target="_self"><i class="icon-home" title="首页"></i></a>
+        {elseif $returnBtn eq 'cancel'}
+            <a href="/my/password" class="getHome fastclick"><i class="cancel" title="取消">取消</i></a>
+        {elseif $returnBtn eq 'user'}
+            {if is_login()}<!-- 已登录 -->
+            <a href="/my/info" class="userStatus J_login fastclick" data-islogin="true" data-url="/"><i class="icon_uCenter"></i></a>
+            {else}<!-- 未登录 -->
+             <a href="/login/index" class="userStatus J_login fastclick" data-islogin="false" data-url="/">登录</a>
+            {/if}
+        {elseif $returnBtn eq 'login'}
+            {if $method eq 'pop'}
+            <a href="javascript:;" class="returnBtn J_closeLogin fastclick"><i></i></a>
+            {else}
+            <a href="javascript:history.go(-1);" class="returnBtn fastclick"><i></i></a>
+            <a href="/home" class="closeBtn fastclick"></a>
+            {/if}
+        {/if}
+    {/if}
+    {if isset($headTitle)}
+        {if $headTitle eq 'project'}
+            <div class="head-filter J_proFilter">
+                <p class="filterTitle J_filterBar fastclick">项目 <i class="filterArr"></i></p>
+                <div class="filterList J_filterList animated fadeIn">
+                    <ul>
+                        <li class="filterItem curr"><a href="/bid/project" class="J_item">全部</a></li>
+                        <li class="filterItem"><a href="/bid/prolist/1" class="J_item">新手专享</a></li>
+                        <li class="filterItem"><a href="/day/currentdetail" class="J_item">活期日息宝</a></li>
+                        <li class="filterItem"><a href="/bid/prolist/2" class="J_item">定期日息宝</a></li>
+                        <li class="filterItem"><a href="/bid/prolist/4" class="J_item">精选项目</a></li>
+                        <li class="filterItem"><a href="/bid/prolist/3" class="J_item">银行宝</a></li>
+                    </ul>
+                </div>
+            </div>
+        {elseif $headTitle eq 'login'}
+        <!-- 登录不显示title -->
+        {/if}
+    {else}
+    <h1 class="txt">{$title}</h1>
+    {/if}
+    
+    
+    {if isset($rightLink)}
+        {if $rightLink eq 'set'}
+            <a href="/my/set" class="rightLink mySet fastclick"><i class="mySet"></i></a>
+        {elseif $rightLink eq 'choose'}
+                <div class="head-filter J_proFilter choose">
+                <p class="filterTitle J_filterBar choose-txt fastclick">筛选 <i class="filterArr"></i></p>
+                <div class="filterList J_filterList animated fadeIn">
+                    {if isset($filterMenu)}
+                        {literal}
+                        <ul>
+                            <li class="filterItem curr"><a href="javascript:;" class="J_item" type="3">全部</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="0">活期日息宝</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="5">定期日息宝</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="1">精选项目</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="4">新手专享</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="2">银行宝</a></li>
+                        </ul>
+                        {/literal}
+                    {else}
+                        {literal}
+                        <ul>
+                            <li class="filterItem curr"><a href="javascript:;" class="J_item" type="0">全部</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="1">收入</a></li>
+                            <li class="filterItem"><a href="javascript:;" class="J_item" type="2">支出</a></li>
+                        </ul>
+                        <!--<ul class="jsChoose">-->
+                            <!--<li class="box checked">-->
+                                <!--<a href="javascript:;" class="flex1" type="0">全部</a>-->
+                                <!--<i></i>-->
+                            <!--</li>-->
+                            <!--<li class="box">-->
+                                <!--<a href="javascript:;" class="flex1" type="1">收入</a>-->
+                                <!--<i></i>-->
+                            <!--</li>-->
+                            <!--<li class="box">-->
+                                <!--<a href="javascript:;" class="flex1" type="2">支出</a>-->
+                                <!--<i></i>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        {/literal}
+                    {/if}
+                </div>
+            </div>
+        {elseif $rightLink eq 'notice'}
+            <a href="javascript:;" class="rightLink jsAllRead">全部已读</a>
+        {elseif $rightLink eq 'noticeContent'}
+            <a href="/my/message" class="rightLink jsAllRead">消息中心</a>
+        {elseif $rightLink eq 'more'}
+            <a href="/message" class="rightLink jsAllRead">更多</a>
+        {elseif $rightLink eq 'rollout'}
+            <a href="/day/faq" class="rightLink J_popPageBtn" data-name="roll">转出说明</a>
+        {elseif $rightLink eq 'shiftto'}
+            <a href="/day/faq" class="rightLink J_popPageBtn" data-name="roll">转入说明</a>
+        {elseif $rightLink eq 'rechargeExp'}
+            <a href="javascript:;" class="rightLink J_popPageBtn" data-name="explain">充值说明</a>  <!-- /help/rechargerule -->
+        {elseif $rightLink eq 'withdrawExp'}  <!-- /help/rechargerule -->
+            <a href="javascript:;" class="rightLink J_popPageBtn" data-name="explain">提现说明</a>
+        {elseif $rightLink eq 'help'}
+            <a href="/day/question" class="headHelp"></a>
+        {elseif $rightLink eq 'menu'}
+            <div class="head-menu J_menuWrap">
+                <span class="icon head-menuIcon J_menu fastclick">菜单</span>
+                <div class="head-menuBox J_menuList bounceIn animated">
+                    <ul class="head-menuList">
+                        <li class="head-menuItem">
+                            <a href="/" class="J_item"><i class="icon homeIcon fastclick"></i>首页</a>
+                        </li>
+                        <li class="head-menuItem">
+                            <a href="/bid/project" class="J_item"><i class="icon proIcon fastclick"></i>项目</a>
+                        </li>
+                        <li class="head-menuItem">
+                            <a href="/my/info" class="J_item"><i class="icon myIcon fastclick"></i>我的</a>
+                        </li>
+                        <li class="head-menuItem">
+                            <a href="/home/more" class="J_item"><i class="icon moreIcon fastclick"></i>更多</a>
+                        </li>
+                        {if is_login()}
+                        <li class="head-menuItem">
+                            <a href="/login/do_loginOff" class="J_item"><i class="icon exitIcon"></i>退出</a>
+                        </li>
+                        {/if}
+                    </ul>
+                </div>
+            </div>
+        {elseif $rightLink eq 'register'}
+            <a href="/login" class="rightLink fastclick">登录</a>
+        {/if}
+    {/if}
+</header>
+<div class="mb90" style="width:100%;"></div>
+{/if}

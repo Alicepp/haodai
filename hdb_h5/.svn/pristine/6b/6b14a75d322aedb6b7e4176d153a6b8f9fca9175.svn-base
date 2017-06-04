@@ -1,0 +1,9 @@
+
+@import url('common/button.css?__inline');
+
+.certifiWrap {
+	padding-top:0.267rem;
+}
+.contentBt {
+	margin:2.0rem 0.4rem 0;
+}

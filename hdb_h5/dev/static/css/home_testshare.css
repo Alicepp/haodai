@@ -1,0 +1,14 @@
+
+
+.appwrap{
+	text-align: center;
+}
+.appwrap button, .appwrap  a{
+	width:  2.6667rem;
+	height: 0.6667rem;
+	line-height: 0.6667rem;
+	font-size: 0.4rem;
+	display: block;
+	margin:0.4rem auto!important;
+	border:0.0133rem solid red;
+}

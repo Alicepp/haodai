@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>{include file="_common/var.htm"}</head>
+<body>
+{include file="_common/header.htm"}
+	<div class="status_wrap">
+		<div class="bd">
+			<span class="pic"><img src="static/images/status/shift_to_success.png" /></span>
+			<h2 class="title">成功转入<span class="cRed f46">{$money}</span>元</h2>
+			<h3 class="mtitle"><span class="cGray">预计收益到账时间：</span>{$icome_time}</h3>
+		</div>
+		<div class="ft">
+			<a href="{$button_top_url}" class="btn redBtn">再次转入</a>
+			<a href="{$button_bottom_url}" class="btn cancelBtn mt20">我知道了</a>
+		</div>
+	</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/bid_shift_to_success/init');
+</script>
+</body>
+</html>

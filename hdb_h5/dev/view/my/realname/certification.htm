@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+{if !empty($Realnameinfo) && $Realnameinfo.status != 1}
+<!-- 未实名 -->
+<section class="certifiWrap">
+    <form action="{$action_url}" class="bindcardForm validForm" method="post">
+		<div class="infoList">
+			<div class="infoItem clearfix border-top-1">
+				<label class="infoName">真实姓名</label>
+				<div class="infoCont">
+					<input type="text" name="name" class="jsUserName" placeholder="请输入您的真实姓名" >
+				</div>
+			</div>
+			<div class="infoItem clearfix">
+				<label class="infoName">身份证号</label>
+				<div class="infoCont">
+					<input type="text" name="idCard" class="jsIdcardCheck" placeholder="请输入您的身份证号" >
+				</div>
+			</div>
+		</div>
+		<div class="contentBt">
+			<button class="btn redBtn" type="submit">确定</button>
+		</div>
+	</form>
+</section>
+{else}
+<!-- 已实名 -->
+<section class="certifiWrap">
+	<div class="infoList">
+		<div class="infoItem clearfix border-top-1">
+			<label class="infoName">真实姓名</label>
+			<div class="infoCont">
+                <span class="cGray">{$Realnameinfo.realName}</span>
+			</div>
+		</div>
+		<div class="infoItem clearfix">
+			<label class="infoName">身份证号</label>
+			<div class="infoCont">
+                <span class="cGray">{$Realnameinfo.idCard}</span>
+			</div>
+		</div>
+	</div>
+</section>
+{/if}
+
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_realname_certification/init');
+</script>
+</body>
+</html>

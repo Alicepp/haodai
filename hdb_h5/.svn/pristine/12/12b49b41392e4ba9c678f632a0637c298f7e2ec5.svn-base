@@ -1,0 +1,311 @@
+
+@import url('common/button.css?__inline');
+@import url('common/commonLogin.css?__inline'); /*公共登录样式*/
+
+/*详情页布局*/
+.detailWrap .header {
+	color:#fff;
+	border:0;
+}
+.detailWrap .pageMain {
+	margin-top:-1.2rem;
+}
+.header .returnBtn i {
+	background-image: url("../images/common/arrow_white.png");
+}
+.header .returnBtn:active {
+	background-color: transparent;
+}
+.detailWrap .header {
+	background-image: linear-gradient(top, #fe3e34, #fe4435);
+	background-image: -webkit-linear-gradient(top, #fe3e34, #fe4435);
+	background-image: -ms-linear-gradient(top, #fe3e34, #fe4435);
+	background-color: #fe3e34;
+}
+.detailWrap {
+    height:100%;
+}
+.pageMain {
+	position: relative;
+	padding-bottom:2.467rem;
+	min-height:100%
+}
+.proMain {
+	position: relative;
+	padding-top:1.2rem;
+	width:100%;
+	height:7.28rem;
+	text-align:center;
+	color:#fff;
+	font-size:0.347rem;
+	line-height: 0.4rem;
+	background-image: linear-gradient(top, #fe3e34, #fe6a3c);
+	background-image: -webkit-linear-gradient(top, #fe3e34, #fe6a3c);
+	background-image: -ms-linear-gradient(top, #fe3e34, #fe6a3c);
+	background-color: transparent;
+}
+.proMain .yieldBox {
+	padding-top:0.373rem;
+	height:4.373rem;
+}
+/*圆环*/
+.yieldCircle {
+	position: relative;
+	margin:0 auto;
+	/*padding:0.187rem;*/
+	width:4.0rem;
+	height:4.0rem;
+	background-color:rgba(255, 255, 255, 0.14);
+	border-radius:100%;
+	-webkit-border-radius:100%;
+
+}
+.yieldCircle .progressCircle {
+	/*transform-origin: center center;
+	-webkit-transform-origin: center center;*/
+	-webkit-transition: stroke-dasharray 0.4s linear 0.1s;
+	transition: stroke-dasharray 0.4s linear 0.1s;
+}
+.yieldCircle .lineEnd {
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform-origin: 19px 19px; 
+	-webkit-transform-origin: 19px 19px;
+	-webkit-transition: transform 0.4s linear 0.1s;
+	transition: transform 0.4s linear 0s;
+	-webkit-transition: -webkit-transform 0.4s linear 0.1s;
+}
+
+.yieldCircle .yieldNum {
+	position: absolute;
+	top:0;
+	left:0;
+	padding-top:1.307rem;
+	width:100%;
+	height:100%;
+	line-height: 1;
+	text-align: center;
+}
+.yieldCircle .yieldNum .yield {
+	margin-bottom:0.32rem;
+	font-size:1.067rem;
+}
+.yieldCircle .yieldNum .precent {
+	font-size:0.533rem;
+}
+
+.proMain .investProgress {
+	display: inline-block;
+	margin-top:0.213rem;
+	width:3.2rem;
+	height:0.56rem;
+	line-height:0.533rem;
+	text-align:center;
+	font-size:0.32rem;
+	color:#fff;
+	border:0.013rem solid #ffb59e;
+	border-radius: 0.267rem / 50%;
+	-webkit-border-radius: 0.267rem / 50%;
+}
+.proMain .otherInfos {
+	margin-top:0.293rem;
+	font-size:0;
+	letter-spacing:0;
+}
+.proMain .otherInfos span {
+	display:inline-block;
+	padding:0 0.333rem;
+	border-left:0.013rem solid #ffe6c3;
+	font-size:0.347rem;
+}
+.proMain .otherInfos span:first-child {
+	border-left:none;
+}
+.proMain .newuserTip {
+	position: absolute;
+	top:1.2rem;
+	left:0;
+	right:0;
+	text-align:center;
+	font-size:0.267rem;
+	color:#ffd9c9;
+}
+
+.proFund {
+	height:1.68rem;
+	border-bottom:0.013rem solid #eee;
+	background-color:#fff;
+}
+.proFund li {
+	position:relative;
+	float:left;
+	padding-top:0.213rem;
+	width:50%;
+	text-align: center;
+	font-size:0.32rem;
+	line-height: 1.5;
+}
+.proFund .fundName {
+	color:#8e91a0;
+}
+.proFund .fundNum {
+	font-size:0.587rem;	
+}
+.proFund li:last-child:before {
+	display:block;
+	content: "";
+	position:absolute;
+	top:0.32rem;
+	left:0;
+	width:0;
+	height:1.04rem;
+	overflow:hidden;
+	border-left:0.013rem solid #d9dae0;
+}
+[data-dpr="1"] .proFund li:last-child:before {
+	border-left-width: 1px;
+}
+
+.relationLink {
+	margin-top:0.267rem;
+	border-top:0.013rem solid #eee;
+	background-color:#fff;
+}
+.relationLink li {
+	height:1.333rem;
+	line-height:1.307rem;
+	font-size:0.4rem;
+	border-bottom:0.013rem solid #eee;
+}
+.relationLink li a {
+	display: block;
+	overflow:hidden;
+	padding:0 0.4rem 0 0.533rem;
+}
+.relationLink li a:active {
+	background-color: #f6f6f6;
+}
+.relationLink .icon {
+	margin-right:0.4rem;
+}
+.relationLink .rArrow {
+	float:right;
+	margin-top:0.4rem;
+}
+
+.pageBottom {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:0.267rem 1.013rem;
+	border-top:0.013rem solid #eee;
+	background-color:#fff;
+}
+.pageBottom .redBtn {
+	background-color:#ff6159;
+}
+.pageBottom .redBtn:active {
+	background-color:#f9473e;
+	opacity: 1;
+}
+/*禁用*/
+.pageBottom .redBtn.disable {
+	background-color:#ffa5a0;
+}
+/*已满标*/
+.pageBottom .redBtn.hasFull {
+	background-color:#ccc;
+}
+
+.newuserTipBt {
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:1.867rem;
+	line-height:0.587rem;
+	font-size:0.32rem;
+	color:#ff473e;
+	text-align: center;
+}
+
+/*倒计时*/
+.pageMain .pro-time {
+	margin-top:0.293rem;
+	border-top:none;
+	height:0.373rem;
+	line-height: 0.373rem;
+}
+
+/*分享*/
+.shareMod {
+	position: fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:10;
+	background-color:#f9f9f9;
+}
+.shareMod .shareList {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;	
+	display: flex;
+	padding:0.467rem 0.4rem 0.413rem;
+	border-width:0.013rem 0;
+	border-style:solid;
+	border-color:#dcdcdc;
+	background-color:#fff;
+}
+.shareMod .shareList li {
+	-moz-box-flex: 1 1 auto;
+    -webkit-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+	text-align:center;
+	color:#999;
+	line-height:0.4rem;
+}
+.shareIcon {
+	display:inline-block;
+	margin-bottom:0.187rem;
+	width:1.133rem;
+	height:1.133rem;
+	vertical-align:top;
+}
+.shareWx {
+	height:1.12rem;
+	background:url("../images/icon/share_wx.png") no-repeat;
+	background-size:100%;
+}
+.shareWeif {
+	width:1.12rem;
+	height:1.12rem;
+	background:url("../images/icon/share_weif.png") no-repeat;
+	background-size:100%;
+}
+.shareQQ {
+	height:1.12rem;
+	background:url("../images/icon/share_qq.png") no-repeat;
+	background-size:100%;
+}
+.shareSina {
+	height:1.12rem;
+	background:url("../images/icon/share_sina.png") no-repeat;
+	background-size:100%;
+}
+.shareQzone {
+	background:url("../images/icon/share_qzone.png") no-repeat;
+	background-size:100%;
+}
+.shareMod .closeShare {
+	display: block;
+	margin-top:0.253rem;
+	height:1.307rem;
+	line-height: 1.293rem;
+	text-align: center;
+	font-size:0.4rem;
+	border-top:0.013rem solid #dcdcdc;
+	background-color:#fff;
+}

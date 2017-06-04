@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	{include file="_common/var.htm"}
+    <link rel="stylesheet" href="static/css/bid_staticintro.css">
+</head>
+<body>
+{include file="_common/header.htm"}
+<div class="appwrap">
+    <div class="staticIntro">
+        <div class="intro">
+            <h3>计划介绍</h3>
+            <p>日息宝计划是好贷宝为出借人提供的标准化智能投标工具。经由出借人授权，一键出借后，平台立即优先匹配投标，并由系统为出借人实现分散投标，节省时间，提高效率，更好的满足出借人多样化出借需求。</p>
+            <p>加入日息宝计划，匹配标的满额确认后，次日按日返息，到期还本。预期收益不等于实际收益，出借人需自行承担资金出借的风险与责任。</p>
+        </div>
+        <div class="intro">
+            <h3>加入条件</h3>
+            <p>1000元起投，按100元的整数倍递增</p>
+        </div>
+        <div class="intro">
+            <h3>退出方式</h3>
+            <p>到期自动退出</p>
+        </div>
+        <div class="intro">
+            <h3>计息规则</h3>
+            <p>按日返息，到期还本</p>
+        </div>
+        <div class="intro">
+            <h3>借款项目类型</h3>
+            <p>车辆抵押借款、房屋抵押借款、小企业信用贷</p>
+        </div>
+    </div>
+</div>
+{include file="_common/footer.htm"}
+</body>
+</html>

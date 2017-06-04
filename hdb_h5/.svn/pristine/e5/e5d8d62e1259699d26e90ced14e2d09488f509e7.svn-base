@@ -1,0 +1,212 @@
+
+
+.header{
+    background:none;
+    border:none;
+    color:#fff;
+    background: -webkit-linear-gradient(top,#fc625d,#fd705d);
+    background: linear-gradient(top,#fc625d,#fd705d);
+}
+.header .returnBtn i {
+    background-image: url("../images/common/arrow_white.png");
+}
+.header .returnBtn:active {
+    background-color: transparent;
+}
+.headA{
+    margin-top:-1.2rem;
+    -webkit-box-pack:center;
+    box-pack:center;
+    -webkit-box-align:center;
+    box-align:center;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height:4.36rem;
+    background: -webkit-linear-gradient(top,#fc625d,#fd9a61);
+    background: linear-gradient(top,#fc625d,#fd9a61);
+}
+.headerF{
+    position: relative;
+    font-size:0.64rem;
+    color:#fff;
+}
+.headerF:after{
+    position:absolute;
+    bottom:-0.5467rem;
+    left:0.4rem;
+    content:"A股上市公司背景 精英风控保障";
+    font-size:0.3467rem;
+}
+/*中融金样式开始*/
+.zrj{
+    padding:0.88rem 0.3467rem 0;
+}
+.profileH{
+    padding-bottom:0.4267rem;
+    width:100%;
+    text-align:center;
+    font-size:0;
+}
+.lineBef,.lineAft{
+    display: inline-block;
+    margin-bottom:0.1rem;
+    width:2.933rem;
+    height:1px;
+    background:#ddd;
+}
+.s30{
+    display: inline-block;
+    font-size:0.4rem;
+    color:#5f616b;
+}
+.s30 i{
+    display:inline-block;
+    top:0.106rem;
+    width:0.2133rem;
+    height:0.2133rem;
+    background:url(../images/common/icon_f.png) 0 0 no-repeat;
+    background-size:0.2133rem 0.2133rem;
+}
+.s30 i:nth-child(1){
+    margin-right:0.4667rem;
+}
+.s30 i:nth-child(2){
+    margin-left:0.4667rem;
+}
+.zrj_profile,.am_profile{
+    font-size:0.32rem;
+    color:#7d808c;
+}
+.zrj_profile{
+    padding-left:0.16rem;
+    padding-bottom:1.04rem;
+    font-size:0.32rem;
+    line-height:0.48rem;
+}
+/*奥马样式开始*/
+.am{
+    padding:0 0.3467rem;
+}
+.aM i:nth-child(1){
+    margin-right:0.2933rem;
+}
+.aM i:nth-child(2){
+    margin-left:0.2933rem;
+}
+.am_profile{
+    padding-bottom:0.62rem;
+    -webkit-box-pack:center;
+    -webkit-justify-content: center;
+    -webkit-align-items:center;
+    flex-wrap:wrap;
+}
+.am_profile .a{
+   display:block;
+   line-height:0.6667rem;
+}
+.assetsW{
+    width:100%;
+    -webkit-box-pack:center;
+    justify-content: center;
+}
+.assets{
+    margin:0 0.19333rem 1rem;
+    border:0.01333rem solid #fd8960;
+    border-radius:50%;
+    width:1.5733rem;
+    height:1.5733rem;
+    color: #fd8960;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack:center;
+    justify-content: center;
+    -webkit-box-align:center;
+    align-items: center;
+}
+.s32{
+    display:block;
+    font-size:0.4387rem;
+}
+.s21{
+    display:block;
+    font-size:0.2776rem;
+}
+/*互联网金融服务管家结束；好贷宝开始*/
+.headB{
+    position:relative;
+    width:100%;
+    height:2.48rem;
+    background: -webkit-linear-gradient(top,#fc706b,#fda370);
+    background: linear-gradient(top,#fc706b,#fda370);
+    -webkit-box-pack:center;
+    -webkit-justify-content: center;
+    -webkit-box-align:center;
+    -webkit-align-items: center;
+}
+.haoDb{
+    font-size:0.5333rem;
+    color:#fff;
+}
+.bgL{
+    position: absolute;
+    left:0;
+    bottom:0;
+    border-width:0.4267rem 2.5rem!important;
+    border-style:solid;
+    border-color:transparent transparent #f9f9f9 #f9f9f9;
+    width:0;
+    height:0;
+}
+.bgR{
+    position: absolute;
+    right:0;
+    bottom:0;
+    border-width:0.4267rem 2.5rem!important;
+    border-style:solid;
+    border-color:transparent #f9f9f9 #f9f9f9 transparent;
+    width:0;
+    height:0;
+}
+.haoDb_list{
+    padding:0.8rem 0.44rem 0 0.8rem;
+    width:100%;
+    overflow: hidden;
+}
+.last{
+    padding-bottom:0.9867rem;
+}
+.iconL{
+    float:left;
+    width:1.84rem;
+    height:1.84rem;
+    background: url(./../images/home_safe/safe.png) 0 0 no-repeat;
+    background-size:4.28rem 6.3733rem;
+}
+.haoDb_list .list{
+    float:left;
+    padding-left:0.4933rem;
+    width:6.4267rem;
+}
+.haoDb_list .listT{
+    font-size:0.3733rem;
+    color:#5f626b;
+    line-height:0.64rem;
+}
+.haoDb_list .listB{
+    font-size:0.32rem;
+    color:#7d808c;
+    line-height:0.48rem;
+}
+.icon_b{
+    background-position:0 -2.2133rem;
+    margin-top:0.2rem;
+}
+.icon_c{
+    background-position:-2.29rem 0;
+    margin-top:-0.3rem;
+}
+.icon_d{
+    background-position:0 -4.5rem;
+    margin-top:-0.2rem;
+}

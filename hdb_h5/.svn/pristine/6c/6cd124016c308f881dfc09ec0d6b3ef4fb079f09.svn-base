@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<div class="help-box appwrap">
+    <div class="help-subset">
+        <div class="help-subset-title">
+            <p>日息宝是否有期限限制？</p>
+            <i class="rightArrow"></i>
+        </div>
+        <div class="help-subset-detail">日息宝是不定期项目，没有期限限制，计息中金额可以随时申请赎回。</div>
+    </div>
+    <div class="help-subset">
+        <div class="help-subset-title">
+            <p>日息宝的收益如何计算？</p>
+            <i class="rightArrow"></i>
+        </div>
+        <div class="help-subset-detail">当日收益=（日息宝已确认份额的资金/10000）×每万份收益</div>
+    </div>
+    <div class="help-subset">
+        <div class="help-subset-title">
+            <p>日息宝的收益结算有什么规则？</p>
+            <i class="rightArrow"></i>
+        </div>
+        <div class="help-subset-detail">日息宝的收益每日结算至可用余额，每天上午8:00前一天的收益到账。赎回确认当日，该笔赎回资金没有收益。</div>
+    </div>
+    <div class="help-subset">
+        <div class="help-subset-title">
+            <p>日息宝什么时候发布？</p>
+            <i class="rightArrow"></i>
+        </div>
+        <div class="help-subset-detail">每日11点更新额度。</div>
+    </div>
+    <div class="help-subset">
+        <div class="help-subset-title">
+            <p>日息宝的转出是否收费？</p>
+            <i class="rightArrow"></i>
+        </div>
+        <div class="help-subset-detail">日息宝可从“日息宝余额”免费转出至“可用余额”。</div>
+    </div>
+    <div class="help-subset">
+        <div class="help-subset-title">
+            <p>日息宝介绍</p>
+            <i class="rightArrow"></i>
+        </div>
+        <div class="help-subset-detail">日息宝，顾名思义，就是“每日返息”的借款项目。出借人的资金用于解决企业资金需求。</div>
+    </div>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/day_question/init');
+</script>
+</body>
+</html>

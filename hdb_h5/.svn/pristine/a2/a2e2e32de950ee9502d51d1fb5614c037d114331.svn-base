@@ -1,0 +1,10 @@
+
+@import url('common/subsidiary.css?__inline');
+@import url('common/project.css?__inline');
+@import url('common/pulldown.css?__inline');
+
+.user-record-lp .list .credit{
+	display: block;
+	line-height: 1.0rem;
+	font-size:0.32rem;
+}

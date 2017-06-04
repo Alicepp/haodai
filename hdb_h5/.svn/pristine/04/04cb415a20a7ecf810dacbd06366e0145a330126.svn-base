@@ -1,0 +1,46 @@
+
+@import url('common/button.css?__inline');
+@import url('help_rechargerule.css?__inline');
+@import url('my_withhold.css?__inline');
+
+.getAll {
+	display: block;
+	font-size:0.4rem;
+	color:#00a8ff;
+	text-decoration: underline;
+}
+
+.relatedInfo .infoRow {
+	margin-top:0.293rem;
+	padding:0 0.373rem;
+	font-size:0.32rem;
+	color:#afb0be;
+	line-height:0.4rem;
+}
+.relatedInfo .infoRow span {
+	color:#5f616b;
+}
+.cashWrap .contentBt {
+	margin:1.267rem 0.373rem 0;
+}
+.contentBt .cRed {
+	position: absolute;
+	left:0;
+	right:0;
+	top:-0.533rem;
+	line-height:0.4rem;
+	text-align:center;
+}
+
+.slideInRight.animated {
+  -webkit-animation-duration:0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.slideOutRight.animated{
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

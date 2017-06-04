@@ -1,0 +1,9 @@
+
+/*@import url('common/cashvalue.css?__inline');*/
+
+.bankList .bankInfo {
+	border-top:none;
+}
+.bankList .bankInfo:first-child {
+	border-top:0.013rem solid #eee;
+}

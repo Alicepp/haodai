@@ -1,0 +1,67 @@
+.agrementDiv .section {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0.5333rem;
+}
+.agrementDiv .agree-cont .section:first-child{
+    padding-top: 0.4rem;
+}
+.agrementDiv .section>.title {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    padding: 0.16rem 0.2667rem 0;
+    line-height: 100%;
+    font-size: 0.43rem;
+}
+.agrementDiv .section .content {
+    color: #666;
+    text-align: justify;
+    padding: 0 0.4rem;
+    font-size: 0.37rem;
+    line-height: 0.56rem;
+    margin-top: 0.27rem;
+}
+.agrementDiv .agree-cont .section .content .content {
+    padding: 0;
+    margin-top: 0.2667rem;
+}
+.agrementDiv .section .reset {
+    counter-reset: num;
+}
+.agrementDiv .section .content li {
+    margin-bottom: 0.2667rem;
+}
+.agrementDiv .agree-cont .section:nth-child(1) li.counter:before {
+    content: "1." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(2) li.counter:before {
+    content: "2." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(3) li.counter:before {
+    content: "3." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(4) li.counter:before {
+    content: "4." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(5) li.counter:before {
+    content: "5." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(6) li.counter:before {
+    content: "6." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(7) li.counter:before {
+    content: "7." counters(num,".") " ";
+    counter-increment: num;
+}
+.agrementDiv .agree-cont .section:nth-child(8) li.counter:before {
+    content: "8." counters(num,".") " ";
+    counter-increment: num;
+}

@@ -1,0 +1,49 @@
+.help-box{
+    border-top:0.013rem solid #eeeeee;
+}
+.help-box .box{
+    display: -webkit-box;
+}
+.help-box .box a{
+    display: block;
+    -webkit-box-flex: 1;
+    text-align: center;
+    height: 2.67rem;
+    background: #ffffff;
+    border-bottom: 0.013rem solid #eeeeee;
+    overflow: hidden;
+}
+.help-box .box:nth-child(1) a:nth-child(1) img{
+    width: 0.73rem;
+    margin: 0.67rem auto 0.51rem;
+}
+.help-box .box:nth-child(1) a:nth-child(2) img{
+    width: 0.81rem;
+    margin: 0.69rem auto 0.53rem;
+}
+.help-box .box:nth-child(1) a:nth-child(3) img{
+    width: 0.75rem;
+    margin: 0.67rem auto 0.53rem;
+}
+.help-box .box:nth-child(2) a:nth-child(1) img{
+    width: 0.76rem;
+    margin: 0.73rem auto 0.53rem;
+}
+.help-box .box:nth-child(2) a:nth-child(2) img{
+    width: 0.77rem;
+    margin: 0.69rem auto 0.51rem;
+}
+.help-box .box:nth-child(2) a:nth-child(3) img{
+    width: 0.76rem;
+    margin: 0.66rem auto 0.46rem;
+}
+.help-box .box a span{
+    display: block;
+    line-height: 1;
+    color: #5f616b;
+    font-size: 0.32rem;
+}
+.help-box .box a:nth-child(2){
+    border-left: 0.013rem solid #eeeeee;
+    border-right: 0.013rem solid #eeeeee;
+}

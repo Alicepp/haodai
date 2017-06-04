@@ -1,0 +1,114 @@
+.inner{
+    padding:0 0.2667rem 0;
+}
+.inner li{
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    border:0.0133rem solid #e6e6e6;
+    border-radius:0.1067rem;
+    margin-top:0.2533rem;
+    padding:0.2133rem 0.2133rem 0;
+    width:100%;
+    background:#fff;
+}
+.inner li:first-child{
+    margin-top:0;
+}
+.inner li img{
+    width:9.0133rem;
+    height:3.4667rem;
+}
+.inner .title{
+    position:relative;
+    padding-left:0.06rem;
+    height:1.07rem;
+    line-height: 1;
+}
+.inner .title span{
+    height:100%;
+    line-height:1.07rem;
+    font-size:0.4rem;
+    color:#353538;
+}
+.inner .time{
+    box-sizing:border-box;
+    border-top:0.0133rem solid #e6e6e6;
+    padding:0 0.1067rem 0 0.0667rem;
+    display:-webkit-box;
+    display:-flex;
+    -webkit-box-pack:justify;
+    box-pack:justify;
+    justify-content:space-between;
+    -webkit-box-align:center;
+    align-items:center;
+    height:0.7867rem;
+}
+.inner .time span{
+    display:block;
+    font-size:0.32rem;
+    color:#5f616b;
+}
+.ico_hot{
+    position:absolute;
+    top:0.19rem;
+    background-clip:padding-box;
+    margin-left:0.2rem;
+    width: 0.6667rem;
+    height: 0.56rem;
+    background:url(../images/activity/hot1.png) 0 0 no-repeat;
+    background-size:contain;
+}
+.overdue .title span,.overdue .time span{
+    color:#a4a5ab;
+}
+.overdue{
+    position:relative;
+    display:block;
+}
+.mask{
+    position:absolute;
+    top:0;
+    left:0;
+    width:9.0133rem;
+    height:3.4667rem;
+    background:rgba(0, 0, 0 ,0.38);
+}
+.maskI{
+    position:absolute;
+    top:1.0933rem;
+    left:2.9867rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    padding:0.2533rem 0 0 0.5333rem;
+    width:3.08rem;
+    height:0.96rem;
+    background:url(../images/activity/en.png) center no-repeat;
+    background-size:contain;
+}
+.boxW{
+    padding:0.6667rem 0.32rem 0.8667rem;
+}
+.boxW .boxT{
+    text-align:center;
+    font-size:0;
+}
+.boxW .lineC{
+ display:inline-block;
+    padding:0 0.2133rem;
+    font-size:0.32rem;
+    color:#5f616b;
+}
+.boxW .lineB,.boxW .lineA{
+  display:inline-block;
+    margin-bottom:0.16rem;
+    width:3rem;
+    height:1px;
+    background-color: #dcdcdc;
+}
+.boxW .hint{
+    padding-top:0.1867rem;
+    line-height:0.2933rem;
+    text-align:center;
+    font-size:0.2933rem;
+    color:#999;
+}

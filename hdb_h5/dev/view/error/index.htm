@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+<header class="header">
+    <a href="javascript:history.go(-1);" class="returnBtn"></a>
+	<h1 class="txt">页面出错</h1>
+</header>
+<div class="error_wrap">
+	<div class="bd">
+		<div class="bg"></div>
+		<h2 class="title">可能该服务已经过期，请刷新或返回首页</h2>
+	</div>
+	<div class="ft">
+		<a href="javascript:;" onclick="window.location.reload();" class="btn redBtn">刷新</a>
+		<a href="/home" class="btn cancelBtn">首页</a>
+	</div>
+</div>
+<script type="text/javascript">
+    require('common:static/widget/error/init');
+</script>
+</body>
+</html>

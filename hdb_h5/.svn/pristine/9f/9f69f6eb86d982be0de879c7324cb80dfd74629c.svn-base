@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+<div class="pageWrap">
+	{include file="_common/header.htm" rightLink="menu" returnBtn="back" headTitle="project"}
+	<section class="projects J_scrollWrap">
+        {if !empty($bestBidList)}
+		<h3 class="list-title"><span>今日优选</span></h3>
+		<div class="optimizationBox">
+			{foreach from=$bestBidList item=value key=k}
+			<div class="optimization {if $k==0}fadeInLeft{else}fadeInRight{/if} animated">
+				<a href="/bid/regulardetail/{$value.bid}">
+					<h3>{$value.borrowTitle}</h3>
+					<p>预期年化</p>
+					<div class="annual"><span>{$value.borrowRate}</span>%</div>
+				</a>
+			</div>
+			{/foreach}
+		</div>
+        {/if}
+
+
+		<div class="projectList">
+			<div class="project-mod">
+				<a href="/bid/prolist/1">
+					<div class="mod-title clearfix">					
+						<h3 class="fl mod-name">新手专区</h3>
+						<span class="fr title-right">更多<i class="more-arr"></i></span>
+					</div>
+				</a>
+				<a href="/bid/regulardetail/{$beginnerList.bid}" class="pro-item J_proItem {if $beginnerList.bidStatus lte 1}pro-notBegin{elseif $beginnerList.bidStatus >= 3}{/if}">
+					<div class="pro-detail">
+						<div class="pro-earnings">
+							<p class="exrnings cRed">{$beginnerList.borrowRate}<i>%</i></p>
+							<p class="graytext">预期年化</p>
+						</div>
+						<div class="pro-info">
+							<h4 class="pro-name">{$beginnerList.borrowTitle}</h4>
+							<p class="graytext">投资期限 {$beginnerList.approvedPeriod}</p>
+							{if $beginnerList.bidStatus lte 1}
+							<div class="pro-time J_countTime" data-time="{$beginnerList.sellTime}">距离发行时间: <span class="leftTime"><i class="cRed J_mini"></i> 分 <i class="cRed J_sec"></i> 秒</span></div>
+							{/if}
+						</div>
+						<div class="progress-box">
+							<svg width="100%" height="100%" viewBox="0 0 36 36" class="J_circle" data-pre="{$beginnerList.bidProcess}">
+							    <circle r="16" cx="18" cy="18" stroke-width="2" stroke="#e5e5e5" fill="none"></circle>
+							    <circle class="progressCircle J_preC" r="16" cx="18" cy="18" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="#ff6159" stroke-opacity="0" stroke-dasharray="0 100" fill="none"></circle>
+							</svg>
+							<div class="progress-number">
+								{if $beginnerList.bidStatus gte 3}
+								<p class="num">100%</p>
+								<p class="fulltxt">{$beginnerList.status_title}</p>
+								{else if $beginnerList.bidStatus == 2 }<!--进行中-->
+								<p class="num">{$beginnerList.bidProcess}%</p>
+								{else}<!--敬请期待-->
+								<p>敬请期待</p>
+								{/if}
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			{foreach from=$list item=lists}
+			<div class="project-mod">
+				<a href="{$lists.url}">
+					<div class="mod-title clearfix">					
+						<h3 class="fl mod-name">{$lists.title}</h3>
+						{if $lists.title neq '活期日息宝'}<span class="fr title-right">更多<i class="more-arr"></i></span>{/if}
+					</div>
+				</a>
+
+
+				<!-- 未开始的添加class  pro-notBegin -->
+				{foreach from=$lists.arrs item=v key=k}
+
+					{if $lists.title eq '活期日息宝'}
+                        <a href="{$lists.url}" class="pro-item pro-notBegin J_proItem">
+					{else}
+                        {if {$v.bidStatus} lte 1}
+                        <a href="/bid/regulardetail/{$v.bid}}" class="pro-item pro-notBegin J_proItem">
+                        {else}
+                        <a href="/bid/regulardetail/{$v.bid}" class="pro-item J_proItem {if $v.bidStatus >= 3}{/if}">
+                        {/if}
+					{/if}
+
+					<div class="pro-detail">
+						<div class="pro-earnings">
+							<p class="exrnings cRed">{$v.borrowRate}<i>%</i></p>
+							<p class="graytext">{$v.income_type}</p>
+						</div>
+						{if $lists.title=='活期日息宝'}
+						<div class="pro-info">
+							<h4 class="pro-name">每日{$v.releasetime}:00更新</h4>
+							<p class="graytext">1元起投，随时支取</p>
+						</div>
+						{else}
+						<div class="pro-info">
+							<h4 class="pro-name">{$v.borrowTitle}</h4>
+							<p class="graytext">投资期限 {$v.approvedPeriod}</p>
+							{if $v.bidStatus lte 1}
+							<div class="pro-time J_countTime" data-time="{$v.sellTime}">距离发行时间: <span class="leftTime"><i class="cRed J_mini"></i> 分 <i class="cRed J_sec"></i> 秒</span></div>
+							{/if}
+						</div>
+						<div class="progress-box">
+							<svg width="100%" height="100%" viewBox="0 0 36 36" class="J_circle" data-pre="{$v.bidProcess}">
+							    <circle r="16" cx="18" cy="18" stroke-width="2" stroke="#e5e5e5" fill="none"></circle>
+							    <circle class="progressCircle J_preC" r="16" cx="18" cy="18" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="#ff6159" stroke-opacity="0" stroke-dasharray="0 100" fill="none"></circle>
+							</svg>
+							<div class="progress-number J_progressNum">
+								{if $v.bidStatus >= 3}
+								<p class="num">{$v.bidProcess}%</p>
+								<p class="fulltxt">{$v.status_title}</p>
+								{else if $v.bidStatus == 2 }<!--进行中-->
+								<p class="num">{$v.bidProcess}%</p>
+								{else}<!--敬请期待-->
+								<p>敬请期待</p>
+								{/if}
+							</div>
+						</div>
+						{/if}
+					</div>
+				</a>
+				{/foreach}
+			</div>
+			{/foreach}
+		</div>
+	</section>
+	<div class="bulbRemind"><i class="icon icon_bulb"></i>预期收益不等于实际收益；借贷有风险，出借需谨慎。</div>
+	{include file="_common/footer.htm"}
+	{include file="_common/downapp.htm"}
+</div>
+<script type="text/javascript">
+    require('common:static/widget/bid_project/init');
+</script>
+</body>
+</html>

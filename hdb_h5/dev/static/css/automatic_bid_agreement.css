@@ -1,0 +1,30 @@
+
+
+.agreementWrap {
+    padding:0.8rem 0.267rem 0;
+    font-size:0.373rem;
+    color:#666;
+    line-height: 0.56rem;
+    background-color: #fff;
+}
+.agreementWrap strong {
+    font-weight: bold;
+}
+.agreementWrap .topExplain {
+    padding-bottom:0.533rem;
+}
+.agreementWrap .agreementMod {
+    padding-bottom:0.533rem;
+}
+
+.agreementWrap .agreementMod dt {
+    margin-bottom:0.133rem;
+    font-weight: bold;
+    font-size:0.43rem;
+}
+.agreementWrap .agreementMod dd {
+    padding:0.267rem 0.133rem 0;
+}
+.agreementWrap .agreementMod ul {
+    padding-left:0.32rem;
+}

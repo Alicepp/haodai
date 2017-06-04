@@ -1,0 +1,27 @@
+
+
+
+.bd{margin:0.267rem 0.133rem;border:1px solid #e8ecf0;border-radius: 6px;background-color: #fff;}
+.bd .mhd{height: 1.067rem;line-height: 1.067rem;padding:0 0.373rem;border-bottom: 1px solid #e8ecf0;}
+.bd .mhd span{font-size: 0.4rem;}
+.bd .mbd{padding:0.333rem 0.533rem;position: relative;top: 0;left: 0;}
+.bd .mbd .myChart{height:5rem;}
+/*.bd .mbd .txt{position: absolute;bottom:0;right: 0;z-index: 99999;}
+.bd .mbd .txt li{line-height: 1rem;}
+.bd .mbd .txt li .dot{width: 0.133rem;height: 0.133rem;border-radius:0.133rem;display: inline-block;position: relative;top: 0.1rem;}
+.bd .mbd .txt li .dot:nth-child(1){background-color: #96d0ff;}
+.bd .mbd .txt li .dot:nth-child(2){background-color: #f57f7e;}
+.bd .mbd .txt li .dot:nth-child(3){background-color: #f6ca77;}
+.bd .mbd .txt li .dot:nth-child(4){background-color: #bfb0ff;}*/
+
+.bd .mbd img{margin:0 auto;}
+.ft{background-color: #fff;}
+.ft dl{border-bottom: 1px solid #e8ecf0;}
+.ft dl dt{height:1.173rem;line-height: 1.173rem;border-top:1px solid #e8ecf0;border-bottom:1px solid #e8ecf0;font-size: 0.4rem;padding-left: 0.56rem;}
+.ft dl dd{height: 1.28rem;line-height: 1.28rem;margin-left: 0.533rem;padding:0 0.667rem 0 0.06rem;border-bottom:1px solid #e8ecf0;font-size: 0.373rem;color: #5f616b;position: relative;top: 0;left:0;}
+.ft dl dd:last-child{border-bottom: 0;}
+.ft dl dd .icon_bg{background:url(../images/my/icon_list.png) no-repeat;background-size:0.63rem 3.4rem;display: inline-block;position: relative;top: 0.1rem;left: 0;width: 0.933rem;}
+.ft dl dd .icon_usable{height: 0.507rem;top: 0.1rem;}
+.ft dl dd .icon_freeze{background-position: 0 -0.94rem;height: 0.56rem;}
+.ft dl dd .icon_await{background-position: 0 -1.96rem;height: 0.56rem;}
+.ft dl dd .icon_rxb{background-position: 0 -2.98rem;height: 0.427rem;}

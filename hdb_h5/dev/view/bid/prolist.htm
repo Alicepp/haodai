@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+	<meta name="author" content="wuping" />
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<section class="listContainer">
+	<ul class="listBox jsList vueTpl" url="{$page_url}">
+		{literal}
+		<!--v-bind:class=" {(m.bidStatus == 1 || m.bidStatus == 2) ? '' : 'endedPro'}"-->
+		<li class=" proItem" v-bind:class="[(m.bidStatus == 1 || m.bidStatus == 2) ? '' : 'endedPro']" v-for="m in list" v-cloak>  <!-- endedPro -->
+			<a v-bind:href="'/bid/regulardetail/'+m.bid">
+				<div class="mainInfo">
+					<span class="status-mark" v-bind:class="[(m.bidStatus == 1 || m.bidStatus == 2) ? '' : 'status-gray']">{{m.status_title}}</span>
+					<div class="itemLeft">
+						<p class="exrnings"><span class="cRed">{{m.borrowRate}}</span>%</p>
+						<p class="pl5">预期年化</p>
+					</div>
+					<div class="itemRight">
+						<h3>{{m.borrowTitle}}</h3>
+						<ul class="deadline">
+							<li>
+								<p>投资期限</p>
+								<p class="investNum">{{m.approvedPeriod}}</p>
+							</li>
+							<li>
+								<p>投资进度</p>
+								<p class="investNum">{{m.bidProcess}}%</p>
+							</li>
+							<!-- <li>
+								<p>剩余可投</p>
+								<p class="investNum">100.00</p>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</a>
+		</li>
+		{/literal}
+	</ul>
+</section>
+
+
+{include file="_common/footer.htm"}
+<div class="bulbRemind"><i class="icon icon_bulb"></i>预期收益不等于实际收益；借贷有风险，出借需谨慎。</div>
+<script type="text/javascript">
+    require('common:static/widget/bid_prolist/init');
+</script>
+</body>
+</html>

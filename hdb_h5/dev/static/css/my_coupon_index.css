@@ -1,0 +1,389 @@
+@import url('common/header.css?__inline');
+@import url('common/pulldown.css?__inline');
+body {
+	font-size: 12px !important;
+}
+[data-dpr="2"] body {
+	font-size: 24px !important;
+}
+[data-dpr="3"] body {
+	font-size: 36px !important;
+}
+* {
+	box-sizing: border-box;
+}
+[v-cloak] {
+	display: none;
+}
+.headHelp{background-image:url("../images/icon/icon_help_gray.png?__inline");}
+.orange {
+	color: #ff9f50;
+}
+.myCoupon {
+	padding-top: 0.5rem;
+	position: relative;
+	overflow: inherit!important;
+	z-index: 1;
+}
+.myCoupon .couponwrap {
+	margin: 1.4rem 0.58rem 0 0.58rem;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 0.5rem;
+}
+.myCoupon .couponwrap li {
+	width: 100%;
+	height: 3.826667rem;
+	display: block;
+	position: relative;
+	margin-top: 0.32rem;
+}
+.myCoupon .couponwrap li:first-child {
+	margin: 0;
+}
+.myCoupon .couponwrap .djq {
+	background: url(../images/my/cash_coupn/djq_coupon_bg.png) center no-repeat;
+	background-size: 100% 100%;
+}
+.myCoupon .couponwrap .fxq {
+	background: url(../images/my/cash_coupn/fxq_coupon_bg.png) center no-repeat;
+	background-size: 100% 100%;
+}
+.myCoupon .couponwrap .ysx {
+	background: url(../images/my/cash_coupn/ysx_coupon_bg.png) center no-repeat;
+	background-size: 100% 100%;
+}
+.myCoupon .couponwrap .topwrap {
+	height: 3.01rem;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-pack: start;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+}
+.myCoupon .couponwrap .topwrap .leftCol {
+	padding-left: 0.293333rem;
+	padding-top: 0.173333rem;
+	width: 5.6rem;
+	-ms-flex: 0 0 5.6rem;
+	-webkit-box-flex: 0;
+	flex: 0 0 5.6rem;
+	height: 100%;
+}
+.myCoupon .couponwrap .topwrap .leftCol .leftTop {
+	position: absolute;
+	width: 2.773334rem;
+	height: 0.92rem;
+	line-height: 1rem;
+	background: #fff;
+	border-radius: 0.426666rem;
+	text-align: center;
+	color: #ff8850;
+	font-size: 0.693334rem;
+	margin-top: 0.1rem;
+	margin-left: 0.1rem;
+	box-sizing: border-box;
+	-moz-transform:scale(0.5,0.5);
+	-webkit-transform:scale(0.5,0.5);
+	-o-transform:scale(0.5,0.5);
+	transform:scale(0.5,0.5);
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	transform-origin:0 0;
+}
+.myCoupon .couponwrap .fxq .topwrap .leftCol .leftTop {
+	color: #51bdff;
+}
+.myCoupon .couponwrap .ysx .topwrap .leftCol .leftTop {
+	color: #d6d6d6;
+}
+.myCoupon .couponwrap .topwrap .leftCol .deswrap {
+	margin-top: 0.493333rem;
+	margin-right: 0.2rem;
+	margin-left: 0.1rem;
+}
+.myCoupon .couponwrap .topwrap .leftCol .deswrap h2 {
+	font-size: 0.426667rem;
+	color: #fff;
+	height: 0.453333rem;
+	line-height: 0.453333rem;
+	display: block;
+}
+.myCoupon .couponwrap .topwrap .leftCol .deswrap p {
+	margin-top: 0.346667rem;
+	color: #fff;
+}
+.myCoupon .couponwrap .topwrap .rightCol {
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
+	text-align: center;
+	position: relative;
+}
+.myCoupon .couponwrap .topwrap .rightCol .conInfo {
+	position: absolute;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	bottom: 0.586667rem;
+	width: 100%;
+	color: #ff9f50;
+}
+.myCoupon .couponwrap .fxq .topwrap .rightCol .conInfo {
+	color: #51bdff;
+}
+.myCoupon .couponwrap .topwrap .rightCol .conInfo .symbol {
+	font-size: 0.64rem;
+}
+.myCoupon .couponwrap .topwrap .rightCol .conInfo .money {
+	font-size: 1.466667rem;
+}
+.myCoupon .couponwrap .foo {
+	position: absolute;
+	height: 0.906667rem;
+	line-height: 0.906667rem;
+	bottom: 0;
+	background: url(../images/my/cash_coupn/foo.png) center no-repeat;
+	background-size: 100% 100%;
+	left: -0.08rem;
+	right: -0.026667rem;
+	padding-left: 0.4rem;
+}
+.myCoupon .couponwrap .foo .leftCol {
+	color: #666666;
+}
+.myCoupon .couponwrap .foo .rightCol {
+	float: right;
+	margin-right: 0.4rem;
+	color: #ff6535;
+}
+.myCoupon .couponwrap .fxq .foo .rightCol {
+	color: #51bdff;
+}
+.myCoupon .foowrap {
+	height: 0.8rem;
+	line-height: 0.8rem;
+	background: #f3f3f3;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	z-index: 88;
+	display: none;
+}
+.myCoupon .couponwrap .ysx .topwrap .rightCol .conInfo {
+	color: #d6d6d6;
+}
+.myCoupon .foowrap a {
+	display: inline-block;
+	height: 100%;
+	color: #329df7;
+}
+
+#iscrollwrap {
+	/*position: absolute;*/
+	/*top: 0.4rem;*/
+	/*bottom: 0.8rem;*/
+	/*width: 100%;*/
+	/*height: calc(100% - 0.8rem);*/
+	/*overflow-y: hidden;*/
+}
+.myCoupon .couponwrap .ysx .foo .rightCol{
+	color: #bbbbbb;
+}
+#pullDown>div {
+	display: inline-block;
+	vertical-align: middle;
+}
+#pullUp>div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.pullLabel {
+	width: 3.0rem;
+}
+
+/*iscroll end*/
+
+/*没有优惠券 开始*/
+.nocouponswrap {
+	position: relative;
+	z-index: 5;
+}
+.nocouponswrap .nocoupons {
+	width: 2.6rem;
+	height: 3rem;
+	background: url(../images/my/cash_coupn/nocoupons.png) center no-repeat;
+	background-size: 100%;
+	margin: 1.56rem auto 0.1rem auto
+}
+.nocouponswrap .infowrap {
+	height: 0.4rem;
+	line-height: 0.4rem;
+	font-size: 0.346667rem;
+	text-align: center;
+	color: #878a97;
+}
+.nocouponswrap .infowrap .lookOldCoupons {
+	color: #329df7;
+	display: inline-block;
+	height: 100%;
+}
+
+/*没有优惠券 结束*/
+
+/*loading start*/
+
+.loading-style-8 {
+	width: 0.666667rem;
+	height: 0.666667rem;	/*margin: 50px auto;*/
+	position: relative;
+	margin-right: 0.266667rem;
+	-webkit-animation: loading-style-8 3s linear infinite;
+	animation: loading-style-8 3s linear infinite;
+}
+.loading-style-8 div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.loading-style-8 span {
+	display: inline-block;
+	width: 0.266667rem;
+	height: 0.266667rem;
+	border-radius: 50%;
+	background: #99CC66;
+	position: absolute;
+	left: 50%;
+	margin-top: -0.133333rem;
+	margin-left: -0.133333rem;
+	-webkit-animation: changeBgColor_8 3s ease infinite;
+	animation: changeBgColor_8 3s ease infinite;
+}
+@-webkit-keyframes loading-style-8 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	33.3% {
+		-webkit-transform: rotate(120deg);
+		transform: rotate(120deg);
+	}
+	66.6% {
+		-webkit-transform: rotate(240deg);
+		transform: rotate(240deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes loading-style-8 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	33.3% {
+		-webkit-transform: rotate(120deg);
+		transform: rotate(120deg);
+	}
+	66.6% {
+		-webkit-transform: rotate(240deg);
+		transform: rotate(240deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes changeBgColor_8 {
+	0%, 100% {
+		background: #99CC66;
+	}
+	33.3% {
+		background: #FFFF66;
+	}
+	66.6% {
+		background: #FF6666;
+	}
+}
+@keyframes changeBgColor_8 {
+	0%, 100% {
+		background: #99CC66;
+	}
+	33.3% {
+		background: #FFFF66;
+	}
+	66.6% {
+		background: #FF6666;
+	}
+}
+.loading-style-8 div:nth-child(2) {
+	-webkit-transform: rotate(120deg);
+	transform: rotate(120deg);
+}
+.loading-style-8 div:nth-child(3) {
+	-webkit-transform: rotate(240deg);
+	transform: rotate(240deg);
+}
+.loading-style-8 div:nth-child(2) span {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.loading-style-8 div:nth-child(3) span {
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+/*loading end*/
+/*tab切换*/
+.hdTab{text-align: center;
+	border: 1px solid #c9c9c9;
+	border-radius: 0.17rem;
+	margin: 0 2.053rem;
+	width: 5.9rem;
+	height: 0.89rem;
+	position: fixed;
+	top: 0.3rem;
+	z-index: 99;}
+.hdTab a{display: inline-block;width: 33.33%;height: 0.867rem;line-height: 0.867rem;color: #7a7c87;border-right: 1px solid #c9c9c9;font-size: 0.4rem;}
+.hdTab a:first-child{border-top-left-radius: 0.16rem;border-bottom-left-radius: 0.16rem;}
+.hdTab a:last-child{border-right: 0;border-top-right-radius: 0.16rem;border-bottom-right-radius: 0.16rem;}
+.hdTab a.active{background-color: #b1b2bc;color: #fff;}
+.mt30 {
+	margin-top: 0.4rem;
+}
+.mb30 {
+	margin-bottom: 0.4rem;
+}
+.tabBg{
+	width: 100%;
+	position: fixed;
+	height: 1.6rem;
+	top: 0rem;
+	background-color: #f9f9f9;
+	z-index: 98;
+}
+.mb90{
+	height: 0rem;
+}
+.header + .mb90{
+	height:1.2rem;
+}
+.header + .mb90+ .appwrap>.hdTab{
+	top:1.7rem
+}
+.header + .mb90+ .appwrap>.tabBg{
+	top:1.2rem
+}
+.shade{
+	width: 100%;
+	position: fixed;
+	background-color: #F9F9F9;
+	height: 3rem;
+	z-index: 2;
+	top: 0;
+	left: 0;
+}

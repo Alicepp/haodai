@@ -1,0 +1,11 @@
+@import url('common/button.css?__inline');
+@import url('common/modelLia.css?__inline');
+@import url('my_coupon_index.css?__inline');  /*我的优惠券*/
+@import url('my_coupon_select.css?__inline');  /*选择优惠券*/
+
+
+.label{padding:0 0.267rem;}
+.pr{padding-right: 0.1rem;}
+.modelLia .con-b{position:relative;}
+.modelLia .con-b .newMsg{width: 0.16rem;height: 0.16rem;top: 0.4rem;left: 2.5rem;}
+.modelLia .con-b .moneyTxt{font-size: 0.373rem;}

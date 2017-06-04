@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>{$title}</title>
+    <script type="text/javascript" src="/static/lib/mod.js"></script>
+    {include file="_common/var.htm"}
+    <meta name="author" content="fanjj" />
+</head>
+<body>
+{include file="_common/header.htm"}
+<div class="appwrap">
+    <ul class="more">
+        <li>
+            <i></i>
+            <a href="">
+                <span>新手引导</span>
+                <b></b>
+            </a>
+        </li>
+        <li>
+            <i></i>
+            <a href="">
+                <span>活动中心</span>
+                <b></b>
+            </a>
+        </li>
+        <li class="more_space1">
+            <i></i>
+            <a href="">
+                <span>系统公告</span>
+                <b></b>
+            </a>
+        </li>
+        <li>
+            <i></i>
+            <a href="">
+                <span>常见问题</span>
+                <b></b>
+            </a>
+        </li>
+        <li class="more_space2">
+            <i></i>
+            <a href="">
+                <span>意见反馈</span>
+                <b></b>
+            </a>
+        </li>
+        <li>
+            <i></i>
+            <a href="">
+                <span>关于我们</span>
+                <b></b>
+            </a>
+        </li>
+    </ul>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_more/init');
+</script>
+</body>
+</html>

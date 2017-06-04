@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>{include file="_common/var.htm"}</head>
+<body>
+{include file="_common/header.htm"}
+	<div class="status_wrap">
+		<div class="bd">
+			<span class="pic"><img src="static/images/status/cash_success.png" /></span>
+            <h2 class="title">成功提现<span class="cRed f46">{$amount|formatMoney}</span>元</h2>
+		</div>
+		<div class="ft">
+			<a href="{getRedirectStr('', '/my/subsidiary/balance')}" class="btn redBtn">查看提现记录</a>
+			<a href="{getRedirectStr('', '/my/info')}" class="btn cancelBtn mt20">我知道了</a>
+		</div>
+	</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_cashvalue_withdraw_success/init');
+</script>
+</body>
+</html>

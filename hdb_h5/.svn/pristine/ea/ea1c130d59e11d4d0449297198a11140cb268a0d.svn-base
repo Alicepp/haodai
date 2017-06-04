@@ -1,0 +1,63 @@
+.titleA,.titleB{
+    padding-top:0.5333rem;
+    width:100%;
+    text-align:center;
+    font-size:0;
+}
+.titleB{
+    padding-top:0;
+}
+.lineBef,.lineAft{
+    display:inline-block;
+    margin-top:0.3rem;
+    width:2.85rem;
+    height:1px;
+    vertical-align:-0.05rem;
+    background:#ddd;
+}
+.s30{
+    display:inline-block;
+    text-align:center;
+    vertical-align:middle;
+    font-size:0.4rem;
+    color:#5f616b;
+}
+.s30 i{
+    display:inline-block;
+    width:0.2133rem;
+    height:0.2133rem;
+    background:url(../images/common/icon_f.png) 0 0 no-repeat;
+    background-size:0.2133rem 0.2133rem;
+}
+.s30 i:nth-child(1){
+    margin-right:0.2667rem;
+}
+.s30 i:nth-child(2){
+    margin-left:0.2667rem;
+}
+.list{
+    height:1.56rem;
+}
+
+.listBox{
+    padding:0.6rem 0 0.1067rem 0.64rem;
+
+}
+.listBox .listT{
+    font-size:0.4267rem;
+    color:#5f616b;
+}
+.listBox .listB{
+     padding-top:0.2133rem;
+    font-size:0.3733rem;
+    color:#b7b9c5;
+}
+.rule{
+    padding:0.7467rem 2rem 0 0.64rem
+}
+.rule .rule_1{
+    padding-bottom:0.4267rem;
+    font-size:0.3733rem;
+    color:#5f616b;
+    line-height:0.5333rem;
+}

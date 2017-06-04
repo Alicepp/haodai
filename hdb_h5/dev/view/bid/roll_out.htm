@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back" rightLink="rollout"}
+
+<div class="warp rollOut">
+	<form action="{$action_url_one}" class="projectBidForm" method="post">
+		<div class="container">
+			<div class="modelLia border-top-1 mt20">
+				<h5 class="title-a">转出金额(元)：</h5>
+				<div class="con-a">
+					<input type="number" class="jsRollOutAmount" remainnum="{$accountRemin}" placeholder="今日最多可转出{formatMoney($accountRemin)}元" />
+					<input type="hidden" name="money" />
+				</div>
+			</div>
+			<div class="content mt230">
+				<button class="btn redBtn jsRollOutBtn" type="submit">确认转出</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- 密码弹框 begin -->
+<div class="none J_dialogHtml">
+	<div class="dialogInner">
+		<a href="javascript:;" class="closeDialog J_closeWithdraw"></a>
+		<form action="{$action_url_two}" class="pwdForm" method="post">
+			<div class="mTitle">本次转出</div>	
+			<div class="money">
+				<div class="cRed"> <span class="num f72 jsMoney"></span></div>
+			</div>
+			<div class="pwBox">
+				<input type="hidden" name="money" class="jsMoneyHidden" />
+				<input type="password" name="tradePwd" class="pwIpt dealPassWord passWordCrypt" />
+			</div>
+			<div class="dialogBtn">
+				<button type="submit" class="btn redBtn confirm">转出</button>
+			</div>
+		</form>
+	    <div class="forgetPw"><a href="{$forget_deal_url}">忘记密码？</a></div>
+	</div>
+</div>
+<!-- 密码弹框 end -->
+{include file="_common/footer.htm"}
+
+<!-- 转出说明 -->
+{include file="_common/statictpl/rollinoutrule.htm" method="pop"}
+<script type="text/javascript">
+    require('common:static/widget/bid_roll_out/init');
+</script>
+</body>
+</html>

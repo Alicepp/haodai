@@ -1,0 +1,79 @@
+.boder-top{ border-top: 1px solid #eee;}
+.pos-relative{
+	position: relative;
+}
+.user-record-lp .section {
+    margin: 0;
+}
+.user-record-lp .list li{
+    padding: 0 0.4rem;
+    border-bottom: 1px solid #e6e6e6;
+	background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.row-lp{
+	width: 100%;
+	clear:both;
+}
+.user-record-lp .list .row-lp:first-child{
+	height: 0.46rem;
+	margin-top:0.38rem;
+	color:#5f616b;
+}
+.user-record-lp .list .title{
+	font-size:0.43rem;
+}
+.user-record-lp .list .title{
+	width:5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 0.48rem;
+}
+.user-record-lp .list .money{
+	font-size:0.45rem;
+}
+.user-record-lp .list .money{
+	font-weight: 500;
+	display: block;
+	line-height: 0.45rem;
+
+}
+.user-record-lp .list .date{
+	font-size:0.32rem;
+}
+.user-record-lp .list .date{
+	color:#b7b9c5;
+	line-height:1.0rem;
+	display:inline-block;
+	vertical-align: middle;
+}
+.none{
+	display: none;
+}
+/*无数据显示*/
+.no-info-box{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+
+}
+.no-info-icon{
+	width: 1.79rem;
+	height: 3.55rem;
+	background: url(../../images/subsidiary_bids_records/no_records.png) no-repeat;
+	background-size: 100%;
+	margin-top:2.4rem;
+}
+.no-info{
+	margin-top:0.8rem;
+	text-align: center;
+	font-size: 0.35rem;
+}
+.no-info a{
+	color:#329df7;
+}

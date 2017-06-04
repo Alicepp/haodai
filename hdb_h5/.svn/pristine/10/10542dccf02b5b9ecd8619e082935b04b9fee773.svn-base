@@ -1,0 +1,69 @@
+
+.service {
+    margin-top:0.267rem;
+    background-color:#fff;
+}
+.service li{
+    border-bottom:0.0133rem solid #e8e8e9;
+    padding:0 0.4rem 0 0.3733rem;
+    width:100%;
+    height:1.28rem;
+    display:-webkit-box;
+    -webkit-box-pack:justify;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:justify;
+    box-align:center;
+    display:-webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.service .phoneL,.service .qqL,.service .wxL{
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100%;
+}
+.service .phone,.service .qq,.service .wx{
+    display:block;
+    font-size:0.3733rem;
+    color:#5f616b;
+}
+.service .phoneR,.service .qqR,.service .wxR{
+    font-size:0.4rem;
+    color:#afb0be;
+}
+.service i{
+    display:block;
+    margin-right:0.2267rem;
+    -webkit-box-flex:0;
+    -webkit-flex: 0 0 0.6267rem;
+    width:0.6267rem;
+    height:0.5333rem;
+    background:url(../images/home_aboutus/logo.png)  no-repeat;
+    background-size: 5.7333rem 2.4533rem;
+}
+.service a{
+    color: #afb0be;
+}
+.service .phone_icon{
+    background-position:-3.1467rem 0;
+}
+.service .qq_icon{
+    background-position:-4.09rem 0;
+}
+.service .wx_icon{
+    background-position:-4.968rem 0;
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lvpp" />
+  <title>{$title}</title>
+  <script type="text/javascript" src="/static/lib/mod.js"></script>
+  {include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm"  returnBtn="back" rightLink='choose' filterMenu='1'}
+<div class="container user-record-lp vueTpl">
+	<ul class="list jsList" url="/my/subsidiary/bids_records" v-if="hasData">
+        {literal}
+        <li track-by="$index" v-for="m in list" v-cloak>
+			<div class="padlr">
+				<div class="row-lp">
+					<div class="fl">
+						<p class="title">{{m.borrowTitle}}</p>
+					</div>
+					<div class="fr">
+						<strong class="money cRed"><i>{{m.amount}}</i>元</strong>
+					</div>
+				</div>
+				<div class="row-lp box">
+					<div class="earn-ratio blue">
+						<span v-show="m.yearInterest"><i>{{m.yearInterest}}</i>%</span>
+						<span v-show="m.type==0">转入</span>
+						<span v-show="m.type==1">转出</span>
+					</div>
+					<div class="bids-term flex1"><i>{{m.approvedPeriod}}</i></div>
+					<div class="bids-date">{{m.createdate}}</div>
+				</div>
+			</div>
+			
+			<div class="row-lp boder-top" v-show="m.type!=1">
+				<div class="padlr pos-relative">
+					<div class="jixi">计息时间：
+						<i v-show="m.interestdate">{{m.bidRecheckDate}}</i>
+						<span v-show="m.lastRefund">- <i>{{m.lastRefund}}</i></span>
+					</div>
+					<div class="fail-bids-icon" v-show="m.bidStatus == 1">{{m.status_title}}</div>
+					<div class="bidding-icon" v-show="m.bidStatus == 2">{{m.status_title}}</div>
+					<div class="settled-icon" v-show="m.bidStatus == 5">{{m.status_title}}</div>
+					<div class="full-bids-icon" v-show="m.bidStatus == 4">{{m.status_title}}</div>
+					<div class="repayment-icon" v-show="m.bidStatus == 3">{{m.status_title}}</div>
+				</div>
+			</div>
+		</li>
+        {/literal}
+	</ul>
+
+	<!-- 暂无记录提示 begin -->
+	<div class="container" v-cloak v-if="!hasData">
+		<div class="no-info-box">
+			<div class="no-info-icon"></div>
+		</div>
+		<div class="no-info">
+			还没有出借记录 | <a href="/bid/project">去出借 >></a>
+		</div>
+	</div>
+	<!-- 暂无记录提示 end -->
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_subsidiary_bids_records/init');
+</script>
+</body>
+</html>

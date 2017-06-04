@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="lvpp" />
+  <title>{$title}</title>
+  <script type="text/javascript" src="/static/lib/mod.js"></script>
+  {include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm"  returnBtn="back" rightLink='choose'}
+<div class="container user-record-lp">
+	<div class="payment-bab">
+		<section class="section vueTpl">
+			<ul class="list boder-top jsList" url="/my/subsidiary/balance" v-if="hasData">
+                {literal}
+                <li v-for="m in list" v-cloak>
+                    <div class="row-lp">
+                        <div class="fl">
+                            <p class="title">{{m.typeName}}</p>
+                        </div>
+                        <div class="fr">
+                            <strong class="money cGreen" v-show="m.income==0.00">-<i>{{m.outlay}}</i>元</strong>
+                            <strong class="money cRed" v-show="m.outlay==0.00">+<i>{{m.income}}</i>元</strong>
+                        </div>
+                    </div>
+              
+                    <div class="row-lp">
+                        <div class="fl">
+                            <span class="date">{{m.tradeDate}}</span>
+                        </div>
+                        <div class="fr"> 
+                            <span class="credit">余额：<i>{{m.balance}}</i>元</span>
+                        </div>
+                    </div>
+                </li>
+                {/literal}
+			</ul>
+
+            <!-- 暂无记录提示 begin -->
+            <div class="container" v-cloak v-if="!hasData">
+                <div class="no-info-box">
+                    <div class="no-info-icon"></div>
+                </div>
+                <div class="no-info">
+                    还没有出借记录 | <a href="/bid/project">去出借 >></a>
+                </div>
+            </div>
+            <!-- 暂无记录提示 end -->
+		</section>
+	</div>
+</div>
+{include file="_common/footer.htm"}
+<script type="text/javascript">
+    require('common:static/widget/my_subsidiary_balance/init');
+</script>
+</body>
+</html>

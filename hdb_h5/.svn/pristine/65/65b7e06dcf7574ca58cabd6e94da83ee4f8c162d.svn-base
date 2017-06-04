@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="liyn" />
+	<title>{$title}</title>
+	<script type="text/javascript" src="/static/lib/mod.js"></script>
+	{include file="_common/var.htm"}
+</head>
+<body>
+{include file="_common/header.htm" returnBtn="back"}
+<!-- 判断用户是否实名 -->
+<!-- is_realname==1 已实名-->
+<!-- is_realname==0 未实名 -->
+<input type="hidden" name="is_realname" class="jsIsRealName" value="{$Realnameinfo.status}" message="{$Realnameinfo.msg}" url="{$Realnameinfo.url}"/>
+
+<div class="warp">
+	<form action="{getRedirectStr('/bid/do_buy/'|cat:$bid, false)}" class="projectBidForm" onsubmit="return false;" method="post">
+		<div class="container vueTpl">
+			<div class="modelLia border-top-1">
+				<h5 class="title-a w225">剩余可投金额：</h5>
+				<div class="con-a">
+					<span class="cRed jsAmount" amount="{$sAmount}">{$sAmount|formatMoney}</span><span class="label">元</span>
+				</div>
+			</div>
+			<div class="modelLia">
+				<h5 class="title-a w225">您的账户余额：</h5>
+				<div class="con-a"><i class="usableAmount jsUsableAmount" amount="{$usableAmount}">{$usableAmount|formatMoney}</i><span class="label">元</span></div>
+				<div class="con-b">
+					<a href="/my/cashvalue/recharge" class="btn2 jsIsRNameLink">去充值</a>
+				</div>
+			</div>
+			<div class="modelLia border-top-1 mt20">
+				<h5 class="title-a">投入金额：</h5>
+				<div class="con-a">
+					<input type="hidden" name="couponUrl" value="{$couponUrl}">
+					<input type="hidden" name="usableAmount" value="{$usableAmount}">
+					<input type="text" name="money" class="jsInvestmentAmount" v-model="money" placeholder="输入100元以上整数金额">
+				</div>
+				<div class="con-b">
+					<a href="javascript:;" class="blue_link" v-on:click="allPut()">全部投入</a>
+				</div>
+			</div>
+			<div class="modelLia">
+				<h5 class="title-a">可用优惠券</h5>
+				<div class="con-b pr">
+					<a href="javascript:;" class="link cGray jsPopPage" data-name="selectCoupon">
+					<!-- <i class="newMsg"></i> -->
+					{literal}
+					<i class="txt moneyTxt" v-cloak>{{moneyTxt}}</i>
+					</a>
+					<i class="rArrow jsrArrow none"></i>
+					{/literal}
+					<input type="hidden" name="coupon_code" v-model="coupon_code">
+				</div>
+			</div>
+			<div class="ml30 mt30 checkboxWrap">
+				<input type="checkbox" checked="" class="protocol jsInputCheck">我已阅读并同意 <a href="/bid/agreement_bid_do/{$bid}" class="protocolLink">《借款合同》</a>
+			</div>
+			<div class="content mt100">
+				<button class="btn redBtn" type="submit">确定</button>
+			</div>
+		</div>
+	</form>
+	<!-- 选择优惠券 -->
+	{include file="my/coupon/select.htm"}
+</div>
+
+{include file="_common/footer.htm"}
+
+<script type="text/javascript">
+    require('common:static/widget/bid_buy/init');
+</script>
+</body>
+</html>

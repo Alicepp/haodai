@@ -1,0 +1,549 @@
+/*########################rest.css########################*/
+@import url('./reset.css?__inline');
+/*########################animate.css########################*/
+@import url('./animate.css?__inline');
+/*########################pageloading.css########################*/
+@import url('./pageloading.css?__inline');
+/*########################header.css########################*/
+@import url('./header.css?__inline');
+/*########################sweetalert.css########################*/
+@import url('./sweetalert.css?__inline');
+* {
+	box-sizing: border-box;	/* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+	-moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+	-webkit-overflow-scrolling: touch;
+}
+[data-dpr="1"] * {
+	border-width: 1px !important
+}
+[v-cloak] {
+	display: none;
+}
+
+html, body {
+	height: 100%;
+}
+body{
+	cursor: pointer;
+}
+.appwrap {
+	font-size: 0.2933rem;
+	position: relative;
+	width: 100%;	/*top: 1.2rem;*/
+	padding-top: 0.2667rem;	/*bottom: 0;*/
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	display: none;
+}
+.box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.flex1 {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+/*文字两端对齐*/
+.justify {
+	text-align: justify;
+	/*word-break: break-all;*/
+	stext-justify: distribute-all-lines;                /*ie6-8*/
+	text-justify: inter-ideograph;
+	-webkit-text-align-last: justify;
+}
+
+.container{margin:0.267rem 0;}
+.content{padding:0 1rem;}
+.center{text-align: center;}
+.border-top-1{border-top:1px solid #e8ecf0;}
+
+/*公用margin*/
+.mt20{margin-top: 0.267rem;}
+.mt30{margin-top: 0.4rem;}
+.mt40{margin-top: 0.533rem;}
+.mt90{margin-top: 1.2rem;}
+.mt100{margin-top: 1.333rem;}
+.mt230{margin-top: 3.067rem;}
+.ml30{margin-left: 0.4rem;}
+
+/*公用padding*/
+.pt20{padding-top: 0.267rem;}
+.pt30{padding-top: 0.4rem;}
+.pl5{padding-left:0.067rem;}
+
+/*居中*/
+.tc{text-align: center;}
+
+/*字号*/
+.f28{font-size: 0.373rem;}
+.f30{font-size: 0.4rem;}
+.f60{font-size: 0.8rem;}
+
+/*红色*/
+.cRed{color: #fd716a;}
+/*蓝色*/
+.cBlue{color: #00a8ff;}
+.cBlue:hover{color: #00a8ff;}
+/*浅灰色*/
+.cGray{color: #afb0be;}
+/*深灰色*/
+.cGray2{color: #5f616b;}
+/*绿色*/
+.cGreen{color:#1dd594;}
+/*加下划线蓝色*/
+.blue_link{color: #00a8ff;text-decoration: underline;}
+
+/*公用icon*/
+.icon{background-size: 100%;background-repeat: no-repeat;padding: 0.24rem;background-position: center;}
+.icon_mobile{background-image: url(../../images/icon/icon_mobile.png?__inline);} /*手机号*/
+.icon_mobile_gray{background-image: url(../../images/icon/icon_mobile_gray.png?__inline);} /*手机号*/
+.icon_pwd{background-image: url(../../images/icon/icon_pwd.png?__inline);}  /*密码*/
+.icon_pwd_gray{background-image: url(../../images/icon/icon_pwd_gray.png?__inline);}  /*密码*/
+.icon_code{background-image: url(../../images/icon/icon_imgcode.png?__inline);}  /*图片验证码*/
+.icon_code_gray{background-image: url(../../images/icon/icon_imgcode_gray.png?__inline);}  /*图片验证码*/
+.icon_pwd_hui_hide{background-image: url(../../images/icon/pw_hide.png?__inline);padding:0.34rem;} /*密码眼睛隐藏状态*/
+.icon_pwd_hui_show{background-image: url(../../images/icon/pw_show.png?__inline);padding:0.34rem;} /*显示状态*/
+
+.icon_user{background-image: url(../../images/icon/icon_user.png?__inline);}  /*用户姓名*/
+.icon_idcard{background-image: url(../../images/icon/icon_idcard.png?__inline);padding:0.26rem;}  /*身份证号*/
+
+.icon_moredetail {padding:0.267rem;background-image: url(../../images/icon/icon_moredetail.png?__inline);} /*更多详情*/
+.icon_record {padding:0.267rem;background-image: url(../../images/icon/icon_record.png?__inline);} /*记录*/
+.icon_income {padding:0.267rem;background-image: url(../../images/icon/icon_income.png?__inline);} /*收益*/
+.icon_bulb {padding:0.16rem;background-image: url(../../images/icon/icon_bulb.png?__inline);}
+/*新消息红色圆点*/
+.newMsg{width: 0.333rem;height: 0.333rem;background-color: #e8544a;border-radius:50%;text-align: center;line-height: 0.333rem;font-size: 0.24rem;position: absolute;}
+
+/*右箭头*/
+.rArrow {
+	display: inline-block;
+	width:0.4rem;
+	height:0.4rem;
+	border-style: solid;
+	border-width:0.04rem 0.04rem 0 0;
+	border-color:#dcdcdc #dcdcdc transparent transparent;
+	vertical-align: middle;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+/*灯泡提醒*/
+.bulbRemind {
+	margin-top:0.2rem;
+	text-align: center;
+	font-size:0.293rem;
+	line-height: 1.6;
+	color:#c2c1c1;
+}
+.bulbRemind .icon_bulb {
+	margin-right:0.24rem;
+}
+/*填写表单样式*/
+.infoItem {
+	display: block;
+	padding:0 0.373rem;
+	height:1.32rem;
+	line-height:1.28rem;
+	font-size:0.373rem;
+	border-bottom:0.013rem solid #eee;
+	background-color:#fff;
+}
+.infoItem .infoName {
+	float:left;
+	margin-right:0.373rem;
+}
+.infoItem .infoCont {
+	overflow:hidden;
+}
+.infoItem .itemRight {
+	float:right;
+	margin-left:0.267rem;
+}
+.infoItem input {
+	width:98%;
+	height:0.9rem;
+}
+/*银行信息 在充值提现 和 实名绑卡页面*/
+.bankInfo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center; 
+  -moz-box-align: center;
+  -ms-flex-align: center; 
+  -webkit-align-items: center;
+  align-items: center;
+  padding:0 0.373rem;
+  border-top:0.013rem solid #eee;
+  border-bottom:0.013rem solid #eee;
+  height:1.84rem;
+  background-color:#fff;
+}
+.bankIcon {
+  display:block;
+  margin-right:0.507rem;
+  width: 0.867rem;
+  height: 0.867rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.bankIcon.bankIcon_ABC{
+	background-image:url(../../images/bank_logo/icon_ABC.png);
+}
+.bankIcon.bankIcon_BCM{
+	background-image:url(../../images/bank_logo/icon_BCM.png);
+}
+.bankIcon.bankIcon_BOC{
+	background-image:url(../../images/bank_logo/icon_BOC.png);
+}
+.bankIcon.bankIcon_CCB{
+	background-image:url(../../images/bank_logo/icon_CCB.png);
+}
+.bankIcon.bankIcon_CEB{
+	background-image:url(../../images/bank_logo/icon_CEB.png);
+}
+.bankIcon.bankIcon_CGB{
+	background-image:url(../../images/bank_logo/icon_CGB.png);
+}
+.bankIcon.bankIcon_CIB{
+	background-image:url(../../images/bank_logo/icon_CIB.png);
+}
+.bankIcon.bankIcon_CITIC{
+	background-image:url(../../images/bank_logo/icon_CITIC.png);
+}
+.bankIcon.bankIcon_CMB{
+	background-image:url(../../images/bank_logo/icon_CMB.png);
+}
+.bankIcon.bankIcon_CMBC{
+	background-image:url(../../images/bank_logo/icon_CMBC.png);
+}
+.bankIcon.bankIcon_HXB{
+	background-image:url(../../images/bank_logo/icon_HXB.png);
+}
+.bankIcon.bankIcon_ICBC{
+	background-image:url(../../images/bank_logo/icon_ICBC.png);
+}
+.bankIcon.bankIcon_LCCB{
+	background-image:url(../../images/bank_logo/icon_LCCB.png);
+}
+.bankIcon.bankIcon_PAB{
+	background-image:url(../../images/bank_logo/icon_PAB.png);
+}
+.bankIcon.bankIcon_PSBC{
+	background-image:url(../../images/bank_logo/icon_PSBC.png);
+}
+.bankIcon.bankIcon_SPDB{
+	background-image:url(../../images/bank_logo/icon_SPDB.png);
+}
+
+
+
+
+
+.bankInfo .infoCont {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size:0.4rem;
+  line-height:0.48rem;
+}
+.bankInfo .bankName {
+  margin-bottom:0.187rem;
+}
+.bankInfo .bankName .grayTxt {
+  margin-left:0.267rem;
+}
+.bankInfo .infoCont .grayTxt {
+  color:#afb0be;
+  font-size:0.373rem;
+}
+
+.fl {float:left;}
+.fr {float:right;}
+.none {display: none;}
+.clearfix:after {
+	display:block;
+	content: '';
+	clear:both;
+	overflow:hidden;
+}
+
+.isAgree {
+	padding:0.333rem 0.4rem 0;
+	font-size:0.32rem;
+	line-height:0.4rem;
+}
+.isAgree .protocol {
+	margin-right:0.2rem;
+	border-radius: 0;
+	-webkit-border-radius:0;
+}
+.isAgree a {
+	color:#00a8ff;
+}
+
+/*成功提示对话框*/
+.pw-manage-wask{
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,.6);
+	position: fixed;
+	z-index: 99;
+	display: none;
+}
+.pw-manage-wap{
+	width: 6.93rem;
+	height: 4.27rem;
+	position: absolute;
+	top:4.67rem;
+	left:50%;
+	margin-left:-3.47rem;
+	background: #fff;
+	border-radius: 0.13rem;
+	z-index: 111;
+	text-align: center;
+}
+
+.pw-manage-wap .pw-manage-title{
+	font-size:0.48rem;
+	color:#5f616b;
+	margin-top:0.8rem;
+}
+.pw-manage-wap .pw-manage-tip{
+	font-size:0.4rem;
+	color:#afb0be;
+	margin:0.53rem 0;
+}
+.pw-manage-wap .pw-manage-closed{
+	border-top:solid 1px #ddd;
+	padding-top: 0.27rem;
+	display:block;
+	font-size: 0.48rem;
+	color:#00a8ff;
+}
+
+/*提示信息在输入框上面显示开始*/
+.Validform_title{display: none;}
+.Validform_info{text-align: center;color: #f00;padding-top: 0.4rem;
+	animation: bounceInRight 0.8s linear;
+	-webkit-animation: bounceInRight 0.8s linear;
+	/*animation-iteration-count:1;*/
+	/*-webkit-animation-iteration-count:1;*/
+}
+.customForm{
+	position: absolute;
+	text-align: center;
+	width: 80%;
+	left: 10%;
+	margin-top: -0.8rem;
+	font-size: 0.32rem;
+	color:#f00;
+	-webkit-animation-duration: .8s!important;
+	animation-duration: .8s!important;
+}
+form{
+  position: relative;
+}
+/*提示信息在输入框上面显示结束*/
+/* 去掉上下小箭头按钮 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;    
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*** 弹出页面 ***/
+.popPage {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  min-height:100%;
+  z-index:100;
+  background-color:#f9f9f9;
+  /*
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;*/
+}
+.popPage .header {
+  z-index: 100;
+  background-color:#fff;
+}
+.popPage .popPageMain {
+  padding-top:1.2rem;
+}
+/*提示去设置交易密码弹窗样式重置*/
+.warmPrompt p {
+  padding-bottom:0.733rem;
+  font-size:0.4rem;
+}
+/*标倒计时 在首页、项目页、定期详情页*/
+.pro-time {
+	border-top:0.013rem solid #eee;
+	height:0.747rem;
+	line-height:0.733rem;
+	font-size:0.32rem;
+	color:#afb0be;
+	text-align: center;
+	overflow:hidden;
+	transition: height 0.3s;
+	-webkit-transition: height 0.3s;
+}
+.pro-time .leftTime {
+	margin-left:0.107rem;
+	color:#8b8e9e;
+	font-size:0.293rem;
+	vertical-align: top;
+}
+.pro-time .leftTime .cRed {
+	display: inline-block;
+	min-width:0.507rem;
+	vertical-align: top;
+	font-size:0.373rem;
+}
+/*成功弹层*/
+body .sweet-alert.pop-success h2 {
+	margin:0;
+	height:0;
+	border:none;
+}
+body .sweet-alert.pop-success p {
+	padding:0;
+}
+body .sweet-alert.pop-success .sa-button-container {
+	display: block;
+}
+.pop-success .success-cont {
+	padding:0.667rem 0 0.773rem;
+	font-size:0.48rem;
+	line-height: 1;
+}
+.pop-success .success-cont .cRed {
+	font-size:0.613rem;
+}
+.pop-success .success-cont .sub-cont {
+	margin-top:0.133rem;
+	font-size: 0.373rem;
+}
+.pop-success .success-cont .sub-cont .cRed {
+	font-size:0.427rem;
+}
+
+.pop-success .success-img {
+	margin:0 auto 0.667rem;
+	height:3.413rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.pop-success .recharge-img {/*充值*/
+	width: 3.733rem;
+	background-image: url("../../images/status/recharge_success.png");
+}
+.pop-success .withdraw-img {/*提现*/
+	width:3.307rem;
+	background-image: url("../../images/status/cash_success.png");
+}
+.pop-success .invest-img { /*投标*/
+	width:3.36rem;
+	background-image: url("../../images/status/invest_success.png");
+}
+.pop-success .realname-img {/*实名*/
+	width:3.64rem;
+	background-image: url("../../images/status/real_name_success.png");
+}
+.pop-success .register-img {/*注册*/
+	width:3.467rem;
+	background-image: url("../../images/status/register_success.png");
+}
+.pop-success .rollout-img {/*转出*/
+	width:3.36rem;
+	background-image: url("../../images/status/roll_out_success.png");
+}
+.pop-success .shift-img {/*转入*/
+	width:3.36rem;
+	background-image: url("../../images/status/shift_to_success.png");
+}
+.pop-success .bindcard-img {/*绑卡*/
+	width:3.307rem;
+	background-image: url("../../images/status/tied_card_success.png");
+}
+
+/*********** footer ***********/
+.footer_ad {
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	padding-left:2.547rem;
+	height:1.307rem;
+	line-height:1.307rem;
+	font-size:0.32rem;
+	color:#fff;
+	background-color:rgba(0,0,0,0.8);
+}
+.footer_ad .ad_close {
+	display:block;
+	position: absolute;
+	top:0;
+	right:0;
+	width:0.907rem;
+	height:1.307rem;
+	border-left:0.013rem solid #fff;
+	background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAARVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////9SnXPCAAAAFnRSTlMABAeLCpSdl5Gaj4ig3Xq/glnIxW1IyDUXHwAAAMxJREFUKM9tkVkWwyAIRYE4RBszdHD/S60SG04D/CR6z30owmfbCczCdTvgVatHEz9qLbDXxslwG60zkOeP5dbFAaA3fJwGBaBZ+50GNxacTzc3XBsUez5qdxSyPzjmtkg/V/ysXPHj6E/iWj5Tdg1/6snRHLJLDZmunF8GpGvueDIRH44rS2t1tWj758N6wNQ56uTxrC4YPqVrqMPXfXlr+A+B50aWqPDnk8QZvkvqMMQc71HiL6cvP2D6WVztr1Ckr+YFjueKYHNf3l/2DBIl+XcNqwAAAABJRU5ErkJggg==") no-repeat center;
+	background-size: 0.4rem 0.4rem; 
+}
+.footer_ad .hdb_icon {
+	display: block;
+	position: absolute;
+	left:0.547rem;
+	top:-0.427rem;
+	width:1.613rem;
+	height:1.613rem;
+	background:url("../../images/common/hdb_logo.png") no-repeat 0 0;
+	background-size: 100% 100%; 
+}
+.footer_ad .down_app {
+	 display:inline-block;
+	 margin-left:0.507rem;
+	 width:2.0rem;
+	 height:0.533rem;
+	 text-align:center;
+	 line-height: 0.533rem;	 
+	 font-size:0.347rem;
+	 color:#ff8e7b;
+	 border:0.013rem solid #ff6159;
+	 vertical-align:middle;
+	 border-radius:0.253rem/0.267rem;
+	 -webkit-border-radius:0.253rem/0.267rem;
+}
+
+/*解决input黄色底*/
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	border: none!important;
+}
+input.jsPassWord:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #FF7B52 inset;
+	border: none!important;
+}
+input.jsUserPhone:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #FF7651 inset;
+	border: none!important;
+}
+
